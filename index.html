@@ -1,0 +1,74 @@
+
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Bunky Web</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="initial-scale=1" />
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <!-- build:css(.) styles/vendor.css -->
+    <!-- bower:css -->
+    <!-- endbower -->
+    <!-- endbuild -->
+    <!-- build:css(.tmp) styles/main.css -->
+      
+      <script src="bower_components/angular/angular.min.js"></script>
+      <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
+      <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.min.css">
+      
+      <!--Other Modules-->
+      <script src="bower_components/angular-route/angular-route.min.js"></script>
+      <script src="bower_components/angular-animate/angular-animate.min.js"></script>
+      <script src="bower_components/angular-touch/angular-touch.min.js"></script>
+      <script src="bower_components/angular-resource/angular-resource.min.js"></script>
+      <script src="bower_components/angular-cookies/angular-cookies.min.js"></script>
+      <script src="bower_components/angular-sanitize/angular-sanitize.min.js"></script>
+      <script src="bower_components/angular-aria/angular-aria.min.js"></script>
+      
+      <!--This is simply Magic-->
+      <script src="js/magic.js"></script>
+      
+  
+<!--       <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=RobotoDraft:300,400,500,700,400italic">-->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- endbuild -->
+  </head>
+    <body ng-app="bunky">
+        <div class="card">
+            <header class="clearfix" ng-controller="HeaderCtrl" />
+            
+            
+            <div class="col-xs-1">
+                <img src="img/bunky.png" id="bunky" alt="Bunky-Face" title="Hey!">
+            </div>
+            <div class="col-xs-4">
+                <span id="bunky-text">Bunky</span>
+            </div>
+            <div class="col-xs-7 no-pm">
+                <div class="col-xs-9 no-pm">
+                    <div class="name-truncate username" title="{{d.name}}">{{d.name}}</div>
+                </div>
+                <div class="col-xs-3 no-pm">
+                     <img src="img/user.jpg" class="img-circle img-responsive user-img">
+                    <div class="settings">
+                       <i class="fa fa-ellipsis-v"></i>
+                        
+                        <div class="dropdown">
+                            <ul>
+                                <a href="#">
+                                    <li>Settgings</li>
+                                    <li>Help</li>
+                                    <li>Feedback</li>
+                                    <li>Logout</li>
+                                </a>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </header>
+            <main ng-view></main>
+        </div>
+    </body>
+</html>

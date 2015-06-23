@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!-- Generator: Adobe Illustrator 18.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="bunky" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 960 560" style="enable-background:new 0 0 560 560;" xml:space="preserve">
+<g id="left-ear">
+	<circle style="fill:#FCC998;" cx="303.766" cy="249.167" r="65.833"/>
+	<circle style="fill:#FFAE71;" cx="306.933" cy="250.333" r="41"/>
+</g>
+<g id="left-ear_copy">
+	<circle style="fill:#FCC998;" cx="642.766" cy="249.167" r="65.833"/>
+	<circle style="fill:#FFAE71;" cx="645.933" cy="250.333" r="41"/>
+</g>
+<circle style="fill:#7A2B33;" cx="477" cy="263" r="186"/>
+<path id="hair" style="fill:#7A2B33;" d="M409,92.864l138.25-67.967l-43.375,56.569l65.563-22.501l-8.969,39.526L586,92.5V112
+	c0,0,27.25,21.875,32,30.25s-82.75,0-82.75,0l-177.5-22.375L409,92.864z"/>
+<g id="face-base">
+	<circle style="fill:#FFD3AE;" cx="407.734" cy="233.651" r="77.984"/>
+	<circle style="fill:#FFD3AE;" cx="554.734" cy="233.651" r="77.984"/>
+	<circle style="fill:#FFD3AE;" cx="484.901" cy="366.817" r="109.151"/>
+</g>
+<image style="display:none;overflow:visible;opacity:0.29;" width="112" height="118" xlink:href="logo.png"  transform="matrix(4.3226 0 0 4.3226 237.9329 24.9651)">
+</image>
+<g id="eyes">
+	<g>
+		<circle style="fill:#FCB783;" cx="410" cy="237.667" r="57.333"/>
+		<circle style="fill:#FCB783;" cx="560" cy="233.667" r="57.333"/>
+	</g>
+	<g id="right-eye">
+		<circle style="fill:#FFFFFF;stroke:#333333;stroke-width:5;stroke-miterlimit:10;" cx="559.837" cy="234.497" r="42.163"/>
+		<g>
+			<circle style="fill:#333333;" cx="562.835" cy="233.106" r="25.863"/>
+			<ellipse style="fill:#FFFFFF;" cx="566.252" cy="221.817" rx="10.585" ry="10.315"/>
+		</g>
+	</g>
+	<g id="left-eye_1_">
+		<circle style="fill:#FFFFFF;stroke:#333333;stroke-width:5;stroke-miterlimit:10;" cx="411.497" cy="236.625" r="42.163"/>
+		<circle style="fill:#333333;" cx="412.496" cy="234.234" r="25.863"/>
+		<circle style="fill:#FFFFFF;" cx="416.163" cy="224.132" r="10.502"/>
+	</g>
+</g>
+<ellipse style="fill:#FFAE71;" cx="485.317" cy="314.667" rx="30.652" ry="14"/>
+<path style="fill:#FFAE71;" d="M550,381.75c0,2.347-18.952,29.875-53.125,29.875s-70.625-27.528-70.625-29.875s28.327,3.5,62.5,3.5
+	S550,379.403,550,381.75z"/>
+<g id="eyes-closed" style="display: none;">
+	<circle style="display:inline;fill:#FCB783;" cx="410" cy="238.667" r="57.333"/>
+	<circle style="display:inline;fill:#FCB783;" cx="560" cy="234.667" r="57.333"/>
+	<path style="display:inline;fill:none;stroke:#333333;stroke-width:3;stroke-miterlimit:10;" d="M361,232.667
+		c0,0,9.75,51.083,50,50.333s47.5-50.333,47.5-50.333"/>
+	<path style="display:inline;fill:none;stroke:#333333;stroke-width:3;stroke-miterlimit:10;" d="M512,229.667
+		c0,0,9.75,51.083,50,50.333s47.5-50.333,47.5-50.333"/>
+</g>
+</svg>
