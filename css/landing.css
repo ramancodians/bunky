@@ -1,0 +1,35 @@
+/*Coded Specially for Landing Page
+Styles By : Raman Choudhary
+*/
+/*HELPER CLASSES*/
+.text-red {
+  color: #ce1515; }
+
+#small-per {
+  font-size: 40%; }
+
+.test {
+  border: 1px solid red; }
+
+.name-truncate {
+  width: 92%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis; }
+
+.no-pm {
+  margin: 0px !important;
+  padding: 0px !important; }
+
+body {
+  background: url(../img/bg1.jpeg) no-repeat fixed center;
+  background-size: cover;
+  -webkit-background-size: cover;
+  align: center;
+  position: relative;
+  font-family: sans-serif; }
+  body:after {
+    position: absolute;
+    top: 0px;
+    height: 100%;
+    width: 100%; }

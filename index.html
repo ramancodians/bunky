@@ -30,45 +30,49 @@
       <script src="js/magic.js"></script>
       
   
-<!--       <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=RobotoDraft:300,400,500,700,400italic">-->
+       <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=RobotoDraft:300,400,500,700,400italic">
     <link rel="stylesheet" href="css/style.css">
     <!-- endbuild -->
   </head>
-    <body ng-app="bunky">
-        <div class="card">
-            <header class="clearfix" ng-controller="HeaderCtrl" />
-            
-            
-            <div class="col-xs-1">
-                <img src="img/bunky.png" id="bunky" alt="Bunky-Face" title="Hey!">
-            </div>
-            <div class="col-xs-4">
-                <span id="bunky-text">Bunky</span>
-            </div>
-            <div class="col-xs-7 no-pm">
-                <div class="col-xs-9 no-pm">
-                    <div class="name-truncate username" title="{{d.name}}">{{d.name}}</div>
-                </div>
-                <div class="col-xs-3 no-pm">
-                     <img src="img/user.jpg" class="img-circle img-responsive user-img">
-                    <div class="settings">
-                       <i class="fa fa-ellipsis-v"></i>
-                        
-                        <div class="dropdown">
-                            <ul>
-                                <a href="#">
-                                    <li>Settgings</li>
-                                    <li>Help</li>
-                                    <li>Feedback</li>
-                                    <li>Logout</li>
-                                </a>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            </header>
-            <main ng-view></main>
+    <body ng-app="bunky">       
+       <section class="one">
+             <div class="container">
+          <div class="card login">
+           <h1>MANAGE YOUR ATTENDANCE LIKE A BOSS! </h1>
+           <div class="center-block">
+               <button class="btn btn-success">Login</button>
+               <a href="#/home" class="btn">Know More</a>
+           </div>
         </div>
+        </div>  
+        </section>
+        
+        <section class="two">
+            <div class="container">
+                <div class="center-block text-center">
+                    <img src="img/bunky1.png" class="img-responsive" id="bunky">
+                    <div class="card">
+                        <p><strong>Bunky is a stoned spider-monkey that helps you bunk and recover from a bunking spree.</strong></p>
+                        
+                        <div class="clearfix">
+                            <h2 class="text-left">FEATURES</h2>
+                            
+                            <div class="col-sm-6">
+                                That’s all you need. It is a similar technique to the absolute-position method, but with the upside that we don’t have to set any height on the element or position-property on the parent. It works straight out of the box, even in IE9!
+                            </div>
+                            <div class="col-sm-6">
+                                <img class="img-responsive" src="img/user.jpg">
+                                
+                            </div>
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+        </section>
+     
+        
     </body>
+       
 </html>
