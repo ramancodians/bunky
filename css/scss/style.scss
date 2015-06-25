@@ -14,12 +14,68 @@ $test : #d46868;
     font-family: 'RobotoDraft';
 }
 
+.text-left{
+    text-align: left;
+}
+
 body{
     background: #eeeeee;
     text-align: center;
     position: relative;
     height: 100%;
     width: 100%;
+}
+
+.blur{
+    -webkit-filter: blur(5px);
+    filter: blur(5px);
+    background: rgb(222, 239, 92);
+    transition-duration: 0.2s;
+}
+
+.login-form{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0px;
+    left: 0px;
+    
+    .holder{
+        background: rgba(255,255,255,1);
+        padding: 40px;
+        margin: 50px auto;
+        max-width: 600px;
+        position: relative;
+        top: -50%;
+        transform: translateY(25%);
+        border-bottom: #efefef solid 5px;
+        border-radius: 5px;
+        
+        .close-icon{
+            float: right;
+            color: #ccc;
+            font-size: 25px;
+            cursor: pointer;
+        }
+        
+        h2{
+            margin: 30px;
+        }
+        
+        img{
+            max-width: 120px;
+            margin: 0px auto;
+        }
+        
+        p{
+            color: #ccc;
+        }
+        
+        #add-col a{
+           
+        }
+        
+    }
 }
 
 .card.login{

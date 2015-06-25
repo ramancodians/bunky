@@ -61,7 +61,16 @@ app.controller('HeaderCtrl',['$scope','Attendance',function($scope,Attendance){
 
 
 app.controller('LoginCtrl',function($scope){
+    $scope.loginBox = false;
     $scope.hello = "Hello!!";
+    
+    $scope.toggle = function(){
+        if($scope.loginBox == false){
+            $scope.loginBox = true;
+        }else if($scope.loginBox == true){
+            $scope.loginBox = false;
+        }
+    }
     
     
 

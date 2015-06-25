@@ -5,12 +5,50 @@
   box-sizing: border-box;
   font-family: 'RobotoDraft'; }
 
+.text-left {
+  text-align: left; }
+
 body {
   background: #eeeeee;
   text-align: center;
   position: relative;
   height: 100%;
   width: 100%; }
+
+.blur {
+  -webkit-filter: blur(5px);
+  filter: blur(5px);
+  background: #deef5c;
+  transition-duration: 0.2s; }
+
+.login-form {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0px;
+  left: 0px; }
+  .login-form .holder {
+    background: white;
+    padding: 40px;
+    margin: 50px auto;
+    max-width: 600px;
+    position: relative;
+    top: -50%;
+    transform: translateY(25%);
+    border-bottom: #efefef solid 5px;
+    border-radius: 5px; }
+    .login-form .holder .close-icon {
+      float: right;
+      color: #ccc;
+      font-size: 25px;
+      cursor: pointer; }
+    .login-form .holder h2 {
+      margin: 30px; }
+    .login-form .holder img {
+      max-width: 120px;
+      margin: 0px auto; }
+    .login-form .holder p {
+      color: #ccc; }
 
 .card.login {
   padding-top: 140px; }
