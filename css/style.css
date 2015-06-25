@@ -21,48 +21,31 @@ body {
   background: #deef5c;
   transition-duration: 0.2s; }
 
-.login-form {
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  top: 0px;
-  left: 0px; }
-  .login-form .holder {
-    background: white;
-    padding: 40px;
-    margin: 50px auto;
-    max-width: 600px;
-    position: relative;
-    top: -50%;
-    transform: translateY(25%);
-    border-bottom: #efefef solid 5px;
-    border-radius: 5px; }
-    .login-form .holder .close-icon {
-      float: right;
-      color: #ccc;
-      font-size: 25px;
-      cursor: pointer; }
-    .login-form .holder h2 {
-      margin: 30px; }
-    .login-form .holder img {
-      max-width: 120px;
-      margin: 0px auto; }
-    .login-form .holder p {
-      color: #ccc; }
-
 .card.login {
-  padding-top: 140px; }
-  .card.login h1 {
-    font-size: 50px;
-    padding-bottom: 50px; }
+  padding-top: 40px; }
+  .card.login #bunky-text {
+    font-size: 40px;
+    font-family: "Gloria Hallelujah", cursive;
+    font-weight: 800;
+    color: #802C35; }
+  .card.login #ThisIsWhatWeDoBitch {
+    font-family: "Patua One", cursive;
+    font-size: 60px;
+    padding-bottom: 20px;
+    max-width: 650px;
+    margin: 30px auto; }
+  .card.login #bunky {
+    margin: 0px auto;
+    max-width: 200px;
+    width: 100%; }
+  .card.login .support-college {
+    margin-top: 80px; }
+    .card.login .support-college img {
+      max-width: 160px;
+      opacity: 0.7; }
 
 section.one {
   padding-bottom: 40px; }
-
-section.two #bunky {
-  margin: 0px auto;
-  max-width: 500px;
-  width: 100%; }
 
 section.two .card {
   padding: 40px 20px 100px 20px;

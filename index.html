@@ -31,6 +31,8 @@
       
   
        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=RobotoDraft:300,400,500,700,400italic">
+ <link href='http://fonts.googleapis.com/css?family=Gloria+Hallelujah|Patua+One' rel='stylesheet' type='text/css'>
+      
     <link rel="stylesheet" href="css/style.css">
     <!-- endbuild -->
   </head>
@@ -38,67 +40,36 @@
         
         <div ng-controller="LoginCtrl">
         
-       <div ng-class="{'blur':loginBox == true}" ng-click="toggle()">        
+       <div ng-class="{'blur':loginBox == true}">        
        <section class="one">
              <div class="container">
           <div class="card login">
-           <h1>MANAGE YOUR ATTENDANCE LIKE A BOSS! </h1>
+              
+                                  <img src="img/bunky.png" class="img-responsive" id="bunky">
+              <h1 id="bunky-text">Bunky!</h1>
+                            
+           <h1 id="ThisIsWhatWeDoBitch" >MANAGE YOUR ATTENDANCE </br> LIKE A BOSS! </h1>
            <div class="center-block">
-               <button class="btn btn-success" ng-click="toggle()">Login</button>
-               <a href="#/home" class="btn">Know More</a>
+               <div class="center-block">
+                    <form class="form-inline">
+                    <input type="text"  class="form-control" placeholder="Username"> &nbsp; <input type="password" placeholder="Password" class="form-control">
+                        <button class="btn btn-success">Login</button>
+                   </form>
+                   
+                    <div class="support-college">
+                            <h6>Supported Colleges</h6>
+                            <img src="img/christ-university.png" id="@">
+                            <span id="add-col"><a href="#"> My college is not there! </a>
+                            </span>                     
+                        </div>
+               </div>
+           
            </div>
         </div>
         </div>  
         </section>
         
-        <section class="two">
-            <div class="container">
-                <div class="center-block text-center">
-                    <img src="img/bunky1.png" class="img-responsive" id="bunky">
-                    <div class="card">
-                        <p><strong>Bunky is a stoned spider-monkey that helps you bunk and recover from a bunking spree.</strong></p>
-                    </div>
-                    
-                </div>
-            </div>
-        </section>
-        </div>
-        
-        <div class="login-form" ng-show="loginBox">
-                <div class="container">
-                    <div class="holder">
-                        <span class="close-icon" data-toggle="tooltip" data-placement="bottom" title="Tooltip on bottom" ng-click="toggle();">
-                            <i class="fa fa-remove"></i>
-                            
-                        </span>
-                        
-                        <div class="text-center">
-                            <img class="img-responsive" src="img/bunky.png">
-                        </div>
-                        <h2>Bunky Login</h2>
-                       
-                        <form class="form">
-                            <div class="form-group">
-                                <input type="text" class="form-control" placeholder="Username" ng-model="username">
-                            </div>
-                            <div class="form-group">
-                                <input type="password" class="form-control" placeholder="Password" ng-model="magicword">
-                            </div>
-                                <div class="form-group">
-                               <button class="btn btn-success btn-lg">Login</button>
-                            </div>
-                        </form>
-                        
-                        <div class="text-left">
-                            <h6>Supported Colleges</h6>
-                            <img src="img/christ-university.png">
-                            <span id="add-col"><a href="#"> My college is not there! </a>
-                            </span>                     
-                        </div>
-                    </div>
-            </div>
-        
-        </div>
+    
         </div>
         
     

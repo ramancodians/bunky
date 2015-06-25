@@ -4,7 +4,8 @@ $base-bg : #eaeaea;
 $white : #FFFFFF;
 $green : #39d179;
 $test : #d46868;
-
+$bunky-font : 'Gloria Hallelujah', cursive;
+$hero-font : 'Patua One', cursive;
 
 
 *{
@@ -33,59 +34,42 @@ body{
     transition-duration: 0.2s;
 }
 
-.login-form{
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    top: 0px;
-    left: 0px;
-    
-    .holder{
-        background: rgba(255,255,255,1);
-        padding: 40px;
-        margin: 50px auto;
-        max-width: 600px;
-        position: relative;
-        top: -50%;
-        transform: translateY(25%);
-        border-bottom: #efefef solid 5px;
-        border-radius: 5px;
-        
-        .close-icon{
-            float: right;
-            color: #ccc;
-            font-size: 25px;
-            cursor: pointer;
-        }
-        
-        h2{
-            margin: 30px;
-        }
-        
-        img{
-            max-width: 120px;
-            margin: 0px auto;
-        }
-        
-        p{
-            color: #ccc;
-        }
-        
-        #add-col a{
-           
-        }
-        
-    }
-}
+
 
 .card.login{
     
-    padding-top: 140px;
-    
-    h1{
-        font-size: 50px;
-        padding-bottom: 50px;
+    #bunky-text{
+        font-size: 40px;
+        font-family: $bunky-font;
+        font-weight: 800;
+        color: #802C35;
     }
+    
+    #ThisIsWhatWeDoBitch{
+        font-family: $hero-font;
+          font-size: 60px;
+            padding-bottom: 20px;
+        max-width: 650px;
+        margin: 30px auto;
+    }
+    
+     #bunky{
+        margin: 0px auto;
+        max-width: 200px;
+        width: 100%;
+    }
+    
+    padding-top: 40px;
+    
+ 
+    
+    .support-college{
+        margin-top: 80px;
+            img{
+                max-width: 160px;
+                opacity: 0.7;
+            }
+        }
 }
 
 section.one{
@@ -93,11 +77,7 @@ section.one{
 }
 
 section.two{
-    #bunky{
-        margin: 0px auto;
-        max-width: 500px;
-        width: 100%;
-    }
+   
     
     .card{
         padding: 40px 20px 100px 20px;
@@ -107,5 +87,7 @@ section.two{
         text-align: left;
         line-height: 30px;
         font-size: 18px;
+        
+        
     }
 }
