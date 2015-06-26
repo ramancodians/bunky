@@ -6,26 +6,25 @@ var app = angular.module('bunky',['ngRoute']);
 app .config(['$routeProvider',
   function($routeProvider) {
     $routeProvider.
-      when('/', {
-        templateUrl: 'views/index.html',
+      when('/home', {
+        templateUrl: 'views/home.html',
         controller: 'HomeCtrl'
       })
         .when('/subject/:subjectID',{
             templateUrl : 'views/subject.html',
             controller : 'SubjectCtrl'
         })
-    .when('/home',{
-            templateUrl : 'views/home.html',
-            controller : 'HomeCtrl'
+    .when('/login',{
+            templateUrl : 'views/login.html',
+            controller : 'LoginCtrl'
         })
       .otherwise({
-        redirectTo: '/'
+        redirectTo: '/home'
       });
   }]);
 
 /*CONTROLLER
 ***********************************************************************************/
-
 
 app.controller('HomeCtrl',['$scope','Attendance',function($scope,Attendance){
     
@@ -47,10 +46,21 @@ app.controller('HomeCtrl',['$scope','Attendance',function($scope,Attendance){
         }
     }
     
+    
 }]);
 
+app.controller('HeaderCtrl',['$scope','Attendance',function($scope,Attendance){
     
-    app.controller('LoginCtrl',function($scope){
+    Attendance.fetch().then(function(data) {
+        $scope.d = data;
+        $scope.d.percentage = data.attendance.percentage;
+        console.log($scope.d.percentage);
+    });
+    
+}]);
+
+
+app.controller('LoginCtrl',function($scope){
     $scope.loginBox = false;
     $scope.hello = "Hello!!";
     
@@ -66,6 +76,27 @@ app.controller('HomeCtrl',['$scope','Attendance',function($scope,Attendance){
 
 });
 
+app.controller('SubjectCtrl',['$routeParams','$scope','Attendance',function($routeParams, $scope,Attendance){
+   
+    $scope.dropdown = false;
+    
+   $scope.toggle = function(){
+        console.log($scope.dropdown);
+        if($scope.dropdown == false){
+            $scope.dropdown = true;
+        }else if($scope.dropdown == true){
+            $scope.dropdown = false;
+        }
+    }
+    
+    //fetcging the Data from service
+    Attendance.fetch().then(function(data) {
+        $scope.d = data.attendance.subjects[$routeParams.subjectID];
+        console.log($scope.d);
+    });
+     $scope.whichSub = $routeParams.subjectID;
+    
+}]);
 
 
 

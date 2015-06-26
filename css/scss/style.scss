@@ -21,6 +21,8 @@ $hero-font : 'Patua One', cursive;
 
 body{
     background: #eeeeee;
+    background: url(../img/graphy.png) repeat, rgba(200,0,0,0.6);
+   
     text-align: center;
     position: relative;
     height: 100%;
@@ -37,6 +39,7 @@ body{
 
 
 .card.login{
+        padding-top: 40px;
     
     #bunky-text{
         font-size: 40px;
@@ -59,7 +62,7 @@ body{
         width: 100%;
     }
     
-    padding-top: 40px;
+
     
  
     
@@ -74,20 +77,4 @@ body{
 
 section.one{
     padding-bottom: 40px;
-}
-
-section.two{
-   
-    
-    .card{
-        padding: 40px 20px 100px 20px;
-        background: #fff;
-        margin: 0px auto;
-        transform: translateY(-75px);
-        text-align: left;
-        line-height: 30px;
-        font-size: 18px;
-        
-        
-    }
 }
