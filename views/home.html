@@ -2,7 +2,7 @@
 <div class="overall clearfix">
     <div class="col-sm-6 text-center">
         <h4 class="text-center">Attendance</h4>
-        <h1 id="percentage" ng-class="{'text-a90-100':d.attendance.percentage <=100 && d.attendance.percentage >90, 'text-a85-90': d.attendance.percentage <= 90 && d.attendance.percentage > 85,'text-a80-85' :d.attendance.percentage <= 85 && d.attendance.percentage > 80, 'text-a75-80' : d.attendance.percentage <= 80 && d.attendance.percentage > 75, 'text-a70-75': d.attendance.percentage <= 75 && d.attendance.percentage > 70, 'text-a40-70': d.attendance.percentage <= 70 && d.attendance.percentage > 40, 'text-a10-40': d.attendance.percentage <= 40 && d.attendance.percentage > 10, 'text-a0-10': d.attendance.percentage <= 10 && d.attendance.percentage > 0}">{{d.attendance.percentage}}<span>%</span></h1>
+        <h1 id="percentage" app-colorify="d.attendance">{{d.attendance.percentage}}<span>%</span></h1>
     </div>
     <div class="col-sm-6 attendance-details">
         <div class="row">

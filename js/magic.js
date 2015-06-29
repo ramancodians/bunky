@@ -98,3 +98,23 @@ app.factory('Attendance', function($q, $timeout, $http) {
 
 /*DIRECTIVES
 ****************************************************************************/
+app.directive('appColorify',function(){
+   var linker = function(scope,element,attrs){
+       var showOut  = function(){
+           console.log(element[0].innerHTML);
+            console.log('Attrs = ' + attrs[0]);
+        }
+       $(this).on('click',showOut);
+   };
+   
+  
+   
+   return {
+        restrict : 'A',
+        link : linker,
+        scope: {
+         tag : '='
+       }
+   
+   }
+});
