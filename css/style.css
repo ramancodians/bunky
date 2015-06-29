@@ -27,8 +27,7 @@
 
 #page-content-wrapper {
   width: 100%;
-  position: absolute;
-  padding: 15px; }
+  position: absolute; }
 
 #wrapper.toggled #page-content-wrapper {
   position: absolute;
@@ -45,7 +44,7 @@
 
 .sidebar-nav li {
   text-indent: 20px;
-  line-height: 50px; }
+  line-height: 60px; }
 
 .sidebar-nav li a {
   display: block;
@@ -83,7 +82,6 @@
   #wrapper.toggled #sidebar-wrapper {
     width: 0; }
   #page-content-wrapper {
-    padding: 20px;
     position: relative; }
   #wrapper.toggled #page-content-wrapper {
     position: relative;
@@ -105,7 +103,7 @@
   text-align: left; }
 
 body {
-  background: whitesmoke;
+  background: #F6F6F6;
   text-align: center;
   position: relative;
   height: 100%;
@@ -123,14 +121,11 @@ body {
     font-size: 40px;
     font-family: "Gloria Hallelujah", cursive;
     font-weight: 800;
-    color: #7c262f; }
+    color: #ffffff; }
   .card.login #ThisIsWhatWeDoBitch {
     font-family: "Patua One", cursive;
     font-size: 60px;
     padding-bottom: 10px;
-    -webkit-text-stroke-width: 1px;
-    font-weight: bold;
-    -webkit-text-stroke-color: #fff;
     margin: 10px auto; }
   .card.login #bunky {
     margin: 0px auto;
@@ -146,43 +141,69 @@ section.one {
   padding-bottom: 40px; }
 
 /*Home Styles*/
+.home .user-panel {
+  background: #FFFFFF;
+  border-bottom: 1px solid #F1F1F1;
+  padding: 30px; }
+  .home .user-panel span, .home .user-panel #user {
+    display: inline-block; }
+  .home .user-panel #user {
+    max-width: 60px;
+    margin-right: 15px; }
+
+.home .bshifter {
+  transform: translateY(10px); }
+
 .home .nv {
   font-size: 20px;
   transform: translateX(-15px);
-  width: 40px;
+  width: 50px;
   height: 25px;
   display: inline-block; }
 
 .home #sidebar-wrapper {
-  background: #ffffff;
-  border-right: 1px solid #ebebeb; }
+  background: #333645; }
+  .home #sidebar-wrapper img#bunky-img {
+    max-width: 60px;
+    display: block;
+    margin: 0px auto;
+    padding-top: 20px; }
+
+.home .sidebar-nav li.active > .fa {
+  color: #53A8BB; }
 
 .home .sidebar-nav li.active {
-  background: whitesmoke;
-  border-left: 8px solid #cdcdcd;
-  color: #fafafa !important; }
+  background: #292c3b;
+  color: #ffffff !important;
+  font-weight: bold; }
   .home .sidebar-nav li.active:hover {
-    background: #ebebeb; }
+    background: #1E202C; }
   .home .sidebar-nav li.active:last-child {
     border: none; }
 
-.home .sidebar-nav li {
-  border-bottom: 1px solid #ebebeb; }
+.home .sidebar-brand {
+  height: 120px;
+  background: #A48AD4; }
 
 .home .sidebar-nav li a {
-  color: #86242E;
-  font-size: 14px;
-  font-weight: bold; }
+  color: #a2a2a2;
+  font-size: 13px;
+  font-weight: 600;
+  text-transform: uppercase; }
 
 .home .main {
-  padding-top: 20px; }
+  padding-top: 20px;
+  max-width: 900px; }
 
 .home .panel {
   padding: 30px;
   margin-top: 20px;
   margin-left: 0px;
-  border-bottom: 2px solid #d4d4d4;
-  border-bottom: 1px solid #e6e6e6; }
+  border-radius: 5px;
+  border: 1px solid #e3e3e3;
+  border-bottom: 3px solid #e0dddd;
+  min-height: 200px;
+  background: rgba(255, 255, 255, 0.5); }
   .home .panel .sub-text {
     color: #808080;
     line-height: 20px; }
@@ -220,8 +241,10 @@ section.one {
 
 .home #bunky {
   font-size: 25px;
-  transform: translateY(6px);
-  display: inline-block;
+  display: block;
+  text-align: center;
+  width: 100%;
+  transform: translate(-8px, -20px);
   font-family: "Gloria Hallelujah", cursive;
   font-weight: 800;
-  color: #7c262f; }
+  color: #ffffff; }

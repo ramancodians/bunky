@@ -8,10 +8,13 @@
         <!-- Sidebar -->
         <div id="sidebar-wrapper">
             <ul class="sidebar-nav text-left">
-                <li class="sidebar-brand">
-                    <a href="#">
-                       <img src="img/bunky.png" style="width: 50px; height: auto; display: inline-block;"><span id="bunky">Bunky</span>
-                    </a>
+                <li class="sidebar-brand text-center" id="first">
+                    
+                        <span class="bshifter">
+                       <img src="img/bunky.png" id="bunky-img">
+                        <span id="bunky">Bunky!</span>
+                        </span>
+                   
                 </li>
                 <li class="active">
                     <a href="#"><i class="fa nv fa-home"></i>Dashboard</a>
@@ -44,13 +47,24 @@
 
         <!-- Page Content -->
         <div id="page-content-wrapper">
-            <div class="container-fluid main text-left">
-         
+            
+            <div class="user-panel text-left">
+                <img src="img/user.jpg" class="img-circle" id="user">
+                <span>
+                   <strong> Raman Choudhary</strong><br/>
+                </span>  
+              
+                <span class="pul pull-right" style="top: 0px; line-height: 60px;">
+                    <button class="btn">Logout</button>
+                </span>
                 
-                <div>
+            </div>
+            <div class="container-fluid main text-left">
+                
+                
+            
                     <div class="col-lg-12">
                         <div class="overall clearfix">
-                            
                                    <span class="you-are-fucked">
                     <i class="fa fa-exclamation-circle"></i>
                 </span>
@@ -75,18 +89,32 @@
                             </div>
                         </div>
                         
-                        
-                        <div>
-                            <div class="col-sm-4 no-pm">
+                        <!--Card Area-->
+                            <div class="col-sm-4">
                                 <div class="panel">
                                     <h5 class="sub-text">HOW MANY CLASSES NEED TO ATTEND TO TAKE 75%</h5>
                                     <h1 class="lt">43 <small>Classes</small>  </h1>
                                 </div>
                                 
                             </div>
-                        </div>
+                         <div class="col-sm-4 col-sm-6" ng-repeat="subject in d.attendance.subjects">
+                                <div class="panel">
+                                    <h5 class="sub-text">{{subject.name}}</h5>
+                                    <h1 class="lt">{{subject.percentage}} <small>&</small>  </h1>
+                                    <div>
+                                    <span class="con">C : {{subject.conducted}}</span> |
+                                    <span class="pre">P : {{subject.present}}</span> |
+                                    <span class="abs">A : {{subject.absent}}</span>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        
+                        
+                        <!--Card Area Ends-->
+                        
                     </div>
-                </div>
+
             </div>
         </div>
         <!-- /#page-content-wrapper -->
