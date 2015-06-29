@@ -1,3 +1,94 @@
+#wrapper {
+  padding-left: 0;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease; }
+
+#wrapper.toggled {
+  padding-left: 250px; }
+
+#sidebar-wrapper {
+  z-index: 1000;
+  position: fixed;
+  left: 250px;
+  width: 0;
+  height: 100%;
+  margin-left: -250px;
+  overflow-y: auto;
+  background: #000;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease; }
+
+#wrapper.toggled #sidebar-wrapper {
+  width: 250px; }
+
+#page-content-wrapper {
+  width: 100%;
+  position: absolute;
+  padding: 15px; }
+
+#wrapper.toggled #page-content-wrapper {
+  position: absolute;
+  margin-right: -250px; }
+
+/* Sidebar Styles */
+.sidebar-nav {
+  position: absolute;
+  top: 0;
+  width: 250px;
+  margin: 0;
+  padding: 0;
+  list-style: none; }
+
+.sidebar-nav li {
+  text-indent: 20px;
+  line-height: 50px; }
+
+.sidebar-nav li a {
+  display: block;
+  text-decoration: none;
+  color: #999999; }
+
+.sidebar-nav li a:hover {
+  text-decoration: none;
+  color: #fff;
+  background: rgba(255, 255, 255, 0.2); }
+
+.sidebar-nav li a:active,
+.sidebar-nav li a:focus {
+  text-decoration: none; }
+
+.sidebar-nav > .sidebar-brand {
+  height: 65px;
+  font-size: 18px;
+  line-height: 60px; }
+
+.sidebar-nav > .sidebar-brand a {
+  color: #999999; }
+
+.sidebar-nav > .sidebar-brand a:hover {
+  color: #fff;
+  background: none; }
+
+@media (min-width: 768px) {
+  #wrapper {
+    padding-left: 250px; }
+  #wrapper.toggled {
+    padding-left: 0; }
+  #sidebar-wrapper {
+    width: 250px; }
+  #wrapper.toggled #sidebar-wrapper {
+    width: 0; }
+  #page-content-wrapper {
+    padding: 20px;
+    position: relative; }
+  #wrapper.toggled #page-content-wrapper {
+    position: relative;
+    margin-right: 0; } }
+
 /*COLOR VARIABLES*/
 * {
   padding: 0px;
@@ -28,13 +119,12 @@ body {
     font-size: 40px;
     font-family: "Gloria Hallelujah", cursive;
     font-weight: 800;
-    color: #802C35; }
+    color: "#7c262f"; }
   .card.login #ThisIsWhatWeDoBitch {
     font-family: "Patua One", cursive;
     font-size: 60px;
-    padding-bottom: 20px;
-    max-width: 650px;
-    margin: 30px auto; }
+    padding-bottom: 10px;
+    margin: 10px auto; }
   .card.login #bunky {
     margin: 0px auto;
     max-width: 200px;
@@ -47,3 +137,33 @@ body {
 
 section.one {
   padding-bottom: 40px; }
+
+/*Home Styles*/
+.home .nv {
+  font-size: 20px;
+  transform: translateX(-15px); }
+
+.home .main {
+  padding-top: 20px; }
+
+.home .overall {
+  padding: 40px;
+  background: #fff;
+  border-radius: 4px;
+  width: 100%;
+  height: auto; }
+  .home .overall label {
+    font-size: 16px;
+    color: #727272; }
+  .home .overall #percentage {
+    font-size: 50px;
+    font-weight: 100;
+    display: block; }
+
+.home #bunky {
+  font-size: 25px;
+  transform: translateY(6px);
+  display: inline-block;
+  font-family: "Gloria Hallelujah", cursive;
+  font-weight: 800;
+  color: "#7c262f"; }
