@@ -90,18 +90,22 @@
     margin-right: 0; } }
 
 /*COLOR VARIABLES*/
+/*$body-bg : url(../img/graphy.png) repeat, rgba(200,0,0,0.6);*/
 * {
   padding: 0px;
   margin: 0px;
   box-sizing: border-box;
   font-family: 'RobotoDraft'; }
 
+.no-pm {
+  margin: 0px !important;
+  padding: 0px !important; }
+
 .text-left {
   text-align: left; }
 
 body {
-  background: #eeeeee;
-  background: url(../img/graphy.png) repeat, rgba(200, 0, 0, 0.6);
+  background: whitesmoke;
   text-align: center;
   position: relative;
   height: 100%;
@@ -119,15 +123,18 @@ body {
     font-size: 40px;
     font-family: "Gloria Hallelujah", cursive;
     font-weight: 800;
-    color: "#7c262f"; }
+    color: #7c262f; }
   .card.login #ThisIsWhatWeDoBitch {
     font-family: "Patua One", cursive;
     font-size: 60px;
     padding-bottom: 10px;
+    -webkit-text-stroke-width: 1px;
+    font-weight: bold;
+    -webkit-text-stroke-color: #fff;
     margin: 10px auto; }
   .card.login #bunky {
     margin: 0px auto;
-    max-width: 200px;
+    max-width: 160px;
     width: 100%; }
   .card.login .support-college {
     margin-top: 80px; }
@@ -141,17 +148,68 @@ section.one {
 /*Home Styles*/
 .home .nv {
   font-size: 20px;
-  transform: translateX(-15px); }
+  transform: translateX(-15px);
+  width: 40px;
+  height: 25px;
+  display: inline-block; }
+
+.home #sidebar-wrapper {
+  background: #ffffff;
+  border-right: 1px solid #ebebeb; }
+
+.home .sidebar-nav li.active {
+  background: whitesmoke;
+  border-left: 8px solid #cdcdcd;
+  color: #fafafa !important; }
+  .home .sidebar-nav li.active:hover {
+    background: #ebebeb; }
+  .home .sidebar-nav li.active:last-child {
+    border: none; }
+
+.home .sidebar-nav li {
+  border-bottom: 1px solid #ebebeb; }
+
+.home .sidebar-nav li a {
+  color: #86242E;
+  font-size: 14px;
+  font-weight: bold; }
 
 .home .main {
   padding-top: 20px; }
 
+.home .panel {
+  padding: 30px;
+  margin-top: 20px;
+  margin-left: 0px;
+  border-bottom: 2px solid #d4d4d4;
+  border-bottom: 1px solid #e6e6e6; }
+  .home .panel .sub-text {
+    color: #808080;
+    line-height: 20px; }
+  .home .panel .lt {
+    font-size: 50px; }
+    .home .panel .lt small {
+      font-size: 18px;
+      font-weight: bold; }
+
 .home .overall {
   padding: 40px;
-  background: #fff;
+  background: #ffffff;
   border-radius: 4px;
+  position: relative;
   width: 100%;
-  height: auto; }
+  height: auto;
+  border: 1px solid #d32828;
+  border-bottom: 10px solid #d32828; }
+  .home .overall .you-are-fucked {
+    position: absolute;
+    top: -20px;
+    left: -10px;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    font-size: 45px;
+    color: #d32828; }
   .home .overall label {
     font-size: 16px;
     color: #727272; }
@@ -166,4 +224,4 @@ section.one {
   display: inline-block;
   font-family: "Gloria Hallelujah", cursive;
   font-weight: 800;
-  color: "#7c262f"; }
+  color: #7c262f; }
