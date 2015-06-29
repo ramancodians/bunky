@@ -1,4 +1,8 @@
+
+
+
 <div ng-controller="HomeCtrl">
+<<<<<<< HEAD
 <div class="overall clearfix">
     <div class="col-sm-6 text-center">
         <h4 class="text-center">Attendance</h4>
@@ -9,107 +13,98 @@
             <div class="col-xs-4">
                 <span class="text-info">Conducted</span>
                 <h1 class="text-info">{{d.attendance.conducted}}</h1>
+
+    
+    <div id="wrapper" class="home">
+
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper">
+            <ul class="sidebar-nav text-left">
+                <li class="sidebar-brand">
+                    <a href="#">
+                       <img src="img/bunky.png" style="width: 50px; height: auto; display: inline-block;"><span id="bunky">Bunky</span>
+                    </a>
+                </li>
+                <li class="active">
+                    <a href="#"><i class="fa nv fa-home"></i>Dashboard</a>
+                </li>
+                <li>
+                    <a href="#"><i class="fa nv fa-line-chart"></i>Subjects</a>
+                </li>
+                <li>
+                    <a href="#"><i class="fa nv fa-question"></i>Can I Bunk?</a>
+                </li>
+                <li>
+                    <a href="#"><i class="fa nv fa-calendar"></i>Plan a Holiday</a>
+                </li>
+                <li>
+                    <a href="#"><i class="fa nv fa-envolop"></i>Feedback</a>
+                </li>
+                
+               <p style="padding: 20px; font-size: 11px; color : #ccc;" class="text-center">
+                made with <i class="fa fa-heart-o"></i><br/> by ironman & batman
+
             
-            </div>
-            <div class="col-xs-4">
-                <span class="text-success">Present</span>
-                <h1 class="text-success">{{d.attendance.present}}</h1>
+            </p>
+                
+                
+            </ul>
             
-            </div>
-            <div class="col-xs-4">
-                <span class="text-red">Absent</span>
-                <h1 class="text-red">{{d.attendance.absent}}</h1>
-            </div>
+           
+            
         </div>
-    </div>
-</div>
-    
-<!--Toolbar-->
-<div class="toolbar clearfix">
-    <div class="col-xs-3">
-        <div class="inner">
-           <i class="fa fa-question"></i> What Should I Do?
-        </div>
-    </div>
-    <div class="col-xs-3">
-        <div class="inner">
-            <i class="fa fa-hotel"></i> Can I Bunk?
-        </div>
-    </div>
-    <div class="col-xs-3">
-        <div class="inner">
-            <i class="fa fa-calendar"></i> Plan a Holiday
-        </div>
-    </div>
-    <div class="col-xs-3">
-        <div class="inner">
-            <i class="fa fa-facebook"></i> Share
-        </div>
-    </div>
-    
-    </div>
-    
-<!--Bunk Chart-->
-<div class="bunk-chart" >
-   <div class="header" ng-click="toggle();">
-       <span>Bunk Chart</span>
-       <span class="pull pull-right">
-        <i class="fa fa-arrow-down text-info"></i>
-       </span>
-    </div>
-    
-      <div class="dropdown animate" ng-show="dropdown">
-          <div class="labels clearfix">
-            <h6>Labels</h6>
-              <div class="label-holder">
-                <span ng-repeat="(key,value) in d.bunkedSubjects" class="name-truncate"><span class="s-color"></span>  {{value}}</span>
-              </div>
-              
-          </div>
-          
-          
-          <!--NgRepeat Block-->
-          <div ng-repeat="(key,value) in d.attendance.bunked" class="day clearfix">
-            <div class="col-xs-3 ">
-              <div class="name-truncate">
-                {{$index + 1}} | {{key}}
+        <!-- /#sidebar-wrapper -->
+
+        <!-- Page Content -->
+        <div id="page-content-wrapper">
+            <div class="container-fluid main text-left">
+         
+                
+                <div>
+                    <div class="col-lg-12">
+                        <div class="overall clearfix">
+                            
+                                   <span class="you-are-fucked">
+                    <i class="fa fa-exclamation-circle"></i>
+                </span>
+                            
+                             <div class="col-md-6">
+                            <label> Overall Attendance</label>
+                          <span id="percentage">
+                            78.43%
+                          </span>
+                        </div>
+                            <div class="col-md-6"><div>
+                                <div class="col-xs-4">Conducted
+                                <h1>232</h1>
+                                </div>
+                                <div class="col-xs-4">Present
+                                <h1>200</h1>
+                                </div>
+                                <div class="col-xs-4">Absent
+                                <h1>32</h1>
+                                </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        
+                        <div>
+                            <div class="col-sm-4 no-pm">
+                                <div class="panel">
+                                    <h5 class="sub-text">HOW MANY CLASSES NEED TO ATTEND TO TAKE 75%</h5>
+                                    <h1 class="lt">43 <small>Classes</small>  </h1>
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div>
                 </div>
-              </div>
-            <div class="col-xs-9">
-                <div class="bunky-holder">
-                <!--Bunk Block Repeat-->
-                    <span id="bunky" ng-repeat="bunky in value track by $index">$</span>
-                    
-                </div>  
             </div>
-          </div>
-      </div>
-</div>
-    
-    
-    
-    
-<div class="subject-list">
-<!--     ng-class="{'text-a90-100':subject.percentage <=100 && subject.percentage >90, 'text-a85-90': subject.percentage <= 90 && subject.percentage > 85,'a80-85' :subject.percentage <= 85 && subject.percentage > 80, 'text-a75-80' : subject.percentage <= 80 && subject.percentage > 75, 'text-a70-75': subject.percentage <= 75 && subject.percentage > 70, 'text-a40-70': subject.percentage <= 70 && subject.percentage > 40, 'text-a10-40': subject.percentage <= 40 && subject.percentage > 10, 'text-a0-10': subject.percentage <= 10 && subject.percentage > 0}"-->
-    
-    <ul>
-        <a ng-repeat="subject in d.attendance.subjects" href="#subject/{{$index}}" class="animate slideInUp">
-        <li>
-            <span id="sub-percentage" ng-class="{'text-a90-100':subject.percentage <=100 && subject.percentage >90, 'text-a85-90': subject.percentage <= 90 && subject.percentage > 85,'text-a80-85' :subject.percentage <= 85 && subject.percentage > 80, 'text-a75-80' : subject.percentage <= 80 && subject.percentage > 75, 'text-a70-75': subject.percentage <= 75 && subject.percentage > 70, 'text-a40-70': subject.percentage <= 70 && subject.percentage > 40, 'text-a10-40': subject.percentage <= 40 && subject.percentage > 10, 'text-a0-10': subject.percentage <= 10 && subject.percentage > 0}">
-                {{subject.percentage}}<span id="small-per">%</span>
-            </span>
-            
-            <div>
-                <strong>{{subject.name}} | <em>{{subject.type}}</em>
-                </strong>
-            </div>
-            <div>
-                <span>C : {{subject.conducted}}</span> | 
-                <span>P : {{subject.present}}</span> | 
-                <span>A : {{subject.absent}}</span>  
-            </div>
-        </li>
-        </a>
-    </ul>
-</div>
+        </div>
+        <!-- /#page-content-wrapper -->
+
+    </div>
+    <!-- /#wrapper -->
+   
 </div>

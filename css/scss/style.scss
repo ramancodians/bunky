@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 @import 'variables';
+
+@import 'sidemenu';
+
 
 /*COLOR VARIABLES*/
 $base-bg : #eaeaea;
@@ -7,6 +11,12 @@ $green : #39d179;
 $test : #d46868;
 $bunky-font : 'Gloria Hallelujah', cursive;
 $hero-font : 'Patua One', cursive;
+$bunky-text-color : #7c262f;
+
+$sidebar-color: #ffffff;
+$overall-color : #ffffff;
+$body-bg : $sidebar-color - 10;
+/*$body-bg : url(../img/graphy.png) repeat, rgba(200,0,0,0.6);*/
 
 
 *{
@@ -16,14 +26,17 @@ $hero-font : 'Patua One', cursive;
     font-family: 'RobotoDraft';
 }
 
+.no-pm{
+    margin: 0px !important;
+    padding: 0px !important;
+}
+
 .text-left{
     text-align: left;
 }
 
 body{
-    background: #eeeeee;
-    background: url(../img/graphy.png) repeat, rgba(200,0,0,0.6);
-   
+    background: $body-bg;
     text-align: center;
     position: relative;
     height: 100%;
@@ -46,26 +59,27 @@ body{
         font-size: 40px;
         font-family: $bunky-font;
         font-weight: 800;
-        color: #802C35;
+        color: $bunky-text-color;
     }
     
     #ThisIsWhatWeDoBitch{
         font-family: $hero-font;
           font-size: 60px;
-            padding-bottom: 20px;
-        max-width: 650px;
-        margin: 30px auto;
+            padding-bottom: 10px;
+         -webkit-text-stroke-width: 1px;
+        font-weight: bold;
+   -webkit-text-stroke-color: #fff;
+       
+        margin: 10px auto;
     }
     
      #bunky{
         margin: 0px auto;
-        max-width: 200px;
+        max-width: 160px;
         width: 100%;
     }
     
-
     
- 
     
     .support-college{
         margin-top: 80px;
@@ -78,4 +92,117 @@ body{
 
 section.one{
     padding-bottom: 40px;
+}
+
+/*Home Styles*/
+
+.home{
+    .nv{
+        font-size: 20px;
+        transform: translateX(-15px);
+        width: 40px;
+        height: 25px;
+        display: inline-block;
+    }
+    
+    #sidebar-wrapper{
+        background: $sidebar-color;
+        border-right: 1px solid $sidebar-color - 20;
+    }
+    
+    .sidebar-nav li.active {
+        background: $sidebar-color - 10;
+        border-left: 8px solid $sidebar-color - 50;
+        color: #fafafa !important;
+        
+        &:hover{
+            background: $sidebar-color - 20;
+        }
+        
+        &:last-child{
+            border: none;
+        }
+    }
+    
+    
+    .sidebar-nav li{
+        border-bottom: 1px solid $sidebar-color - 20;
+    }
+    .sidebar-nav li a {
+        color: #86242E;
+        font-size: 14px;
+        font-weight: bold;
+    }
+
+    
+    .main{
+        padding-top: 20px;
+    }
+    
+    .panel{
+        padding: 30px;
+        margin-top: 20px;
+        margin-left: 0px;
+        border-bottom: 2px solid #d4d4d4;
+        border-bottom: 1px solid #e6e6e6;
+        
+        .sub-text{
+            color: #808080;
+            line-height: 20px;
+        }
+        
+        .lt{
+            font-size: 50px;
+            
+            small{
+                font-size: 18px;
+                font-weight: bold;
+            }
+        }
+    }
+    
+        .overall{
+            padding: 40px;
+            background: $overall-color;
+            border-radius: 4px;
+            position: relative;
+            width: 100%;
+            height: auto;
+            border: 1px solid rgb(211, 40, 40);
+            border-bottom: 10px solid rgb(211, 40, 40);
+            
+            .you-are-fucked{
+                position: absolute;
+                top: -20px;
+                left: -10px;
+                border-radius: 50%;
+                width:  60px;
+                height: 60px;
+                font-size: 45px;
+                color: rgb(211, 40, 40);
+            }
+            
+            
+            label{
+                font-size: 16px;
+                color: #727272;
+            }
+            
+            #percentage{
+                font-size: 50px;
+                font-weight: 100;
+                display: block;
+                
+            }
+    }
+    
+    #bunky{
+        font-size: 25px;
+        transform: translateY(6px);
+        display: inline-block;
+        font-family: $bunky-font;
+        font-weight: 800;
+        color: $bunky-text-color;
+    }
+    
 }
