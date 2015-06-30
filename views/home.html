@@ -2,6 +2,18 @@
 
 
 <div ng-controller="HomeCtrl">
+
+<div class="overall clearfix">
+    <div class="col-sm-6 text-center">
+        <h4 class="text-center">Attendance</h4>
+        <h1 id="percentage" app-colorify="d.attendance">{{d.attendance.percentage}}<span>%</span></h1>
+    </div>
+    <div class="col-sm-6 attendance-details">
+        <div class="row">
+            <div class="col-xs-4">
+                <span class="text-info">Conducted</span>
+                <h1 class="text-info">{{d.attendance.conducted}}</h1>
+
     
     <div id="wrapper" class="home">
 
@@ -34,6 +46,7 @@
                 
                <p style="padding: 20px; font-size: 11px; color : #ccc;" class="text-center">
                 made with <i class="fa fa-heart-o"></i><br/> by ironman & batman
+
             
             </p>
                 
