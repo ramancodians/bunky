@@ -154,7 +154,7 @@
   text-align: left; }
 
 body {
-  background: #f4f4f4 !important;
+  background: #F4F4F4 !important;
   text-align: center;
   position: relative;
   height: 100%;
@@ -256,8 +256,8 @@ section.one {
   min-height: 230px;
   background: white; }
   .home .panel .sub-text {
-    color: #808080;
-    line-height: 20px; }
+    line-height: 20px;
+    color: #A48AD4; }
   .home .panel h1 {
     font-weight: 100; }
   .home .panel .lt {
@@ -267,7 +267,7 @@ section.one {
       font-weight: bold; }
 
 .home .overall {
-  padding: 40px;
+  padding: 60px 40px;
   background: #ffffff;
   border-radius: 4px;
   position: relative;
@@ -286,7 +286,7 @@ section.one {
     color: #d32828; }
   .home .overall label {
     font-size: 16px;
-    color: #727272; }
+    color: #A48AD4; }
   .home .overall #percentage {
     font-size: 50px;
     font-weight: 100;

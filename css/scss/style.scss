@@ -15,7 +15,7 @@ $userpanel-color: #FFFFFF;
 
 $sidebar-color: #333645;
 $overall-color : #ffffff;
-$body-bg : #f4f4f4;
+$body-bg : #F4F4F4;
 /*$body-bg : url(../img/graphy.png) repeat, rgba(200,0,0,0.6);*/
 
 
@@ -185,8 +185,9 @@ section.one{
         background: rgba(255,255,255,1);
         
         .sub-text{
-            color: #808080;
             line-height: 20px;
+            color: #A48AD4;
+
         }
         
         h1{
@@ -204,7 +205,7 @@ section.one{
     }
     
         .overall{
-            padding: 40px;
+            padding: 60px 40px;
             background: $overall-color;
             border-radius: 4px;
             position: relative;
@@ -227,7 +228,7 @@ section.one{
             
             label{
                 font-size: 16px;
-                color: #727272;
+                color: #A48AD4;
             }
             
             #percentage{
