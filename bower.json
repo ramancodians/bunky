@@ -9,7 +9,9 @@
     "angular-route": "^1.3.0",
     "angular-sanitize": "^1.3.0",
     "angular-touch": "^1.3.0",
-    "jquery": "~2.1.4"
+    "jquery": "~2.1.4",
+    "bootstrap": "~3.3.5",
+    "font-awesome": "~4.3.0"
   },
   "authors": [
     "Raman Choudhary <raman.choudhary65@gmail.com>"
