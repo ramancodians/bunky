@@ -2,19 +2,6 @@
 
 
 <div ng-controller="HomeCtrl">
-
-<div class="overall clearfix">
-    <div class="col-sm-6 text-center">
-        <h4 class="text-center">Attendance</h4>
-        <h1 id="percentage" app-colorify="d.attendance">{{d.attendance.percentage}}<span>%</span></h1>
-    </div>
-    <div class="col-sm-6 attendance-details">
-        <div class="row">
-            <div class="col-xs-4">
-                <span class="text-info">Conducted</span>
-                <h1 class="text-info">{{d.attendance.conducted}}</h1>
-
-    
     <div id="wrapper" class="home">
 
         <!-- Sidebar -->
@@ -31,9 +18,7 @@
                 <li class="active">
                     <a href="#"><i class="fa nv fa-home"></i>Dashboard</a>
                 </li>
-                <li>
-                    <a href="#"><i class="fa nv fa-line-chart"></i>Subjects</a>
-                </li>
+              
                 <li>
                     <a href="#"><i class="fa nv fa-question"></i>Can I Bunk?</a>
                 </li>
@@ -105,12 +90,32 @@
                         <!--Card Area-->
                             <div class="col-sm-4">
                                 <div class="panel">
-                                    <h5 class="sub-text">HOW MANY CLASSES NEED TO ATTEND TO TAKE 75%</h5>
-                                    <h1 class="lt">43 <small>Classes</small>  </h1>
+                                    <h5 class="sub-text">
+                                        HOW MANY CLASSES NEED TO ATTEND TO MAKE 
+                                        <select class="form-controll">
+                                            <option>
+                                                100%
+                                            </option>
+                                            <option>
+                                                90%
+                                            </option>
+                                            <option>
+                                                85%
+                                            </option>
+                                            <option>
+                                                80%
+                                            </option>
+                                            <option>
+                                                75%
+                                            </option>
+                                        
+                                        
+                                        </select></h5>
+                                    <h1 class="lt">46 <small>Classes</small>  </h1>
                                 </div>
                                 
                             </div>
-                         <div class="col-sm-4 col-sm-6" ng-repeat="subject in d.attendance.subjects">
+                         <div class="col-md-4 col-sm-6" ng-repeat="subject in d.attendance.subjects">
                                 <div class="panel">
                                     <h5 class="sub-text">{{subject.name}}</h5>
                                     <h1 class="lt">{{subject.percentage}} <small>&</small>  </h1>

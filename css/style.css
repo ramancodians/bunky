@@ -154,7 +154,7 @@
   text-align: left; }
 
 body {
-  background: #F6F6F6;
+  background: #f4f4f4 !important;
   text-align: center;
   position: relative;
   height: 100%;
@@ -253,11 +253,13 @@ section.one {
   border-radius: 5px;
   border: 1px solid #e3e3e3;
   border-bottom: 3px solid #e0dddd;
-  min-height: 200px;
-  background: rgba(255, 255, 255, 0.5); }
+  min-height: 230px;
+  background: white; }
   .home .panel .sub-text {
     color: #808080;
     line-height: 20px; }
+  .home .panel h1 {
+    font-weight: 100; }
   .home .panel .lt {
     font-size: 50px; }
     .home .panel .lt small {

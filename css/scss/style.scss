@@ -15,7 +15,7 @@ $userpanel-color: #FFFFFF;
 
 $sidebar-color: #333645;
 $overall-color : #ffffff;
-$body-bg : #F6F6F6;
+$body-bg : #f4f4f4;
 /*$body-bg : url(../img/graphy.png) repeat, rgba(200,0,0,0.6);*/
 
 
@@ -36,7 +36,7 @@ $body-bg : #F6F6F6;
 }
 
 body{
-    background: $body-bg;
+    background: $body-bg !important;
     text-align: center;
     position: relative;
     height: 100%;
@@ -181,12 +181,16 @@ section.one{
         border-radius: 5px;
         border: 1px solid #e3e3e3;
         border-bottom: 3px solid #e0dddd;
-        min-height: 200px;
-        background: rgba(255,255,255,0.5);
+        min-height: 230px;
+        background: rgba(255,255,255,1);
         
         .sub-text{
             color: #808080;
             line-height: 20px;
+        }
+        
+        h1{
+            font-weight: 100;
         }
         
         .lt{
