@@ -193,13 +193,15 @@ section.one {
 
 /*Home Styles*/
 .home .user-panel {
-  background: #FFFFFF;
+  background: #d32828;
   border-bottom: 1px solid #F1F1F1;
-  padding: 30px; }
+  padding: 10px; }
   .home .user-panel span, .home .user-panel #user {
     display: inline-block; }
+  .home .user-panel span strong {
+    color: #ffffff; }
   .home .user-panel #user {
-    max-width: 60px;
+    max-width: 40px;
     margin-right: 15px; }
 
 .home .bshifter {
@@ -233,7 +235,7 @@ section.one {
     border: none; }
 
 .home .sidebar-brand {
-  height: 120px;
+  height: 40px;
   background: #A48AD4; }
 
 .home .sidebar-nav li a {
@@ -283,7 +285,7 @@ section.one {
     width: 60px;
     height: 60px;
     font-size: 45px;
-    color: #d32828; }
+    color: #ce3232; }
   .home .overall label {
     font-size: 16px;
     color: #A48AD4; }

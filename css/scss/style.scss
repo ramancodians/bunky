@@ -97,16 +97,20 @@ section.one{
 .home{
     
     .user-panel{
-        background: $userpanel-color;
+        background: rgb(211, 40, 40);       
         border-bottom: 1px solid #F1F1F1;
-        padding: 30px;
+        padding: 10px;
         
         span,#user{
             display: inline-block;
         }
         
+        span strong{
+            color: #ffffff;
+        }
+        
         #user{
-            max-width: 60px;
+            max-width: 40px;
             margin-right: 15px;
         }
     }
@@ -157,7 +161,7 @@ section.one{
     
     
     .sidebar-brand{
-        height: 120px;
+        height: 40px;
         background: #A48AD4;
     }
 
@@ -222,7 +226,7 @@ section.one{
                 width:  60px;
                 height: 60px;
                 font-size: 45px;
-                color: rgb(211, 40, 40);
+                color: rgb(206, 50, 50);
             }
             
             
