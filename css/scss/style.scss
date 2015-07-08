@@ -26,6 +26,10 @@ $body-bg : #F4F4F4;
     font-family: 'RobotoDraft';
 }
 
+.sub-text{
+    color: #888787;
+}
+
 .no-pm{
     margin: 0px !important;
     padding: 0px !important;
@@ -96,9 +100,19 @@ section.one{
 
 .home{
     
-    .user-panel{
-        background: rgb(211, 40, 40);       
-        border-bottom: 1px solid #F1F1F1;
+    .home-card{
+        max-width: 600px;
+        position: relative;
+        padding: 20px;
+        background: #fff;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+        margin: 20px auto;
+        transform: translateY(-90px);
+        
+        
+        .user-panel{
+        
         padding: 10px;
         
         span,#user{
@@ -110,13 +124,15 @@ section.one{
         }
         
         #user{
-            max-width: 40px;
+            max-width: 100px;
             margin-right: 15px;
         }
     }
+        
+    }
     
-    .bshifter{
-        transform: translateY(10px);
+    #page-content-wrapper{
+        border-top: 120px solid #ccc;
     }
     
     .nv{
@@ -161,7 +177,7 @@ section.one{
     
     
     .sidebar-brand{
-        height: 40px;
+        height: 120px;
         background: #A48AD4;
     }
 
@@ -178,35 +194,7 @@ section.one{
         max-width: 900px;
     }
     
-    .panel{
-        padding: 30px;
-        margin-top: 20px;
-        margin-left: 0px;
-        border-radius: 5px;
-        border: 1px solid #e3e3e3;
-        border-bottom: 3px solid #e0dddd;
-        min-height: 230px;
-        background: rgba(255,255,255,1);
-        
-        .sub-text{
-            line-height: 20px;
-            color: #A48AD4;
-
-        }
-        
-        h1{
-            font-weight: 100;
-        }
-        
-        .lt{
-            font-size: 50px;
-            
-            small{
-                font-size: 18px;
-                font-weight: bold;
-            }
-        }
-    }
+   
     
         .overall{
             padding: 60px 40px;

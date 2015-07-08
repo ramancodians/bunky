@@ -146,6 +146,9 @@
   box-sizing: border-box;
   font-family: 'RobotoDraft'; }
 
+.sub-text {
+  color: #888787; }
+
 .no-pm {
   margin: 0px !important;
   padding: 0px !important; }
@@ -192,20 +195,27 @@ section.one {
   padding-bottom: 40px; }
 
 /*Home Styles*/
-.home .user-panel {
-  background: #d32828;
-  border-bottom: 1px solid #F1F1F1;
-  padding: 10px; }
-  .home .user-panel span, .home .user-panel #user {
-    display: inline-block; }
-  .home .user-panel span strong {
-    color: #ffffff; }
-  .home .user-panel #user {
-    max-width: 40px;
-    margin-right: 15px; }
+.home .home-card {
+  max-width: 600px;
+  position: relative;
+  padding: 20px;
+  background: #fff;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  margin: 20px auto;
+  transform: translateY(-90px); }
+  .home .home-card .user-panel {
+    padding: 10px; }
+    .home .home-card .user-panel span, .home .home-card .user-panel #user {
+      display: inline-block; }
+    .home .home-card .user-panel span strong {
+      color: #ffffff; }
+    .home .home-card .user-panel #user {
+      max-width: 100px;
+      margin-right: 15px; }
 
-.home .bshifter {
-  transform: translateY(10px); }
+.home #page-content-wrapper {
+  border-top: 120px solid #ccc; }
 
 .home .nv {
   font-size: 20px;
@@ -235,7 +245,7 @@ section.one {
     border: none; }
 
 .home .sidebar-brand {
-  height: 40px;
+  height: 120px;
   background: #A48AD4; }
 
 .home .sidebar-nav li a {
@@ -247,26 +257,6 @@ section.one {
 .home .main {
   padding-top: 20px;
   max-width: 900px; }
-
-.home .panel {
-  padding: 30px;
-  margin-top: 20px;
-  margin-left: 0px;
-  border-radius: 5px;
-  border: 1px solid #e3e3e3;
-  border-bottom: 3px solid #e0dddd;
-  min-height: 230px;
-  background: white; }
-  .home .panel .sub-text {
-    line-height: 20px;
-    color: #A48AD4; }
-  .home .panel h1 {
-    font-weight: 100; }
-  .home .panel .lt {
-    font-size: 50px; }
-    .home .panel .lt small {
-      font-size: 18px;
-      font-weight: bold; }
 
 .home .overall {
   padding: 60px 40px;

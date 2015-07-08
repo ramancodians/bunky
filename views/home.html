@@ -45,99 +45,16 @@
 
         <!-- Page Content -->
         <div id="page-content-wrapper">
-            
-            <div class="user-panel text-left">
-                <img src="img/user.jpg" class="img-circle" id="user">
-                <span>
-                   <strong> Raman Choudhary</strong><br/>
-                </span>  
-              
-                <span class="pul pull-right" style="top: 0px; line-height: 60px;">
-                    <button class="btn">Logout</button>
-                </span>
-                
-            </div>
-            <div class="container-fluid main text-left">
-                
-                
-            
-                    <div class="col-lg-12">
-                        <div class="overall clearfix">
-                            
-                            <span class="you-are-fucked">
-                                <i class="fa fa-exclamation-circle"></i>
-                            </span>
-                            
-                             <div class="col-md-6">
-                            <label> Overall Attendance</label>
-                          <span id="percentage">
-                            78.43%
-                          </span>
-                        </div>
-                            <div class="col-md-6"><div>
-                                <div class="col-xs-4">Conducted
-                                <h1>232</h1>
-                                </div>
-                                <div class="col-xs-4">Present
-                                <h1>200</h1>
-                                </div>
-                                <div class="col-xs-4">Absent
-                                <h1>32</h1>
-                                </div>
-                                </div>
-                            </div>
-                        </div> 
-                        
-                        <!--Card Area-->
-                            <div class="col-sm-4">
-                                <div class="panel"> 
-                                    <h5 class="sub-text">
-                                        HOW MANY CLASSES NEED TO ATTEND TO MAKE 
-                                        <select class="form-controll">
-                                            <option>
-                                                100%
-                                            </option>
-                                            <option>
-                                                90%
-                                            </option>
-                                            <option>
-                                                85%
-                                            </option>
-                                            <option>
-                                                80%
-                                            </option>
-                                            <option>
-                                                75%
-                                            </option>
-                                        
-                                        
-                                        </select></h5>
-                                    <h1 class="lt">46 <small>Classes</small>  </h1>
-                                </div>
-                                
-                            </div>
-                         <div class="col-md-4 col-sm-6" ng-repeat="subject in d.attendance.subjects">
-                                <div class="panel">
-                                    <h5 class="sub-text">{{subject.name}}</h5>
-                                    <h1 class="lt">{{subject.percentage}} <small>&</small>  </h1>
-                                    <div>
-                                    <span class="con">C : {{subject.conducted}}</span> |
-                                    <span class="pre">P : {{subject.present}}</span> |
-                                    <span class="abs">A : {{subject.absent}}</span>
-                                    </div>
-                                </div>
-                                
-                            </div>
-                        
-                        
-                        <!--Card Area Ends-->
-                        
-                    </div>
-
+            <div class="home-card">
+                <div class="user-panel">
+                    <img class="img-circle" id="user" src="img/user.jpg">
+                    <h4>Raman Choudhary</h4>
+                    <h6 class="sub-text">BCA, Christ University</h6>
+                    
+                </div>
             </div>
         </div>
         <!-- /#page-content-wrapper -->
-
     </div>
     <!-- /#wrapper -->
    
