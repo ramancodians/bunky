@@ -1,245 +1,271 @@
-
 @import 'variables';
 @import 'sidemenu';
-
-
 /*COLOR VARIABLES*/
-$base-bg : #eaeaea;
-$white : #FFFFFF;
-$green : #39d179;
-$test : #d46868;
-$bunky-font : 'Gloria Hallelujah', cursive;
-$hero-font : 'Patua One', cursive;
-$bunky-text-color : #ffffff;
-$userpanel-color: #FFFFFF;
 
-$sidebar-color: #333645;
-$overall-color : #ffffff;
-$body-bg : #F4F4F4;
+$base-bg: #eaeaea;
+$white: #434343;
+$green: #39d179;
+$test: #d46868;
+$bunky-font: 'Gloria Hallelujah',
+cursive;
+$hero-font: 'Patua One',
+cursive;
+$bunky-text-color: #ffffff;
+$userpanel-color: #FFFFFF;
+$bunky-bg: #39d179;
+/*Dark Theme*/
+
+$sidebar-color: #333645 + 20;
+/*Light Theme*/
+
+$sidebar-color: #f2f2f2;
+/*Custom Theme*/
+//$sidebar-color: #34495e;
+
+$overall-color: #ffffff;
+$body-bg: #F4F4F4;
 /*$body-bg : url(../img/graphy.png) repeat, rgba(200,0,0,0.6);*/
 
+.test-gr{
+/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#7db9e8+0,e74c3c+100&amp;0+45,0.93+100 */
+background: -moz-linear-gradient(top,  rgba(125,185,232,0) 0%, rgba(173,136,155,0) 45%, rgba(231,76,60,0.93) 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(125,185,232,0)), color-stop(45%,rgba(173,136,155,0)), color-stop(100%,rgba(231,76,60,0.93))); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  rgba(125,185,232,0) 0%,rgba(173,136,155,0) 45%,rgba(231,76,60,0.93) 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  rgba(125,185,232,0) 0%,rgba(173,136,155,0) 45%,rgba(231,76,60,0.93) 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  rgba(125,185,232,0) 0%,rgba(173,136,155,0) 45%,rgba(231,76,60,0.93) 100%); /* IE10+ */
+background: linear-gradient(to bottom,  rgba(125,185,232,0) 0%,rgba(173,136,155,0) 45%,rgba(231,76,60,0.93) 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#007db9e8', endColorstr='#ede74c3c',GradientType=0 ); /* IE6-9 */
 
-*{
+}
+
+* {
     padding: 0px;
     margin: 0px;
     box-sizing: border-box;
     font-family: 'RobotoDraft';
 }
 
-.sub-text{
+.sub-text {
     color: #888787;
 }
 
-.no-pm{
+.no-pm {
     margin: 0px !important;
     padding: 0px !important;
 }
 
-.text-left{
+.text-left {
     text-align: left;
 }
 
-body{
-    background: $body-bg !important;
+body {
+    background: $sidebar-color - 15 !important;
     text-align: center;
     position: relative;
     height: 100%;
     width: 100%;
+    background: red;
 }
 
-.blur{
+.blur {
     -webkit-filter: blur(5px);
     filter: blur(5px);
     background: rgb(222, 239, 92);
     transition-duration: 0.2s;
 }
 
-
-
-.card.login{
-        padding-top: 40px;
-    
-    #bunky-text{
+.card.login {
+    padding-top: 40px;
+    #bunky-text {
         font-size: 40px;
         font-family: $bunky-font;
         font-weight: 800;
         color: $bunky-text-color;
     }
-    
-    #ThisIsWhatWeDoBitch{
+    #ThisIsWhatWeDoBitch {
         font-family: $hero-font;
-          font-size: 60px;
-            padding-bottom: 10px;
-   
-       
+        font-size: 60px;
+        padding-bottom: 10px;
         margin: 10px auto;
     }
-    
-     #bunky{
+    #bunky {
         margin: 0px auto;
         max-width: 160px;
         width: 100%;
     }
-    
-    
-    
-    .support-college{
+    .support-college {
         margin-top: 80px;
-            img{
-                max-width: 160px;
-                opacity: 0.7;
-            }
+        img {
+            max-width: 160px;
+            opacity: 0.7;
         }
+    }
 }
 
-section.one{
+section.one {
     padding-bottom: 40px;
 }
-
 /*Home Styles*/
 
-.home{
-    
-    .home-card{
-        max-width: 600px;
+.home {
+    .home-card {
+        max-width: 800px;
         position: relative;
-        padding: 20px;
-        background: #fff;
         border-radius: 5px;
-        border: 1px solid #ccc;
+        border: 1px solid $sidebar-color;
         margin: 20px auto;
         transform: translateY(-90px);
-        
-        
-        .user-panel{
-        
-        padding: 10px;
-        
-        span,#user{
-            display: inline-block;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        .user-panel {
+            background: $sidebar-color - 5;
+            border-bottom: $sidebar-color - 20 1px solid;
+            padding: 20px;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            h4#username {
+                color: $white;
+            }
+            span,
+            #user {
+                display: inline-block;
+            }
+            span strong {
+                color: #ffffff;
+            }
+            #user {
+                max-width: 100px;
+                margin-right: 15px;
+            }
+            .overall {
+                .row{
+                    padding: 20px 0px;
+                    .adj{
+                        transform: translateY(20px);
+                        .col-xs-4{
+                            &:nth-child(1){
+                                color: #1992c7 !important;
+                            }
+                            &:nth-child(2){
+                                color: #14b120 !important;
+                            }
+                            &:nth-child(3){
+                                color: #ba0a0a !important;
+                            }
+                        }
+                    }
+                }
+            }
         }
-        
-        span strong{
-            color: #ffffff;
+        .tabs {
+            padding: 0px;
+            background: $sidebar-color;
+            text-align: left;
+            border-bottom: 1px solid $sidebar-color - 10;
+            span {
+                display: inline-block;
+                padding: 20px;
+                width: auto;
+                background: $sidebar-color;
+                margin: 0px;
+                color: #a2a2a2;
+                font-weight: bold;
+                transform: translateY(1px);
+                border-top: 1px solid $sidebar-color - 10;
+                border-right: 1px solid $sidebar-color - 10;
+                &:hover {
+                    background: $sidebar-color + 5;
+                }
+            }
+            span.active {
+                background: $sidebar-color + 20;
+            }
         }
-        
-        #user{
-            max-width: 100px;
-            margin-right: 15px;
+        .tab {
+            background: $sidebar-color + 20;
+            color: $white;
+            text-align: left !important;
+            div {
+                padding: 5px 20px;
+                border-bottom: $sidebar-color - 5px 1px solid;
+                p.perbox{
+                    width:  70px;
+                    height: 70px;
+                    display: inline-block;
+                    border-radius: 4px;
+                    color: white;
+                   font-size: 22px;
+                    line-height: 70px;
+                    text-align: center;
+                    background: $bunky-bg;
+                    margin: 0px;
+                }
+                
+                #subname{
+                    text-transform: capitalize;
+                    font-weight: bold;
+                    margin-left: 30px;
+                    color: #555555;
+                }
+                
+            }
         }
     }
-        
+    #page-content-wrapper {
+        border-top: 120px solid $bunky-bg - 10;
     }
-    
-    #page-content-wrapper{
-        border-top: 120px solid #ccc;
-    }
-    
-    .nv{
+    .nv {
         font-size: 20px;
         transform: translateX(-15px);
         width: 50px;
         height: 25px;
         display: inline-block;
+        color: $bunky-bg;
     }
-    
-    #sidebar-wrapper{
+    #sidebar-wrapper {
         background: $sidebar-color;
-        
-        #bunky{
-        }
-        
-        img#bunky-img{
+        #bunky {}
+        img#bunky-img {
             max-width: 60px;
             display: block;
             margin: 0px auto;
-            padding-top: 20px; 
+            padding-top: 20px;
         }
-        
     }
-    
-    .sidebar-nav li.active > .fa{
+    .sidebar-nav li.active > .fa {
         color: #53A8BB;
     }
     .sidebar-nav li.active {
-        background: $sidebar-color - 10;
+        background: $sidebar-color - 15;
         color: #ffffff !important;
         font-weight: bold;
-        
-        &:hover{
-            background:#1E202C;
-        }
-        
-        &:last-child{
+        &:last-child {
             border: none;
         }
     }
     
+    .sidebar-nav li :hover {
+            background: $sidebar-color - 30;
+        }
     
-    .sidebar-brand{
+    .sidebar-brand {
         height: 120px;
-        background: #A48AD4;
+        background: $bunky-bg;
     }
-
     .sidebar-nav li a {
         color: #a2a2a2;
         font-size: 13px;
         font-weight: 600;
         text-transform: uppercase;
     }
-
-    
-    .main{
-        padding-top: 20px;
-        max-width: 900px;
-    }
-    
-   
-    
-        .overall{
-            padding: 60px 40px;
-            background: $overall-color;
-            border-radius: 4px;
-            position: relative;
-            width: 100%;
-            height: auto;
-            border: 1px solid rgb(211, 40, 40);
-            border-bottom: 10px solid rgb(211, 40, 40);
-            
-            .you-are-fucked{
-                position: absolute;
-                top: -20px;
-                left: -10px;
-                border-radius: 50%;
-                width:  60px;
-                height: 60px;
-                font-size: 45px;
-                color: rgb(206, 50, 50);
-            }
-            
-            
-            label{
-                font-size: 16px;
-                color: #A48AD4;
-            }
-            
-            #percentage{
-                font-size: 50px;
-                font-weight: 100;
-                display: block;
-                
-            }
-    }
-    
-    #bunky{
+    #bunky {
         font-size: 25px;
         display: block;
         text-align: center;
         width: 100%;
-        transform: translate(-8px,-20px);
+        transform: translate(-8px, -20px);
         font-family: $bunky-font;
         font-weight: 800;
         color: $bunky-text-color;
     }
-    
 }

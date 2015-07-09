@@ -139,7 +139,27 @@
     margin-right: 0; } }
 
 /*COLOR VARIABLES*/
+/*Dark Theme*/
+/*Light Theme*/
+/*Custom Theme*/
 /*$body-bg : url(../img/graphy.png) repeat, rgba(200,0,0,0.6);*/
+.test-gr {
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#7db9e8+0,e74c3c+100&amp;0+45,0.93+100 */
+  background: -moz-linear-gradient(top, rgba(125, 185, 232, 0) 0%, rgba(173, 136, 155, 0) 45%, rgba(231, 76, 60, 0.93) 100%);
+  /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(125, 185, 232, 0)), color-stop(45%, rgba(173, 136, 155, 0)), color-stop(100%, rgba(231, 76, 60, 0.93)));
+  /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, rgba(125, 185, 232, 0) 0%, rgba(173, 136, 155, 0) 45%, rgba(231, 76, 60, 0.93) 100%);
+  /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, rgba(125, 185, 232, 0) 0%, rgba(173, 136, 155, 0) 45%, rgba(231, 76, 60, 0.93) 100%);
+  /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, rgba(125, 185, 232, 0) 0%, rgba(173, 136, 155, 0) 45%, rgba(231, 76, 60, 0.93) 100%);
+  /* IE10+ */
+  background: linear-gradient(to bottom, rgba(125, 185, 232, 0) 0%, rgba(173, 136, 155, 0) 45%, rgba(231, 76, 60, 0.93) 100%);
+  /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#007db9e8', endColorstr='#ede74c3c',GradientType=0 );
+  /* IE6-9 */ }
+
 * {
   padding: 0px;
   margin: 0px;
@@ -157,11 +177,12 @@
   text-align: left; }
 
 body {
-  background: #F4F4F4 !important;
+  background: #e3e3e3 !important;
   text-align: center;
   position: relative;
   height: 100%;
-  width: 100%; }
+  width: 100%;
+  background: red; }
 
 .blur {
   -webkit-filter: blur(5px);
@@ -196,36 +217,97 @@ section.one {
 
 /*Home Styles*/
 .home .home-card {
-  max-width: 600px;
+  max-width: 800px;
   position: relative;
-  padding: 20px;
-  background: #fff;
   border-radius: 5px;
-  border: 1px solid #ccc;
+  border: 1px solid #f2f2f2;
   margin: 20px auto;
-  transform: translateY(-90px); }
+  transform: translateY(-90px);
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px; }
   .home .home-card .user-panel {
-    padding: 10px; }
-    .home .home-card .user-panel span, .home .home-card .user-panel #user {
+    background: #ededed;
+    border-bottom: #dedede 1px solid;
+    padding: 20px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px; }
+    .home .home-card .user-panel h4#username {
+      color: #434343; }
+    .home .home-card .user-panel span,
+    .home .home-card .user-panel #user {
       display: inline-block; }
     .home .home-card .user-panel span strong {
       color: #ffffff; }
     .home .home-card .user-panel #user {
       max-width: 100px;
       margin-right: 15px; }
+    .home .home-card .user-panel .overall .row {
+      padding: 20px 0px; }
+      .home .home-card .user-panel .overall .row .adj {
+        transform: translateY(20px); }
+        .home .home-card .user-panel .overall .row .adj .col-xs-4:nth-child(1) {
+          color: #1992c7 !important; }
+        .home .home-card .user-panel .overall .row .adj .col-xs-4:nth-child(2) {
+          color: #14b120 !important; }
+        .home .home-card .user-panel .overall .row .adj .col-xs-4:nth-child(3) {
+          color: #ba0a0a !important; }
+  .home .home-card .tabs {
+    padding: 0px;
+    background: #f2f2f2;
+    text-align: left;
+    border-bottom: 1px solid #e8e8e8; }
+    .home .home-card .tabs span {
+      display: inline-block;
+      padding: 20px;
+      width: auto;
+      background: #f2f2f2;
+      margin: 0px;
+      color: #a2a2a2;
+      font-weight: bold;
+      transform: translateY(1px);
+      border-top: 1px solid #e8e8e8;
+      border-right: 1px solid #e8e8e8; }
+      .home .home-card .tabs span:hover {
+        background: #f7f7f7; }
+    .home .home-card .tabs span.active {
+      background: white; }
+  .home .home-card .tab {
+    background: white;
+    color: #434343;
+    text-align: left !important; }
+    .home .home-card .tab div {
+      padding: 5px 20px;
+      border-bottom: #ededed 1px solid; }
+      .home .home-card .tab div p.perbox {
+        width: 70px;
+        height: 70px;
+        display: inline-block;
+        border-radius: 4px;
+        color: white;
+        font-size: 22px;
+        line-height: 70px;
+        text-align: center;
+        background: #39d179;
+        margin: 0px; }
+      .home .home-card .tab div #subname {
+        text-transform: capitalize;
+        font-weight: bold;
+        margin-left: 30px;
+        color: #555555; }
 
 .home #page-content-wrapper {
-  border-top: 120px solid #ccc; }
+  border-top: 120px solid #2fc76f; }
 
 .home .nv {
   font-size: 20px;
   transform: translateX(-15px);
   width: 50px;
   height: 25px;
-  display: inline-block; }
+  display: inline-block;
+  color: #39d179; }
 
 .home #sidebar-wrapper {
-  background: #333645; }
+  background: #f2f2f2; }
   .home #sidebar-wrapper img#bunky-img {
     max-width: 60px;
     display: block;
@@ -236,53 +318,24 @@ section.one {
   color: #53A8BB; }
 
 .home .sidebar-nav li.active {
-  background: #292c3b;
+  background: #e3e3e3;
   color: #ffffff !important;
   font-weight: bold; }
-  .home .sidebar-nav li.active:hover {
-    background: #1E202C; }
   .home .sidebar-nav li.active:last-child {
     border: none; }
 
+.home .sidebar-nav li :hover {
+  background: #d4d4d4; }
+
 .home .sidebar-brand {
   height: 120px;
-  background: #A48AD4; }
+  background: #39d179; }
 
 .home .sidebar-nav li a {
   color: #a2a2a2;
   font-size: 13px;
   font-weight: 600;
   text-transform: uppercase; }
-
-.home .main {
-  padding-top: 20px;
-  max-width: 900px; }
-
-.home .overall {
-  padding: 60px 40px;
-  background: #ffffff;
-  border-radius: 4px;
-  position: relative;
-  width: 100%;
-  height: auto;
-  border: 1px solid #d32828;
-  border-bottom: 10px solid #d32828; }
-  .home .overall .you-are-fucked {
-    position: absolute;
-    top: -20px;
-    left: -10px;
-    border-radius: 50%;
-    width: 60px;
-    height: 60px;
-    font-size: 45px;
-    color: #ce3232; }
-  .home .overall label {
-    font-size: 16px;
-    color: #A48AD4; }
-  .home .overall #percentage {
-    font-size: 50px;
-    font-weight: 100;
-    display: block; }
 
 .home #bunky {
   font-size: 25px;

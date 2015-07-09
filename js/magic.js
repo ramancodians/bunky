@@ -18,6 +18,10 @@ app .config(['$routeProvider',
             templateUrl : 'views/home.html',
             controller : 'HomeCtrl'
         })
+    .when('/canIBunk',{
+            templateUrl : 'views/can-i-bunk.html',
+            controller : 'CIBCtrl'
+        })
       .otherwise({
         redirectTo: '/'
       });
@@ -48,6 +52,30 @@ app.controller('HomeCtrl',['$scope','Attendance',function($scope,Attendance){
     }
     
 }]);
+
+app.controller('CIBCtrl',['$scope','Attendance',function($scope,Attendance){
+    
+    $scope.dropdown = false;
+    
+       Attendance.fetch().then(function(data) {
+           $scope.d = data;
+           console.log(data);
+       });
+    
+    $scope.toggle = function(){
+        
+        
+        console.log($scope.dropdown);
+        if($scope.dropdown == false){
+            $scope.dropdown = true;
+        }else if($scope.dropdown == true){
+            $scope.dropdown = false;
+        }
+    }
+    
+}]);
+
+
 
     
     app.controller('LoginCtrl',function($scope){

@@ -1,6 +1,3 @@
-
-
-
 <div ng-controller="HomeCtrl">
     <div id="wrapper" class="home">
 
@@ -8,54 +5,86 @@
         <div id="sidebar-wrapper">
             <ul class="sidebar-nav text-left">
                 <li class="sidebar-brand text-center" id="first">
-                    
-                        <span class="bshifter">
+
+                    <span class="bshifter">
                        <img src="img/bunky.png" id="bunky-img">
                         <span id="bunky">Bunky!</span>
-                        </span>
-                   
+                    </span>
+
                 </li>
                 <li class="active">
                     <a href="#"><i class="fa nv fa-home"></i>Dashboard</a>
                 </li>
-              
+
                 <li>
-                    <a href="#"><i class="fa nv fa-question"></i>Can I Bunk?</a>
+                    <a href="#/canIBunk"><i class="fa nv fa-question"></i>Can I Bunk?</a>
                 </li>
                 <li>
                     <a href="#"><i class="fa nv fa-calendar"></i>Plan a Holiday</a>
                 </li>
                 <li>
-                    <a href="#"><i class="fa nv fa-envolop"></i>Feedback</a>
+                    <a href="#"><i class="fa nv fa-envelope-o"></i>Feedback</a>
                 </li>
-                
-               <p style="padding: 20px; font-size: 11px; color : #ccc;" class="text-center">
-                made with <i class="fa fa-heart-o"></i><br/> by ironman & batman
-
-            
-            </p>
-                
-                
+                <p style="padding: 20px; font-size: 11px; color : #ccc;" class="text-center">
+                    made with <i class="fa fa-heart-o"></i>
+                    <br/> by ironman & batman
+                </p>
             </ul>
-            
-           
-            
         </div>
         <!-- /#sidebar-wrapper -->
 
         <!-- Page Content -->
         <div id="page-content-wrapper">
             <div class="home-card">
-                <div class="user-panel">
-                    <img class="img-circle" id="user" src="img/user.jpg">
-                    <h4>Raman Choudhary</h4>
-                    <h6 class="sub-text">BCA, Christ University</h6>
-                    
+                <div class="user-panel clearfix test-gr">
+                    <div class="col-md-6 text-left">
+                        <img class="img-circle" id="user" src="img/user.jpg">
+                        <h4 id="username">Raman Choudhary</h4>
+                        <h6 class="sub-text">BCA, Christ University</h6>
+                    </div>
+                    <div class="col-md-6 text-right">
+                        <div class="overall text-center">
+                            <div class="row">
+                                <div class="col-xs-6">
+                                    <h5>Attendace</h5>
+                                    <h1>{{d.attendance.percentage}}</h1>
+                                </div>
+                                <div class="col-xs-6 adj">
+                                    <div class="col-xs-4">
+                                        <h5>C</h5>
+                                        <h4>{{d.attendance.conducted}}</h4>
+                                    </div>
+                                    <div class="col-xs-4">
+                                        <h5>P</h5>
+                                        <h4>{{d.attendance.present}}</h4>
+                                    </div>
+                                    <div class="col-xs-4">
+                                        <h5>A</h5>
+                                        <h4>{{d.attendance.absent}}</h4>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tabs">
+                    <span class="active">Overview</span>
+                    <span>Bunk Graph</span>
+                </div>
+                <div class="tab">
+                    <div ng-repeat="i in d.attendance.subjects">
+                        <p class="perbox">
+                            {{i.percentage}}
+                        </p>
+                        <span id="subname">                                             {{i.name}}
+                        </span>
+                    </div>
                 </div>
             </div>
         </div>
         <!-- /#page-content-wrapper -->
     </div>
     <!-- /#wrapper -->
-   
+
 </div>
