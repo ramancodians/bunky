@@ -20,23 +20,12 @@ $sidebar-color: #333645 + 20;
 
 $sidebar-color: #e8e8e8;
 /*Custom Theme*/
-//$sidebar-color: #34495e;
 
+$text-red: #a01b1b;
+//$sidebar-color: #34495e;
 $overall-color: #ffffff;
 $body-bg: #F4F4F4;
 /*$body-bg : url(../img/graphy.png) repeat, rgba(200,0,0,0.6);*/
-
-.test-gr{
-/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#7db9e8+0,e74c3c+100&amp;0+45,0.93+100 */
-background: -moz-linear-gradient(top,  rgba(125,185,232,0) 0%, rgba(173,136,155,0) 45%, rgba(231,76,60,0.93) 100%); /* FF3.6+ */
-background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(125,185,232,0)), color-stop(45%,rgba(173,136,155,0)), color-stop(100%,rgba(231,76,60,0.93))); /* Chrome,Safari4+ */
-background: -webkit-linear-gradient(top,  rgba(125,185,232,0) 0%,rgba(173,136,155,0) 45%,rgba(231,76,60,0.93) 100%); /* Chrome10+,Safari5.1+ */
-background: -o-linear-gradient(top,  rgba(125,185,232,0) 0%,rgba(173,136,155,0) 45%,rgba(231,76,60,0.93) 100%); /* Opera 11.10+ */
-background: -ms-linear-gradient(top,  rgba(125,185,232,0) 0%,rgba(173,136,155,0) 45%,rgba(231,76,60,0.93) 100%); /* IE10+ */
-background: linear-gradient(to bottom,  rgba(125,185,232,0) 0%,rgba(173,136,155,0) 45%,rgba(231,76,60,0.93) 100%); /* W3C */
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#007db9e8', endColorstr='#ede74c3c',GradientType=0 ); /* IE6-9 */
-
-}
 
 * {
     padding: 0px;
@@ -138,18 +127,18 @@ section.one {
                 margin-right: 15px;
             }
             .overall {
-                .row{
+                .row {
                     padding: 20px 0px;
-                    .adj{
+                    .adj {
                         transform: translateY(20px);
-                        .col-xs-4{
-                            &:nth-child(1){
+                        .col-xs-4 {
+                            &:nth-child(1) {
                                 color: #1992c7 !important;
                             }
-                            &:nth-child(2){
+                            &:nth-child(2) {
                                 color: #14b120 !important;
                             }
-                            &:nth-child(3){
+                            &:nth-child(3) {
                                 color: #ba0a0a !important;
                             }
                         }
@@ -165,6 +154,7 @@ section.one {
             span {
                 display: inline-block;
                 padding: 20px;
+                cursor: pointer;
                 width: auto;
                 background: $sidebar-color;
                 margin: 0px;
@@ -186,28 +176,63 @@ section.one {
             color: $white;
             text-align: left !important;
             div {
-                padding: 5px 20px;
+                padding: 10px 20px;
                 border-bottom: $sidebar-color - 5px 1px solid;
-                p.perbox{
-                    width:  70px;
-                    height: 70px;
+                .app {
+                    max-width: 80px;
+                    border-radius: 5px;
                     display: inline-block;
-                    border-radius: 4px;
-                    color: white;
-                   font-size: 22px;
-                    line-height: 70px;
-                    text-align: center;
                     background: $bunky-bg;
-                    margin: 0px;
+                    padding: 20px;
+                    margin-right: 30px;
                 }
-                
-                #subname{
-                    text-transform: capitalize;
+                #lele {
+                    width: 50px;
+                    display: inline-block;
+                }
+                select {
+                    display: inline-block;
+                    width: 80px;
+                }
+                #lostattendance,
+                #classestoattend {
                     font-weight: bold;
-                    margin-left: 30px;
-                    color: #555555;
+                    color: $text-red;
                 }
-                
+                #noBunkingBitch {
+                    color: $text-red;
+                    font-weight: bold;
+                }
+            }
+        }
+        .subjects,
+        .bunk-graph {
+            background: #fff;
+            min-height: 400px;
+        }
+        .subjects {
+            text-align: left;
+            div {
+                padding: 10px 20px;
+                border-bottom: $sidebar-color - 5px 1px solid;
+            }
+            p.perbox {
+                width: 70px;
+                height: 70px;
+                display: inline-block;
+                border-radius: 4px;
+                line-height: 70px;
+                color: white;
+                font-size: 22px;
+                text-align: center;
+                background: $bunky-bg;
+                margin: 0px;
+            }
+            #subname {
+                text-transform: capitalize;
+                font-weight: bold;
+                margin-left: 30px;
+                color: #555555;
             }
         }
     }
@@ -224,6 +249,7 @@ section.one {
     }
     #sidebar-wrapper {
         background: $sidebar-color;
+        background: $sidebar-color + 10;
         #bunky {}
         img#bunky-img {
             max-width: 60px;
@@ -243,11 +269,9 @@ section.one {
             border: none;
         }
     }
-    
-    .sidebar-nav li :hover {
-            background: $sidebar-color - 30;
-        }
-    
+    .sidebar-nav li:hover {
+        background: $sidebar-color - 30;
+    }
     .sidebar-brand {
         height: 120px;
         background: $bunky-bg;

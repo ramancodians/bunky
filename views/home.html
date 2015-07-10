@@ -1,90 +1,109 @@
 <div ng-controller="HomeCtrl">
-    <div id="wrapper" class="home">
-
-        <!-- Sidebar -->
-        <div id="sidebar-wrapper">
-            <ul class="sidebar-nav text-left">
-                <li class="sidebar-brand text-center" id="first">
-
-                    <span class="bshifter">
-                       <img src="img/bunky.png" id="bunky-img">
-                        <span id="bunky">Bunky!</span>
-                    </span>
-
-                </li>
-                <li class="active">
-                    <a href="#"><i class="fa nv fa-home"></i>Dashboard</a>
-                </li>
-
-                <li>
-                    <a href="#/canIBunk"><i class="fa nv fa-question"></i>Can I Bunk?</a>
-                </li>
-                <li>
-                    <a href="#"><i class="fa nv fa-calendar"></i>Plan a Holiday</a>
-                </li>
-                <li>
-                    <a href="#"><i class="fa nv fa-envelope-o"></i>Feedback</a>
-                </li>
-                <p style="padding: 20px; font-size: 11px; color : #ccc;" class="text-center">
-                    made with <i class="fa fa-heart-o"></i>
-                    <br/> by ironman & batman
-                </p>
-            </ul>
+    <!-- Page Content -->
+    <div class="user-panel clearfix test-gr">
+        <div class="col-md-6 text-left">
+            <img class="img-circle" id="user" src="img/user.jpg">
+            <h4 id="username">Raman Choudhary</h4>
+            <h6 class="sub-text">BCA, Christ University</h6>
         </div>
-        <!-- /#sidebar-wrapper -->
-
-        <!-- Page Content -->
-        <div id="page-content-wrapper">
-            <div class="home-card">
-                <div class="user-panel clearfix test-gr">
-                    <div class="col-md-6 text-left">
-                        <img class="img-circle" id="user" src="img/user.jpg">
-                        <h4 id="username">Raman Choudhary</h4>
-                        <h6 class="sub-text">BCA, Christ University</h6>
+        <div class="col-md-6 text-right">
+            <div class="overall text-center">
+                <div class="row">
+                    <div class="col-xs-6">
+                        <h5>Attendace</h5>
+                        <h1>{{d.attendance.percentage}}</h1>
                     </div>
-                    <div class="col-md-6 text-right">
-                        <div class="overall text-center">
-                            <div class="row">
-                                <div class="col-xs-6">
-                                    <h5>Attendace</h5>
-                                    <h1>{{d.attendance.percentage}}</h1>
-                                </div>
-                                <div class="col-xs-6 adj">
-                                    <div class="col-xs-4">
-                                        <h5>C</h5>
-                                        <h4>{{d.attendance.conducted}}</h4>
-                                    </div>
-                                    <div class="col-xs-4">
-                                        <h5>P</h5>
-                                        <h4>{{d.attendance.present}}</h4>
-                                    </div>
-                                    <div class="col-xs-4">
-                                        <h5>A</h5>
-                                        <h4>{{d.attendance.absent}}</h4>
-                                    </div>
-                                </div>
-
-                            </div>
+                    <div class="col-xs-6 adj">
+                        <div class="col-xs-4">
+                            <h5>C</h5>
+                            <h4>{{d.attendance.conducted}}</h4>
                         </div>
-                    </div>
-                </div>
-                <div class="tabs">
-                    <span class="active">Overview</span>
-                    <span>Bunk Graph</span>
-                </div>
-                <div class="tab">
-                    <div ng-repeat="i in d.attendance.subjects">
-                        <p class="perbox">
-                            {{i.percentage}}
-                        </p>
-                        <span id="subname">                                             {{i.name}}
-                        </span>
+                        <div class="col-xs-4">
+                            <h5>P</h5>
+                            <h4>{{d.attendance.present}}</h4>
+                        </div>
+                        <div class="col-xs-4">
+                            <h5>A</h5>
+                            <h4>{{d.attendance.absent}}</h4>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-        <!-- /#page-content-wrapper -->
     </div>
-    <!-- /#wrapper -->
+    <div class="tabs">
+        <span ng-click="tabHandler(0)" ng-class="{'active': tab[0]}">Overview
+        </span>
+        <span ng-click="tabHandler(1)" ng-class="{'active':tab[1]}">Subjects</span>
+        <span ng-click="tabHandler(2)" ng-class="{'active': tab[2]}">Bunk Graph</span>
+    </div>
+    <div class="tab" ng-show="tab[0]" ng-click="tab[0] = true">
+        <div>
+            <img ng-src="img/app-1.PNG" class="app">
+            <span> If you bunky
+                <input type="text" ng-model="oneBunk" ng-init="oneBunk = 1" value="1" id="lele" class="form-control">
+               <select class="form-control">
+                    <option>hour</option>
+                    <option>day</option>
+                </select>
+                then you'll loose <span id="lostattendance">0.54%</span>
+            </span>
+        </div>
+
+        <div>
+            <img ng-src="img/app-2.png" class="app">
+            <span> To reach  
+                <select class="form-control" editable="true">
+                    <option>75%</option>
+                    <option>80%</option>
+                    <option>85%</option>
+                    <option>90%</option>
+                    <option>95%</option>
+                    <option>100%</option>
+                </select>
+                you have to attend <spanc id="classestoattend">58</span> classes
+            </span>
+
+        </div>
+
+        <div>
+            <img ng-src="img/app-3.png" class="app">
+            <span>
+                <span id="noBunkingBitch">
+                    Your attendance is too low!
+                    You can't afford to bunky any class.
+                </span>
+            </span>
+        </div>
+
+        <!--
+    <div ng-repeat="i in d.attendance.subjects">
+    <p class="perbox">
+        {{i.percentage}}
+    </p>
+    <span id="subname">
+                {{i.name}}
+            </span>
+</div>
+-->
+    </div>
+
+    <div class="subjects" ng-show="tab[1]" ng-click="tab[1] = true" ng-class="{'active':tab[1]}">
+
+        <div ng-repeat="i in d.attendance.subjects">
+            <p class="perbox">
+                {{i.percentage}}
+            </p>
+            <span id="subname">
+                {{i.name}}
+            </span>
+        </div>
+    </div>
+
+    <div class="bunk-graph" ng-show="tab[2]" ng-click="tab[2] = true">
+        Graph baby goes here...!
+    </div>
 
 </div>
+
+<!-- /#wrapper -->

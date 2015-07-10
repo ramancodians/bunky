@@ -1,7 +1,7 @@
-
 <!doctype html>
 <html>
-  <head>
+
+<head>
     <meta charset="utf-8">
     <title>Bunky Web</title>
     <meta name="description" content="">
@@ -12,38 +12,83 @@
     <!-- endbower -->
     <!-- endbuild -->
     <!-- build:css(.tmp) styles/main.css -->
-      
-      <!--Bootstap Baby!-->
-       <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
-       <script src="bower_components/jquery/dist/jquery.min.js"></script>
-      <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
-      
-     
-      
-      <!--My Styles-->
-       <link rel="stylesheet" href="css/style.css">
-       
-      <!--Awesome Fonts-->
-      
 
-      <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
-      <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.min.css">
-      <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <!--Bootstap Baby!-->
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
 
-       <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.min.css">
 
-      
-      <!--Google Fonts-->
-      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=RobotoDraft:300,400,500,700,400italic">
- <link href='http://fonts.googleapis.com/css?family=Gloria+Hallelujah|Patua+One' rel='stylesheet' type='text/css'>
-      
-      <!--Angular Magic-->      
-      <script src="bower_components/angular/angular.min.js"></script>
-      <script src="bower_components/angular-route/angular-route.min.js"></script>
-      <!--This is simply Magic-->
-      <script src="js/magic.js"></script>
+
+    <!--My Styles-->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!--Awesome Fonts-->
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.min.css">
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+
+    <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.min.css">
+
+
+    <!--Google Fonts-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=RobotoDraft:300,400,500,700,400italic">
+    <link href='http://fonts.googleapis.com/css?family=Gloria+Hallelujah|Patua+One' rel='stylesheet' type='text/css'>
+    <!--Angular Magic-->
+    <script src="bower_components/angular/angular.min.js"></script>
+    <script src="bower_components/angular-route/angular-route.min.js"></script>
+    <!--This is simply Magic-->
+    <script src="js/magic.js"></script>
     <!-- endbuild -->
-  </head>
-    <body ng-app="bunky" ng-view>
-    </body>
+</head>
+
+<body ng-app="bunky">
+    <div ng-controller="HomeCtrl">
+        <div id="wrapper" class="home">
+            <!-- Sidebar -->
+            <div id="sidebar-wrapper">
+                <ul class="sidebar-nav text-left">
+                    <li class="sidebar-brand text-center" id="first">
+
+                        <span class="bshifter">
+                       <img src="img/bunky.png" id="bunky-img">
+                        <span id="bunky">Bunky!</span>
+                        </span>
+
+                    </li>
+                    <li class="active">
+                        <a href="#/home"><i class="fa nv fa-home"></i>Dashboard</a>
+                    </li>
+
+                    <li>
+                        <a href="#/canIBunk"><i class="fa nv fa-question"></i>Can I Bunk?</a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa nv fa-calendar"></i>Plan a Holiday</a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa nv fa-envelope-o"></i>Feedback</a>
+                    </li>
+                    <p style="padding: 20px; font-size: 11px; color : #ccc;" class="text-center">
+                        made with <i class="fa fa-heart-o"></i>
+                        <br/> by ironman & batman
+                    </p>
+                </ul>
+            </div>
+            <!-- /#sidebar-wrapper -->
+
+            <!-- Page Content -->
+            <div id="page-content-wrapper">
+                <div class="home-card" ng-view>
+
+                </div>
+            </div>
+            <!-- /#page-content-wrapper -->
+        </div>
+        <!-- /#wrapper -->
+
+    </div>
+
+</body>
+
 </html>
