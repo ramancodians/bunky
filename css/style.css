@@ -177,7 +177,7 @@
   text-align: left; }
 
 body {
-  background: #e3e3e3 !important;
+  background: #d9d9d9 !important;
   text-align: center;
   position: relative;
   height: 100%;
@@ -220,14 +220,14 @@ section.one {
   max-width: 800px;
   position: relative;
   border-radius: 5px;
-  border: 1px solid #f2f2f2;
+  border: 1px solid #e8e8e8;
   margin: 20px auto;
   transform: translateY(-90px);
   border-top-left-radius: 10px;
   border-top-right-radius: 10px; }
   .home .home-card .user-panel {
-    background: #ededed;
-    border-bottom: #dedede 1px solid;
+    background: #e3e3e3;
+    border-bottom: #d4d4d4 1px solid;
     padding: 20px;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px; }
@@ -253,31 +253,31 @@ section.one {
           color: #ba0a0a !important; }
   .home .home-card .tabs {
     padding: 0px;
-    background: #f2f2f2;
+    background: #e8e8e8;
     text-align: left;
-    border-bottom: 1px solid #e8e8e8; }
+    border-bottom: 1px solid #dedede; }
     .home .home-card .tabs span {
       display: inline-block;
       padding: 20px;
       width: auto;
-      background: #f2f2f2;
+      background: #e8e8e8;
       margin: 0px;
       color: #a2a2a2;
       font-weight: bold;
       transform: translateY(1px);
-      border-top: 1px solid #e8e8e8;
-      border-right: 1px solid #e8e8e8; }
+      border-top: 1px solid #dedede;
+      border-right: 1px solid #dedede; }
       .home .home-card .tabs span:hover {
-        background: #f7f7f7; }
+        background: #ededed; }
     .home .home-card .tabs span.active {
-      background: white; }
+      background: #fcfcfc; }
   .home .home-card .tab {
-    background: white;
+    background: #fcfcfc;
     color: #434343;
     text-align: left !important; }
     .home .home-card .tab div {
       padding: 5px 20px;
-      border-bottom: #ededed 1px solid; }
+      border-bottom: #e3e3e3 1px solid; }
       .home .home-card .tab div p.perbox {
         width: 70px;
         height: 70px;
@@ -307,7 +307,7 @@ section.one {
   color: #39d179; }
 
 .home #sidebar-wrapper {
-  background: #f2f2f2; }
+  background: #e8e8e8; }
   .home #sidebar-wrapper img#bunky-img {
     max-width: 60px;
     display: block;
@@ -318,14 +318,14 @@ section.one {
   color: #53A8BB; }
 
 .home .sidebar-nav li.active {
-  background: #e3e3e3;
+  background: #d9d9d9;
   color: #ffffff !important;
   font-weight: bold; }
   .home .sidebar-nav li.active:last-child {
     border: none; }
 
 .home .sidebar-nav li :hover {
-  background: #d4d4d4; }
+  background: #cacaca; }
 
 .home .sidebar-brand {
   height: 120px;
