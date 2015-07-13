@@ -30,10 +30,27 @@ app.config(['$routeProvider',
 /*CONTROLLER
  ***********************************************************************************/
 
-
 app.controller('HomeCtrl', ['$scope', 'Attendance', function ($scope, Attendance) {
 
     $scope.dropdown = false;
+    
+    $scope.sidebar = [{
+        item : 'Dashboard',
+        icon : 'home',
+        url: 'home'
+    },{
+        item : 'Can I bunk',
+        icon : 'question',
+        url: 'canIBunk'
+    },{
+        item : 'Plan a Holiday',
+        icon : 'calendar',
+        url: 'plan-a-holiday'
+    },{
+        item : 'Feedback',
+        icon : 'heart-o',
+        url: 'feedback'
+    }];
 
     //controlling the Tabs Logic
     $scope.tab = [false, true, false];

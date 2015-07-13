@@ -49,26 +49,18 @@
             <div id="sidebar-wrapper">
                 <ul class="sidebar-nav text-left">
                     <li class="sidebar-brand text-center" id="first">
-
                         <span class="bshifter">
                        <img src="img/bunky.png" id="bunky-img">
                         <span id="bunky">Bunky!</span>
                         </span>
-
                     </li>
-                    <li class="active">
-                        <a href="#/home"><i class="fa nv fa-home"></i>Dashboard</a>
+                    
+                    <li class="active" ng-repeat="i in sidebar">
+                        <a href="#/{{i.url}}">
+                            <i class="fa nv fa-{{i.icon}}"></i>{{i.item}}
+                        </a>
                     </li>
-
-                    <li>
-                        <a href="#/canIBunk"><i class="fa nv fa-question"></i>Can I Bunk?</a>
-                    </li>
-                    <li>
-                        <a href="#"><i class="fa nv fa-calendar"></i>Plan a Holiday</a>
-                    </li>
-                    <li>
-                        <a href="#"><i class="fa nv fa-envelope-o"></i>Feedback</a>
-                    </li>
+                    
                     <p style="padding: 20px; font-size: 11px; color : #ccc;" class="text-center">
                         made with <i class="fa fa-heart-o"></i>
                         <br/> by ironman & batman
