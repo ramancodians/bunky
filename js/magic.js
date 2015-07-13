@@ -34,9 +34,10 @@ app.config(['$routeProvider',
 app.controller('HomeCtrl', ['$scope', 'Attendance', function ($scope, Attendance) {
 
     $scope.dropdown = false;
+    $scope.ba = 1;
 
     //controlling the Tabs Logic
-    $scope.tab = [false, true, false];
+    $scope.tab = [true, false, false];
 
     $scope.tabHandler = function (i) {
         //find the tab with true and setting it false

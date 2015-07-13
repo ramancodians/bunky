@@ -266,11 +266,11 @@ section.one {
         max-width: 80px;
         border-radius: 5px;
         display: inline-block;
-        background: #39d179;
+        background: #39cbd1;
         padding: 20px;
         margin-right: 30px; }
       .home .home-card .tab div #lele {
-        width: 50px;
+        width: 70px;
         display: inline-block; }
       .home .home-card .tab div select {
         display: inline-block;
@@ -280,6 +280,12 @@ section.one {
         font-weight: bold;
         color: #a01b1b; }
       .home .home-card .tab div #noBunkingBitch {
+        color: #a01b1b;
+        font-weight: bold; }
+      .home .home-card .tab div .gain {
+        color: #349b1b;
+        font-weight: bold; }
+      .home .home-card .tab div .loose {
         color: #a01b1b;
         font-weight: bold; }
   .home .home-card .subjects,
@@ -300,7 +306,7 @@ section.one {
       color: white;
       font-size: 22px;
       text-align: center;
-      background: #39d179;
+      background: #39cbd1;
       margin: 0px; }
     .home .home-card .subjects #subname {
       text-transform: capitalize;
@@ -309,7 +315,7 @@ section.one {
       color: #555555; }
 
 .home #page-content-wrapper {
-  border-top: 120px solid #2fc76f; }
+  border-top: 120px solid #2fc1c7; }
 
 .home .nv {
   font-size: 20px;
@@ -317,7 +323,7 @@ section.one {
   width: 50px;
   height: 25px;
   display: inline-block;
-  color: #39d179; }
+  color: #39cbd1; }
 
 .home #sidebar-wrapper {
   background: #e8e8e8;
@@ -343,7 +349,7 @@ section.one {
 
 .home .sidebar-brand {
   height: 120px;
-  background: #39d179; }
+  background: #39cbd1; }
 
 .home .sidebar-nav li a {
   color: #a2a2a2;

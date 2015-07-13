@@ -12,7 +12,7 @@ $hero-font: 'Patua One',
 cursive;
 $bunky-text-color: #ffffff;
 $userpanel-color: #FFFFFF;
-$bunky-bg: #39d179;
+$bunky-bg: #39cbd1;
 /*Dark Theme*/
 
 $sidebar-color: #333645 + 20;
@@ -187,7 +187,7 @@ section.one {
                     margin-right: 30px;
                 }
                 #lele {
-                    width: 50px;
+                    width: 70px;
                     display: inline-block;
                 }
                 select {
@@ -200,6 +200,14 @@ section.one {
                     color: $text-red;
                 }
                 #noBunkingBitch {
+                    color: $text-red;
+                    font-weight: bold;
+                }
+                .gain {
+                    color: #349b1b;
+                    font-weight: bold;
+                }
+                .loose {
                     color: $text-red;
                     font-weight: bold;
                 }
