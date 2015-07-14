@@ -55,7 +55,7 @@
                         </span>
                     </li>
                     
-                    <li class="active" ng-repeat="i in sidebar">
+                    <li ng-repeat="i in sidebar" ng-class="{'active':activeNav == i.url}" ng-click="sidebarActive(i.url)" class="ripple">
                         <a href="#/{{i.url}}">
                             <i class="fa nv fa-{{i.icon}}"></i>{{i.item}}
                         </a>
@@ -80,7 +80,7 @@
         <!-- /#wrapper -->
 
     </div>
-
+   
 </body>
 
 </html>

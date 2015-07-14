@@ -1,5 +1,7 @@
 @import 'variables';
 @import 'sidemenu';
+@import 'animation';
+
 /*COLOR VARIABLES*/
 
 $base-bg: #eaeaea;
@@ -12,7 +14,7 @@ $hero-font: 'Patua One',
 cursive;
 $bunky-text-color: #ffffff;
 $userpanel-color: #FFFFFF;
-$bunky-bg: #39d179;
+$bunky-bg: #39cbd1;
 /*Dark Theme*/
 
 $sidebar-color: #333645 + 20;
@@ -102,13 +104,19 @@ section.one {
         position: relative;
         border-radius: 5px;
         background: $sidebar-color;
-        border: 1px solid $sidebar-color;
+        //border: 1px solid $sidebar-color;
         margin: 20px auto;
         transform: translateY(-90px);
         border-top-left-radius: 10px;
         border-top-right-radius: 10px;
         .user-panel {
-            background: $sidebar-color - 5;
+            background: url(../img/home-header/christ.png) center center no-repeat;
+            -moz-backgroud-size: cover;
+            -webkit-backgroud-size: cover;
+            -o-backgroud-size: cover;
+            backgroud-size: cover;
+            
+//            background: $sidebar-color - 5;
             border-bottom: $sidebar-color - 20 1px solid;
             padding: 20px;
             border-top-left-radius: 10px;
@@ -188,7 +196,7 @@ section.one {
                     margin-right: 30px;
                 }
                 #lele {
-                    width: 50px;
+                    width: 70px;
                     display: inline-block;
                 }
                 select {
@@ -201,6 +209,14 @@ section.one {
                     color: $text-red;
                 }
                 #noBunkingBitch {
+                    color: $text-red;
+                    font-weight: bold;
+                }
+                .gain {
+                    color: #349b1b;
+                    font-weight: bold;
+                }
+                .loose {
                     color: $text-red;
                     font-weight: bold;
                 }
@@ -218,15 +234,15 @@ section.one {
                 border-bottom: $sidebar-color - 5px 1px solid;
             }
             p.perbox {
-                width: 70px;
-                height: 70px;
+                width: 80px;
+                height: 80px;
                 display: inline-block;
                 border-radius: 4px;
-                line-height: 70px;
+                line-height: 80px;
                 color: white;
                 font-size: 22px;
                 text-align: center;
-                background: $bunky-bg;
+                //background: $bunky-bg;
                 margin: 0px;
             }
             #subname {
@@ -264,14 +280,21 @@ section.one {
     }
     .sidebar-nav li.active {
         background: $sidebar-color - 15;
+        border-left: 5px solid $bunky-bg;
         color: #ffffff !important;
         font-weight: bold;
         &:last-child {
             border: none;
         }
     }
+    .sidebar-nav li{ 
+        transition-duration: 0.4s;
+        overflow: hidden;
+        position: relative;
+    }
     .sidebar-nav li:hover {
         background: $sidebar-color - 30;
+        border-left: 5px solid $bunky-bg;
     }
     .sidebar-brand {
         height: 120px;
@@ -294,3 +317,51 @@ section.one {
         color: $bunky-text-color;
     }
 }
+
+.can-i-bunk{
+    padding: 40px;
+    
+    .header{
+        .fa{
+            font-size: 70px;
+            color: $bunky-bg;
+        }
+        span{
+            display: block;
+            font-size: 25px;
+            font-weight: bold;
+            font-family: $bunky-font;
+            color: $bunky-bg;
+        }
+    }
+    
+    main{
+        margin: 30px 0px;
+        .msg{
+            font-size: 100px;
+            font-family: $bunky-font;
+            color: $text-red;
+            display: block;
+        }
+    }
+}
+
+/* Large desktop */
+@media (min-width: 1200px) { }
+ 
+/* Portrait tablet to landscape and desktop */
+@media (min-width: 768px) and (max-width: 979px) {  }
+ 
+/* Landscape phone to portrait tablet */
+@media (max-width: 767px) {
+    .user-panel{
+        .col-md-6{
+            text-align: center;
+        }
+    }
+    
+}
+ 
+/* Landscape phones and down */
+@media (max-width: 480px) {  }
+

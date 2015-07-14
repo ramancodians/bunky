@@ -40,13 +40,17 @@
     <div class="tab" ng-show="tab[0]" ng-click="tab[0] = true">
         <div>
             <img ng-src="img/app-1.PNG" class="app">
-            <span> If you bunky
-                <input type="text" ng-model="oneBunk" ng-init="oneBunk = 1" value="1" id="lele" class="form-control">
-               <select class="form-control">
-                    <option>hour</option>
-                    <option>day</option>
+            <span style="display: inline-block;"> If you
+                <select class="form-control" style="width:100px;" ng-model="ba">
+                    <option value="1" selected>Bunk</option>
+                    <option value="0">Attend</option>
                 </select>
-                then you'll loose <span id="lostattendance">0.54%</span>
+                <input type="number" ng-model="oneBunk" ng-init="oneBunk = 1" value="1" id="lele" class="form-control">
+                
+                hr/hrs then you'll <span ng-class="{'loose':ba==1,'gain':ba == 0}">
+                <span ng-if="ba == 1">loose -</span><span ng-if="ba == 0">gain +</span>{{(oneBunk/(d.attendance.conducted + oneBunk))*100 | number: 2}}% | {{d.attendance.percentage + (oneBunk/(d.attendance.conducted + oneBunk))*100 | number: 2}}%</span>
+
+
             </span>
         </div>
 
@@ -75,23 +79,20 @@
                 </span>
             </span>
         </div>
-
-        <!--
-    <div ng-repeat="i in d.attendance.subjects">
-    <p class="perbox">
-        {{i.percentage}}
-    </p>
-    <span id="subname">
-                {{i.name}}
-            </span>
-</div>
--->
+        
+        <div>
+            <img ng-src="img/app-4.png" class="app">
+            <span>You can get 
+                <span class="text-success">
+                    <strong>{{extraMarks}} marks</strong>
+                </span> extra based on your attendance.</span>
+        </div>
     </div>
 
     <div class="subjects" ng-show="tab[1]" ng-click="tab[1] = true" ng-class="{'active':tab[1]}">
 
         <div ng-repeat="i in d.attendance.subjects">
-            <p class="perbox">
+            <p class="perbox" app-colorify="{{i.percentage}}">
                 {{i.percentage}}
             </p>
             <span id="subname">
