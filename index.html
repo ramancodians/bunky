@@ -44,7 +44,7 @@
 
 <body ng-app="bunky">
     <div ng-controller="HomeCtrl">
-        <div id="wrapper" class="home">
+        <div id="wrapper" class="home" ng-class="{'toggled': menu == true}">
             <!-- Sidebar -->
             <div id="sidebar-wrapper">
                 <ul class="sidebar-nav text-left">
@@ -54,13 +54,13 @@
                         <span id="bunky">Bunky!</span>
                         </span>
                     </li>
-                    
+
                     <li ng-repeat="i in sidebar" ng-class="{'active':activeNav == i.url}" ng-click="sidebarActive(i.url)" class="ripple">
                         <a href="#/{{i.url}}">
                             <i class="fa nv fa-{{i.icon}}"></i>{{i.item}}
                         </a>
                     </li>
-                    
+
                     <p style="padding: 20px; font-size: 11px; color : #ccc;" class="text-center">
                         made with <i class="fa fa-heart-o"></i>
                         <br/> by ironman & batman
@@ -71,6 +71,17 @@
 
             <!-- Page Content -->
             <div id="page-content-wrapper">
+                
+                <div class="page-overlay" ng-show="menu == true" ng-click="menuToggle()">asdsaasdsad</div>
+                
+                 <div class="sidebar-mobile-btn" ng-click="menuToggle()" ng-class="{'toggle checked':menu == true}">
+                    <ul class='hamburger'>
+                        <li class='first'></li>
+                        <li class='second'></li>
+                        <li class='third'></li>
+                    </ul>
+                </div>
+                
                 <div class="home-card" ng-view>
 
                 </div>
@@ -80,7 +91,12 @@
         <!-- /#wrapper -->
 
     </div>
-   
+    <script>
+//        $('.sidebar-mobile-btn').on('click', function(){
+//          $(this).toggleClass('checked');
+//        })
+    </script>
+
 </body>
 
 </html>

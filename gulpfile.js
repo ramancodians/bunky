@@ -5,7 +5,7 @@ var livereload = require('gulp-livereload');
 //SASS coversion
 gulp.task('sass', function () {
     gulp.src('./css/scss/*.scss')
-        .pipe(sass())
+        .pipe(sass({ style: 'compressed'}).on('error',sass.logError))
         .pipe(gulp.dest('./css/'))
 	.pipe(livereload());
     console.log("SASS Convertion Done!");

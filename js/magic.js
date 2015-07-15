@@ -22,6 +22,10 @@ app.config(['$routeProvider',
                 templateUrl: 'views/can-i-bunk.html',
                 controller: 'CIBCtrl'
             })
+            .when('/join-us', {
+                templateUrl: 'views/join-us.html',
+                controller: 'JoinUsCtrl'
+            })
             .otherwise({
                 redirectTo: '/home'
             });
@@ -33,6 +37,11 @@ app.config(['$routeProvider',
 app.controller('HomeCtrl', ['$scope', 'Attendance','Christ', function ($scope, Attendance,Christ) {
 
     $scope.dropdown = false;
+    $scope.menu = false;
+    
+     $scope.menuToggle = function () {
+         $scope.menu = !$scope.menu;
+    }
     
     // Ripple effect
     
@@ -51,9 +60,9 @@ app.controller('HomeCtrl', ['$scope', 'Attendance','Christ', function ($scope, A
         icon : 'calendar',
         url: 'plan-a-holiday'
     },{
-        item : 'Feedback',
+        item : 'Join Us',
         icon : 'heart-o',
-        url: 'feedback'
+        url: 'join-us'
     }];
     
     // activating the home sidebar
@@ -62,15 +71,15 @@ app.controller('HomeCtrl', ['$scope', 'Attendance','Christ', function ($scope, A
     // sidebar .active class logic
     $scope.sidebarActive = function(url){
         $scope.activeNav = url;
+        $scope.menuToggle();
     }
     
     
     // bunk and attend UI logic 
     // basically when to show gain
     // or loose property
-    $scope.ba = 1;
-
-
+  
+    
     //controlling the Tabs Logic
     $scope.tab = [true, false, false];
 
@@ -154,8 +163,6 @@ app.controller('CIBCtrl', ['$scope', 'Attendance', function ($scope, Attendance)
     });
 
     $scope.toggle = function () {
-
-
         console.log($scope.dropdown);
         if ($scope.dropdown == false) {
             $scope.dropdown = true;
@@ -266,4 +273,18 @@ app.directive('appColorify', function () {
         }
 
     }
+});
+
+app.directive('convertToNumber', function() {
+  return {
+    require: 'ngModel',
+    link: function(scope, element, attrs, ngModel) {
+      ngModel.$parsers.push(function(val) {
+        return parseInt(val, 10);
+      });
+      ngModel.$formatters.push(function(val){
+        return '' + val;
+      });
+    }
+  }
 });

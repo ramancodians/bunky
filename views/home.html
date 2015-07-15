@@ -40,15 +40,31 @@
     <div class="tab" ng-show="tab[0]" ng-click="tab[0] = true">
         <div>
             <img ng-src="img/app-1.PNG" class="app">
-            <span style="display: inline-block;"> If you
-                <select class="form-control" style="width:100px;" ng-model="ba">
-                    <option value="1" selected>Bunk</option>
-                    <option value="0">Attend</option>
+            <span> If you
+                <select class="form-control" style="width:100px;" ng-model="ba" ng-init="ba = 'bunk'">
+                    <option value="bunk" selected>Bunk</option>
+                    <option value="attend">Attend</option>
                 </select>
-                <input type="number" ng-model="oneBunk" ng-init="oneBunk = 1" value="1" id="lele" class="form-control">
+                <input type="number" ng-model="oneBunk" ng-init="oneBunk = 1" value="1" id="lele" class="form-control" min="0" max="200">
                 
-                hr/hrs then you'll <span ng-class="{'loose':ba==1,'gain':ba == 0}">
-                <span ng-if="ba == 1">loose -</span><span ng-if="ba == 0">gain +</span>{{(oneBunk/(d.attendance.conducted + oneBunk))*100 | number: 2}}% | {{d.attendance.percentage + (oneBunk/(d.attendance.conducted + oneBunk))*100 | number: 2}}%</span>
+                hr/hrs then you'll 
+                
+                <span ng-class="{'gain':ba == 'attend','loose':ba == 'bunk'}">
+                <!--If you're Attending-->
+                <span ng-if="ba == 'attend'">
+                    gain
+                     -{{((d.attendance.present + oneBunk)/(d.attendance.conducted + oneBunk) * 100) - d.attendance.percentage | number : 2}}% | 
+                    <em>{{ d.attendance.percentage - (((d.attendance.present + oneBunk)/(d.attendance.conducted + oneBunk) * 100) - d.attendance.percentage) | number : 2 }}% </em>
+                </span>
+
+            <!--If you are Bunking-->
+            <span ng-if="ba == 'bunk'">
+                    loose
+                     {{( d.attendance.percentage - (d.attendance.present)/(d.attendance.conducted + oneBunk) * 100) | number : 2}}%
+                   | 
+                    <em>    {{ d.attendance.percentage - (((d.attendance.present)/(d.attendance.conducted + oneBunk) * 100) + d.attendance.percentage) | number : 2 }}% </em>
+                </span>
+            </span>
 
 
             </span>
@@ -57,7 +73,7 @@
         <div>
             <img ng-src="img/app-2.png" class="app">
             <span> To reach  
-                <select class="form-control" editable="true">
+                <select class="form-control" editable="true" >
                     <option>75%</option>
                     <option>80%</option>
                     <option>85%</option>
@@ -65,11 +81,9 @@
                     <option>95%</option>
                     <option>100%</option>
                 </select>
-                you have to attend <spanc id="classestoattend">58</span> classes
+                you have to attend <span id="classestoattend">58</span> classes
             </span>
-
         </div>
-
         <div>
             <img ng-src="img/app-3.png" class="app">
             <span>
@@ -79,7 +93,6 @@
                 </span>
             </span>
         </div>
-        
         <div>
             <img ng-src="img/app-4.png" class="app">
             <span>You can get 
