@@ -1,48 +1,194 @@
-
 <!doctype html>
 <html>
-  <head>
+
+<head>
     <meta charset="utf-8">
     <title>Bunky Web</title>
     <meta name="description" content="">
     <meta name="viewport" content="initial-scale=1" />
-    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
-    <!-- build:css(.) styles/vendor.css -->
-    <!-- bower:css -->
-    <!-- endbower -->
+
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
+    <link href="bower_components/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href="css/landing.css" rel="stylesheet">
+
+    <!--Google Fonts-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=RobotoDraft:300,400,500,700,400italic">
+    <link href='http://fonts.googleapis.com/css?family=Gloria+Hallelujah|Patua+One' rel='stylesheet' type='text/css'>
+
+    <link rel="stylesheet" href="css/landing.css">
     <!-- endbuild -->
-    <!-- build:css(.tmp) styles/main.css -->
-      
-      <script src="bower_components/angular/angular.min.js"></script>
-      <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
-      <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.min.css">
-      
-      <!--Other Modules-->
-      <script src="bower_components/angular-route/angular-route.min.js"></script>
-      <script src="bower_components/angular-animate/angular-animate.min.js"></script>
-      <script src="bower_components/angular-touch/angular-touch.min.js"></script>
-      <script src="bower_components/angular-resource/angular-resource.min.js"></script>
-      <script src="bower_components/angular-cookies/angular-cookies.min.js"></script>
-      <script src="bower_components/angular-sanitize/angular-sanitize.min.js"></script>
-      <script src="bower_components/angular-aria/angular-aria.min.js"></script>
-      
-      <!--This is simply Magic-->
-      <script src="js/magic.js"></script>
-      
-  
-       <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=RobotoDraft:300,400,500,700,400italic">
-    <link rel="stylesheet" href="css/style.css">
-    <!-- endbuild -->
-  </head>
-    <body ng-app="bunky">
-        
-      <div id="box1" class="box blurred-bg tinted">
-  <div class="content">
-    <h1>Blurred Background</h1>
-	    <h2>By <a href="http://ariona.net" rel="follow" target="_blank">Ariona, Rian</a></h2>
-    	<p>Drag this box to move around</p>
-    <p class="related">See also: <a href="http://codepen.io/ariona/details/LVZLGP/" target="_blank">Staged Dropdown Animation</a></p>  
-  </div>
-</div>
-    </body>
+</head>
+
+<body>
+    <header class="clearfix">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-4">
+                    <div>
+                        <img src="img/bunky.svg" class="bunky-logo">
+                        <span class="bunky-text">Bunky!</span>
+                    </div>
+                </div>
+                <div class="col-xs-8">
+                    <div>
+                        <ul class="nav nav-pills pull pull-right">
+                            <li id="login">
+                                <a href="#">Login</a>
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="main">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6 pitch">
+                    <div>
+                        <h1>Manage your attendance like a Boss!</h1>
+                        <h3>Bunky is a stoned spider-monkey that helps you bunk and recover from a bunking spree.</h3>
+
+                        <div class="let-me-know">
+                            <input type="text" max="9999999999" min="7000000000" placeholder="Phone Number">
+                            <button class="btn btn-success btn-lg">
+                                I'm in!
+                            </button>
+
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <img src="img/phone.png" class="img-responsive" role="Showcase app">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="features">
+        <div class="container">
+            <h1 class="title">So! What Bunky can do for you? </h1>
+
+            <div class="row">
+                <div class="col-sm-4">
+                    <div class="icon">
+                        <i class="fa fa-calculator img-circle"></i>
+                    </div>
+                    <h1>Bunk Calculations</h1>
+                    <p>
+                        Lorem Impsomsa safsdf tsfgkpoer sdf sdfsdrs a sdxcv ert s dfsdf sdf sf sf s fsfsd f sfsd Lorem Impsomsa safsdf tsfgkpoer sdf sdfsdrs a sdxcv ert s dfsdf sdf sf sf s fsfsd f sfsd
+                    </p>
+                </div>
+                <div class="col-sm-4">
+                    <div class="icon">
+                        <i class="fa fa-area-chart img-circle"></i>
+                    </div>
+                    <h1>Analysis</h1>
+                    <p>
+                        Lorem Impsomsa safsdf tsfgkpoer sdf sdfsdrs a sdxcv ert s dfsdf sdf sf sf s fsfsd f sfsd Lorem Impsomsa safsdf tsfgkpoer sdf sdfsdrs a sdxcv ert s dfsdf sdf sf sf s fsfsd f sfsd
+                    </p>
+                </div>
+                <div class="col-sm-4">
+                    <div class="icon">
+                        <i class="fa fa-plane img-circle"></i>
+                    </div>
+                    <h1>Plan a holiday</h1>
+                    <p>
+                        Lorem Impsomsa safsdf tsfgkpoer sdf sdfsdrs a sdxcv ert s dfsdf sdf sf sf s fsfsd f sfsd Lorem Impsomsa safsdf tsfgkpoer sdf sdfsdrs a sdxcv ert s dfsdf sdf sf sf s fsfsd f sfsd
+                    </p>
+                </div>
+            </div>
+
+            <h4>
+                ...and even more!!
+            </h4>
+        </div>
+    </div>
+
+    <div class="developer">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6">
+                     <h1 class="title">
+                        Are you a geek? Why don't join us! 
+                    </h1>
+                   <div>
+                       <p>
+                          Bunky is a <strong><a href="@">Open Source</a></strong> project. We are trying to solve the Attendance Management problem that we all face in College. Currently we are working on Christ University Attendance system. We would love to have you onboard and together extend Bunky in various colleges and platform. 
+                       </p>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div>
+                       <div class="row people text-center">
+                           <h4 class="text-left">Superheros Needed</h4>
+                            <div class="col-sm-4 col-xs-12">
+                                <div class="hhh">
+                                   <i class="fa fa-android"></i>
+                                    <span>
+                                        Android </br> Developer
+                                    </span>
+                                    <button>Apply</button>
+                                </div>
+                           </div>
+                            <div class="col-sm-4 col-xs-12">
+                                <div class="hhh">
+                                   <i class="fa fa-apple"></i>
+                                    <span>
+                                        iOS </br> Developer
+                                    </span>
+                                    <button>Apply</button>
+                                </div>
+                           </div>
+                           <div class="col-sm-4 col-xs-12">
+                                <div class="hhh">
+                                <i class="fa fa-bank"></i>
+                                    <span>
+                                        College </br> Representative
+                                    </span>
+                                    <button>Apply</button>
+                               </div>
+                           </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-4">
+                    <ul>
+                        <li><a href="#">Item 1</a>
+                        </li>
+                        <li><a href="#">Item 1</a>
+                        </li>
+                        <li><a href="#">Item 1</a>
+                        </li>
+                        <li><a href="#">Item 1</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-sm-4">
+                    <div>
+                        Facebook
+                    </div>
+
+                </div>
+                <div class="col-sm-4">
+                    <div>
+                        twitter
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+</body>
+
 </html>
