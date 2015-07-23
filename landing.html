@@ -14,12 +14,36 @@
     <!--Google Fonts-->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=RobotoDraft:300,400,500,700,400italic">
     <link href='http://fonts.googleapis.com/css?family=Gloria+Hallelujah|Patua+One' rel='stylesheet' type='text/css'>
-
     <link rel="stylesheet" href="css/landing.css">
     <!-- endbuild -->
-</head>
+    
+    <!--Angular-->
+    <script src="bower_components/angular/angular.min.js"></script>
+    <script src="bower_components/angularfire/dist/angularfire.min.js"></script>
+    <script>
+    //Magic is happring here...!
+        
+        var app  = angular.modeule('landing',['angularfire']);
+        
+        app.controller('MainCtrl',['$scope','angularfire',function($scope,Angularfire){
+            
+            
+        }]);
+        
 
-<body>
+            app.factory("SingUpData", ["$firebaseArray",
+              function($firebaseArray) {   
+                var ref = new Firebase("https://bunky.firebaseio.com/");
+
+                // this uses AngularFire to create the synchronized array
+                return $firebaseArray(ref);
+              }
+            ]);
+    
+    </script>
+    </head>
+
+<body ng-app="landing">
   
 <div class="modal fade login-model" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
   <div class="modal-dialog modal-sm">

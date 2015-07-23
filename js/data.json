@@ -5,7 +5,8 @@
         "conducted": 164,
         "present": 88,
         "absent": 76,
-        "percentage": 53.66,
+        "percentage": 72.56,
+        "targetAttendance" : 75.00,
         "subjects": [
             {
                 "name": "PROFESSIONAL ENGLISH",

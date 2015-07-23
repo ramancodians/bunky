@@ -207,9 +207,12 @@ section.one {
             background: $sidebar-color + 20;
             color: $white;
             text-align: left !important;
+            padding-bottom: 50px;
+            
             div {
                 padding: 10px 20px;
                 border-bottom: $sidebar-color - 5px 1px solid;
+                max-height: 85px;
                 
                 & >span{
                     position: relative;
@@ -267,6 +270,11 @@ section.one {
         .bunk-graph {
             background: #fff;
             min-height: 400px;
+            position: relative;
+            padding-bottom: 30px;
+            
+        
+            
         }
         .subjects {
             text-align: left;
@@ -384,8 +392,15 @@ section.one {
     
     .header{
         .fa{
-            font-size: 70px;
             color: $bunky-bg;
+            display: block;
+            width:  80px;
+            height: 80px;
+            margin: 0px auto;
+            padding: 15px;
+            border-radius: 50%;
+            font-size: 50px;
+            border: 1px solid $bunky-bg;
         }
         span{
             display: block;
@@ -512,4 +527,104 @@ section.one {
         color: #fff;
     }
 }
+
+.plan-a-holiday{
+    
+    .calendar-navbar{
+        padding: 10px 0px;
+         background: #CCC;
+        margin: 0px 0px;
+    }
+    
+
+        .monthview-dataCell{
+            padding: 40px;
+            background: red;
+        }
+    
+    
+    .header{
+        padding: 40px;
+       
+        
+        h1.icon{
+            color: $bunky-bg;
+            display: block;
+            width:  80px;
+            height: 80px;
+            margin: 0px auto;
+            padding: 15px;
+            border-radius: 50%;
+            font-size: 50px;
+            border: 1px solid $bunky-bg;
+              transition-duration: 0.4s;
+        }
+        
+        h5{
+             display: block;
+            font-size: 25px;
+            font-weight: bold;
+            font-family: $bunky-font;
+            color: $bunky-bg;
+        }
+   
+    }
+}
+
+
+.ng-modal-overlay {
+  /* A dark translucent div that covers the whole screen */
+  position:absolute;
+  z-index:9999;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  background-color:#000000;
+  opacity: 0.3;
+}
+.ng-modal-dialog {
+  /* A centered div above the overlay with a box shadow. */
+  z-index:10000;
+  position: absolute;
+  width: 60%; /* Default */
+    border-radius: 10px;
+    
+
+  /* Center the dialog */
+  top: 50px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+
+  background-color: #fff;
+  box-shadow: 4px 4px 80px #000;
+}
+.ng-modal-dialog-content {
+  padding:10px;
+  text-align: left;
+}
+.ng-modal-close {
+  position: absolute;
+  top: 3px;
+  right: 5px;
+  padding: 5px;
+  cursor: pointer;
+  font-size: 120%;
+  display: inline-block;
+  font-weight: bold;
+  font-family: 'arial', 'sans-serif';
+}
+
+
+
+
+
+
+
+
+
+
+
 

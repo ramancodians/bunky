@@ -18,25 +18,31 @@
     <script src="bower_components/jquery/dist/jquery.min.js"></script>
     <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
 
-
-
-    <!--My Styles-->
-    <link rel="stylesheet" href="css/style.css">
-
-    <!--Awesome Fonts-->
+        <!--Awesome Fonts-->
     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.min.css">
     <script src="bower_components/jquery/dist/jquery.min.js"></script>
 
     <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.min.css">
 
+    <link href="bower_components/ng-responsive-calendar/dist/css/calendar.min.css" rel="stylesheet">
+    <link href="bower_components/angular-chart.js/dist/angular-chart.css" rel="stylesheet">
+    
+    <!--My Styles-->
+    <link rel="stylesheet" href="css/style.css">
+
+
+
+
 
     <!--Google Fonts-->
-<!--    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=RobotoDraft:300,400,500,700,400italic">-->
-<!--    <link href='http://fonts.googleapis.com/css?family=Gloria+Hallelujah|Patua+One' rel='stylesheet' type='text/css'>-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=RobotoDraft:300,400,500,700,400italic">
+    <link href='http://fonts.googleapis.com/css?family=Gloria+Hallelujah|Patua+One' rel='stylesheet' type='text/css'>
     <!--Angular Magic-->
     <script src="bower_components/angular/angular.min.js"></script>
     <script src="bower_components/angular-route/angular-route.min.js"></script>
+    <script src="bower_components/ng-responsive-calendar/dist/js/calendar-tpls.min.js"></script>
+
     <!--This is simply Magic-->
     <script src="js/magic.js"></script>
     <!-- endbuild -->
@@ -44,6 +50,8 @@
 
 <body ng-app="bunky">
     <div ng-controller="HomeCtrl">
+        
+        
         <div id="wrapper" class="home" ng-class="{'toggled': menu == true}">
             <!-- Sidebar -->
             <div id="sidebar-wrapper">
@@ -71,28 +79,7 @@
 
             <!-- Page Content -->
             <div id="page-content-wrapper">
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                <div class="page-overlay" ng-show="menu == true && mobile == false" ng-click="menuToggle()"></div>
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
+                <div class="page-overlay" ng-show="menu == true" ng-click="menu = !menu" class="visible-sm visible-xs"></div>
                  <div class="sidebar-mobile-btn visible-sm visible-xs" ng-click="menuToggle()" ng-class="{'toggle checked':menu == true}">
                     <ul class='hamburger'>
                         <li class='first'></li>
@@ -108,6 +95,12 @@
             <!-- /#page-content-wrapper -->
         </div>
         <!-- /#wrapper -->
+        
+        
+                    <modal-dialog show='modalShown' width='750px' height='60%'>
+  <p>Modal Content Goes here<p>
+</modal-dialog>
+
 
     </div>
     <script>

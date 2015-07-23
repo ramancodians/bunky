@@ -1,4 +1,4 @@
-var app = angular.module('bunky', ['ngRoute']);
+var app = angular.module('bunky', ['ngRoute','ui.rCalendar']);
 
 /*CONFIG
  *************************************************************************************/
@@ -10,9 +10,9 @@ app.config(['$routeProvider',
                 templateUrl: 'views/home.html',
                 controller: 'HomeCtrl'
             })
-            .when('/subject/:subjectID', {
-                templateUrl: 'views/subject.html',
-                controller: 'SubjectCtrl'
+            .when('/plan-a-holiday', {
+                templateUrl: 'views/plan-a-holiday.html',
+                controller: 'PAHCtrl'
             })
             .when('/home', {
                 templateUrl: 'views/home.html',
@@ -41,33 +41,41 @@ app.controller('HomeCtrl', ['$scope', 'Attendance','Christ', function ($scope, A
     
      $scope.menuToggle = function () {
          $scope.isMobile();
-         console.log("Menu Toggled called!");
+         
          
          if($scope.mobile == true){
-           $scope.menu = true;
+             console.log("Mobile Toggle Called!");
+             $scope.menu = !$scope.menu;
          }else{
-            $scope.menu = !$scope.menu;
+            // desktop then do this
+           console.log("Desktop Toggled called!");
+
+            $scope.menu = false;
          }
          console.log($scope.menu);
               
     }
      
+     
      $scope.isMobile = function(){
         $scope.mobile = window.innerWidth;
          
         if($scope.mobile > 767){
-           console.log("Desktop Version of Site activated");
+          // console.log("Desktop Version of Site activated");
            $scope.mobile = false;
-            console.log($scope.mobile);
+           // console.log($scope.mobile);
         }else{
-            console.log("Mobile Version of Site activated");
+          //  console.log("Mobile Version of Site activated");
             $scope.mobile =  true;
-            $scope.menu = true;
-            console.log($scope.mobile);
+          //  $scope.menu = true;
+           // console.log($scope.mobile);
         }
      }
     
-    // get the window
+      $scope.modalShown = false;
+    $scope.toggleModal = function() {
+    $scope.modalShown = !$scope.modalShown;
+    };
     
     
 
@@ -85,9 +93,9 @@ app.controller('HomeCtrl', ['$scope', 'Attendance','Christ', function ($scope, A
         icon : 'calendar',
         url: 'plan-a-holiday'
     },{
-        item : 'Join Us',
-        icon : 'heart-o',
-        url: 'join-us'
+        item : 'Bunk Stats',
+        icon : 'line-chart',
+        url: 'stats'
     }];
     
     // activating the home sidebar
@@ -115,36 +123,21 @@ app.controller('HomeCtrl', ['$scope', 'Attendance','Christ', function ($scope, A
         $scope.tab[i] = true;
     
     }
+
+
+    $scope.makeSubjectBunkChart = function(){
+         
+    }
     
-    //getting the color based on attendance
-    $scope.getColor = function(per){ 
-            console.log("getColor() got called!");
-           if(per <= 100 && per >90){             
-               return 'a90-100';
-           }else if(per > 85){               
-               return 'a85-90';
-           }else if(per > 80){              
-               return 'a80-85';
-           }else if(per > 75){             
-               return 'a75-80';
-           }else if(per > 70){              
-               return 'a70-75';
-           }else if(per > 40){              
-               return 'a40-70';
-           }else if(per > 10){              
-               return 'a10-40';
-           }else if(per >= 0){             
-               return 'a0-10';
-           }else{
-               return 'black';
-           }
-        }
-   
+    // calling
+    $scope.makeSubjectBunkChart();
+
     $scope.extraMarks = 0;
         
     // fetching data from json
     Attendance.fetch().then(function (data) {
         $scope.d = data;
+        console.log($scope.d);
         
     }).then(function(){
         var marks = 0;
@@ -167,16 +160,14 @@ app.controller('HomeCtrl', ['$scope', 'Attendance','Christ', function ($scope, A
         });
         $scope.extraMarks = marks;
     });
-    
-    $scope.getChristData = function(){
-        Christ.get();
-    };
-         $scope.getChristData();
-   
-    
 
 
 }]);
+
+app.controller('PAHCtrl',function($scope){
+    $scope.hello = "Hello Angular";
+    
+});
 
 app.controller('CIBCtrl', ['$scope', 'Attendance', function ($scope, Attendance) {
 
@@ -212,6 +203,7 @@ app.controller('LoginCtrl', function ($scope) {
         }
     }
 
+    
 
 
 });
@@ -312,4 +304,26 @@ app.directive('convertToNumber', function() {
       });
     }
   }
+});
+
+app.directive('modalDialog', function() {
+  return {
+    restrict: 'E',
+    scope: {
+      show: '='
+    },
+    replace: true, // Replace with the template below
+    transclude: true, // we want to insert custom content inside the directive
+    link: function(scope, element, attrs) {
+      scope.dialogStyle = {};
+      if (attrs.width)
+        scope.dialogStyle.width = attrs.width;
+      if (attrs.height)
+        scope.dialogStyle.height = attrs.height;
+      scope.hideModal = function() {
+        scope.show = false;
+      };
+    },
+    templateUrl: 'views/modal.html'
+  };
 });
