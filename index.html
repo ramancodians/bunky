@@ -32,8 +32,8 @@
 
 
     <!--Google Fonts-->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=RobotoDraft:300,400,500,700,400italic">
-    <link href='http://fonts.googleapis.com/css?family=Gloria+Hallelujah|Patua+One' rel='stylesheet' type='text/css'>
+<!--    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=RobotoDraft:300,400,500,700,400italic">-->
+<!--    <link href='http://fonts.googleapis.com/css?family=Gloria+Hallelujah|Patua+One' rel='stylesheet' type='text/css'>-->
     <!--Angular Magic-->
     <script src="bower_components/angular/angular.min.js"></script>
     <script src="bower_components/angular-route/angular-route.min.js"></script>
@@ -72,9 +72,28 @@
             <!-- Page Content -->
             <div id="page-content-wrapper">
                 
-                <div class="page-overlay" ng-show="menu == true" ng-click="menuToggle()">asdsaasdsad</div>
                 
-                 <div class="sidebar-mobile-btn" ng-click="menuToggle()" ng-class="{'toggle checked':menu == true}">
+                
+                
+                
+                
+                
+                
+                
+                
+                <div class="page-overlay" ng-show="menu == true && mobile == false" ng-click="menuToggle()"></div>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                 <div class="sidebar-mobile-btn visible-sm visible-xs" ng-click="menuToggle()" ng-class="{'toggle checked':menu == true}">
                     <ul class='hamburger'>
                         <li class='first'></li>
                         <li class='second'></li>

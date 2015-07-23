@@ -20,11 +20,45 @@
 </head>
 
 <body>
+  
+<div class="modal fade login-model" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
+  <div class="modal-dialog modal-sm">
+    <div class="modal-content">
+        <div class="login-app">
+            <div class="header text-center">
+                <h1>Bunky! <span>Login</span></h1>
+            </div>
+            <div class="xxx">
+                <form class="form">
+                    <div class="form-group">
+                        <i class="fa fa-user"></i>
+                        <input type="text" placeholder="Student ID" name="userman">
+                    </div>
+                     <div class="form-group">
+                        <i class="fa fa-lock"></i>
+                        <input type="password" placeholder="Password" name="userman">
+                    </div>
+                    <div class="notice">
+                        <span>
+                        We need your permission to fetch your attendance.
+                        </span>
+                        
+                        <input type="checkbox" name="tc" class="tc"> Allow Bunky 
+                    </div>
+                    
+                    <button>Login</button>
+                    
+                </form>
+            </div>
+        </div>
+    </div>
+  </div>
+</div>
     <header class="clearfix">
         <div class="container">
             <div class="row">
                 <div class="col-xs-4">
-                    <div>
+                    <div class="xxx">
                         <img src="img/bunky.svg" class="bunky-logo">
                         <span class="bunky-text">Bunky!</span>
                     </div>
@@ -32,7 +66,7 @@
                 <div class="col-xs-8">
                     <div>
                         <ul class="nav nav-pills pull pull-right">
-                            <li id="login">
+                            <li id="login" data-toggle="modal" data-target=".login-model">
                                 <a href="#">Login</a>
 
                         </ul>
@@ -45,9 +79,14 @@
     <div class="main">
         <div class="container">
             <div class="row">
-                <div class="col-sm-6 pitch">
+                <div class="col-sm-5">
                     <div>
-                        <h1>Manage your attendance like a Boss!</h1>
+                         <img src="img/phone.png" class="img-responsive" role="Showcase app">
+                    </div>
+                </div>
+                <div class="col-sm-7 pitch">
+                    <div>
+                        <h1>Manage your attendance Like a Boss!</h1>
                         <h3>Bunky is a stoned spider-monkey that helps you bunk and recover from a bunking spree.</h3>
 
                         <div class="let-me-know">
@@ -59,9 +98,6 @@
                         </div>
 
                     </div>
-                </div>
-                <div class="col-sm-6">
-                    <img src="img/phone.png" class="img-responsive" role="Showcase app">
                 </div>
             </div>
         </div>
@@ -78,7 +114,9 @@
                     </div>
                     <h1>Bunk Calculations</h1>
                     <p>
-                        Lorem Impsomsa safsdf tsfgkpoer sdf sdfsdrs a sdxcv ert s dfsdf sdf sf sf s fsfsd f sfsd Lorem Impsomsa safsdf tsfgkpoer sdf sdfsdrs a sdxcv ert s dfsdf sdf sf sf s fsfsd f sfsd
+                        We made calculation very easy. Pre-loaded equations for all
+                        your bunking requrements. No Need to copy paste the values,
+                        Bunky can automatically take data from University Server.   Yaa! Magic!
                     </p>
                 </div>
                 <div class="col-sm-4">
@@ -87,7 +125,7 @@
                     </div>
                     <h1>Analysis</h1>
                     <p>
-                        Lorem Impsomsa safsdf tsfgkpoer sdf sdfsdrs a sdxcv ert s dfsdf sdf sf sf s fsfsd f sfsd Lorem Impsomsa safsdf tsfgkpoer sdf sdfsdrs a sdxcv ert s dfsdf sdf sf sf s fsfsd f sfsd
+                       Bunky can analyse your attendanc and advice you what you can do with it. You specify what is your priority before hand and bunky will take that into account while suggesting you what to do.
                     </p>
                 </div>
                 <div class="col-sm-4">
@@ -96,7 +134,7 @@
                     </div>
                     <h1>Plan a holiday</h1>
                     <p>
-                        Lorem Impsomsa safsdf tsfgkpoer sdf sdfsdrs a sdxcv ert s dfsdf sdf sf sf s fsfsd f sfsd Lorem Impsomsa safsdf tsfgkpoer sdf sdfsdrs a sdxcv ert s dfsdf sdf sf sf s fsfsd f sfsd
+                      You attended all the classes in the begening! Now time to use  your extra attendance. Plan a holiday let you plan bunky for a longer period of time. Bunky will give you clear picture of those classes bunked on your attendance.
                     </p>
                 </div>
             </div>
@@ -160,35 +198,21 @@
 
     <footer>
         <div class="container">
-            <div class="row">
-                <div class="col-sm-4">
-                    <ul>
-                        <li><a href="#">Item 1</a>
-                        </li>
-                        <li><a href="#">Item 1</a>
-                        </li>
-                        <li><a href="#">Item 1</a>
-                        </li>
-                        <li><a href="#">Item 1</a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="col-sm-4">
-                    <div>
-                        Facebook
-                    </div>
-
-                </div>
-                <div class="col-sm-4">
-                    <div>
-                        twitter
-                    </div>
+            <div class="row text-center">
+               <div class="col-md-12">
+                   <div>
+                    <p>
+                        Made with <i class="fa fa-heart-o text-error"></i> by 
+                        <img src="img/ironman.png" class="heros"> & <img class="heros" src="img/batman.png">
+                       </p> 
+                   </div>
                 </div>
             </div>
         </div>
     </footer>
 
-
+<script src="bower_components/jquery/dist/jquery.min.js"></script>
+<script src="bower_components/bootstrap/js/modal.js"></script>
 </body>
 
 </html>

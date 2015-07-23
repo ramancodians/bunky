@@ -40,10 +40,35 @@ app.controller('HomeCtrl', ['$scope', 'Attendance','Christ', function ($scope, A
     $scope.menu = false;
     
      $scope.menuToggle = function () {
-         $scope.menu = !$scope.menu;
+         $scope.isMobile();
+         console.log("Menu Toggled called!");
+         
+         if($scope.mobile == true){
+           $scope.menu = true;
+         }else{
+            $scope.menu = !$scope.menu;
+         }
+         console.log($scope.menu);
+              
     }
+     
+     $scope.isMobile = function(){
+        $scope.mobile = window.innerWidth;
+         
+        if($scope.mobile > 767){
+           console.log("Desktop Version of Site activated");
+           $scope.mobile = false;
+            console.log($scope.mobile);
+        }else{
+            console.log("Mobile Version of Site activated");
+            $scope.mobile =  true;
+            $scope.menu = true;
+            console.log($scope.mobile);
+        }
+     }
     
-    // Ripple effect
+    // get the window
+    
     
 
     // sidebar data
