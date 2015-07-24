@@ -96,7 +96,7 @@
                 </span>
             </span>
         </div>
-        <div class="clearfix">
+        <div>
             <img ng-src="img/app-4.png" class="app">
             <span>You can get 
                 <span class="text-success">
@@ -106,7 +106,7 @@
     </div>
 
     <div class="subjects" ng-show="tab[1]" ng-click="tab[1] = true" ng-class="{'active':tab[1]}">
-         <div ng-repeat="i in d.attendance.subjects" ng-click='toggleModal()'>
+         <div ng-repeat="i in d.attendance.subjects" ng-click='toggleModal(i)'>
             <p class="perbox" app-colorify="{{i.percentage}}">
                 {{i.percentage}}
             </p>
@@ -118,15 +118,58 @@
     </div>
 
     <div class="bunk-graph" ng-show="tab[2]" ng-click="tab[2] = true">
-        <div class="holder clearfix">
+        <div class="holder">
       
             
         </div>
     </div>
 <modal-dialog show='modalShown'>
   <header>
-        {{}}
+    <h1>{{subDetails.name}}</h1>
+      <div class="row">
+        <div class="col-xs-6">
+            <div>
+            <p>Attendance</p>
+                <h2>{{subDetails.percentage}}</h2>
+            
+            </div>
+         </div>
+        <div class="col-xs-6 text-center">
+            <div class="row">
+                <div class="col-xs-4">
+                    <div>
+                    <span class="visible-xs visible-sm">C</span>
+                    <span class="visible-md visible-lg">Conducted</span>
+                    <h1 class="hhh">
+                       {{subDetails.conducted}}
+                    </h1>
+                    </div>
+                </div>
+                <div class="col-xs-4">
+                    <div>
+                    <span class="visible-xs visible-sm">P</span>
+                    <span class="visible-md visible-lg">Present</span>
+                    <h1 class="hhh">
+                        {{subDetails.present}}
+                    </h1>
+                    </div>
+                </div>
+                <div class="col-xs-4">
+                    <div>
+                    <span class="visible-xs visible-sm">A</span>
+                    <span class="visible-md visible-lg">Absent</span>
+                    <h1 class="hhh">
+                        {{subDetails.absent}}
+                    </h1>
+                    </div>
+                </div>
+            </div>
+          </div>
+      </div>
+      
     </header>
+    
+    
 </modal-dialog>
 
 </div>

@@ -2565,8 +2565,7 @@ section.one {
     padding-bottom: 50px; }
     .home .home-card .tab div {
       padding: 10px 20px;
-      border-bottom: #e3e3e3 1px solid;
-      max-height: 85px; }
+      border-bottom: #e3e3e3 1px solid; }
       .home .home-card .tab div > span {
         position: relative; }
         @media (max-width: 767px) {
@@ -2868,21 +2867,35 @@ section.one {
   /* A centered div above the overlay with a box shadow. */
   z-index: 10000;
   position: absolute;
-  width: 60%;
+  width: 80%;
   /* Default */
-  border-radius: 10px;
+  border-radius: 0px;
+  left: 50%;
+  transform: translateX(-50%);
   /* Center the dialog */
   top: 50px;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  -webkit-transform: translate(-50%, -50%);
-  -moz-transform: translate(-50%, -50%);
+  margin: 0px auto;
   background-color: #fff;
   box-shadow: 4px 4px 80px #000; }
+  @media (max-width: 767px) {
+    .ng-modal-dialog {
+      width: 95%; } }
+  .ng-modal-dialog header {
+    color: #444;
+    padding: 70px 20px 20px 20px; }
+    .ng-modal-dialog header h1 {
+      font-weight: normal;
+      text-transform: capitalize;
+      font-size: 25px; }
+    .ng-modal-dialog header > h1 {
+      margin-bottom: 20px; }
+    .ng-modal-dialog header h1.hhh {
+      font-size: 20px;
+      padding-top: 10px; }
 
 .ng-modal-dialog-content {
-  padding: 10px;
-  text-align: left; }
+  text-align: left;
+  width: 100%; }
 
 .ng-modal-close {
   position: absolute;

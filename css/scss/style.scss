@@ -212,7 +212,7 @@ section.one {
             div {
                 padding: 10px 20px;
                 border-bottom: $sidebar-color - 5px 1px solid;
-                max-height: 85px;
+                
                 
                 & >span{
                     position: relative;
@@ -587,23 +587,48 @@ section.one {
   /* A centered div above the overlay with a box shadow. */
   z-index:10000;
   position: absolute;
-  width: 60%; /* Default */
-    border-radius: 10px;
+  width: 80%; /* Default */
+  border-radius: 0px;
+    left: 50%;
+    transform: translateX(-50%);
+    
+    @include tablet{
+        width: 95%;
+    }
     
 
   /* Center the dialog */
   top: 50px;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  -webkit-transform: translate(-50%, -50%);
-  -moz-transform: translate(-50%, -50%);
+  margin: 0px auto;
+
 
   background-color: #fff;
   box-shadow: 4px 4px 80px #000;
+    
+    header{
+        color: #444;
+        h1{
+            font-weight: normal;
+            text-transform: capitalize;
+            font-size: 25px;
+        }
+        
+        & > h1{
+            margin-bottom: 20px; 
+        }
+        padding: 70px 20px 20px 20px;
+        
+        h1.hhh{
+            font-size: 20px;
+            padding-top: 10px
+        }
+    }
+    
 }
 .ng-modal-dialog-content {
-  padding:10px;
-  text-align: left;
+   text-align: left;
+    width: 100%;
+    
 }
 .ng-modal-close {
   position: absolute;

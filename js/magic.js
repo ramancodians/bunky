@@ -73,8 +73,11 @@ app.controller('HomeCtrl', ['$scope', 'Attendance','Christ', function ($scope, A
      }
     
       $scope.modalShown = false;
-    $scope.toggleModal = function() {
-    $scope.modalShown = !$scope.modalShown;
+    
+    $scope.toggleModal = function(data) {
+        $scope.modalShown = !$scope.modalShown;
+        $scope.subDetails = data;
+        console.log($scope.subDetails);
     };
     
     
