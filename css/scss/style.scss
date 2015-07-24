@@ -575,13 +575,13 @@ section.one {
 .ng-modal-overlay {
   /* A dark translucent div that covers the whole screen */
   position:absolute;
-  z-index:9999;
-  top:0;
-  left:0;
-  width:100%;
+  z-index:10000;
+  top:-180px;
+  left:-500px;
+  width:2000%;
   height:100%;
   background-color:#000000;
-  opacity: 0.3;
+  opacity: 0.5;
 }
 .ng-modal-dialog {
   /* A centered div above the overlay with a box shadow. */
@@ -597,6 +597,10 @@ section.one {
     }
     
 
+    .ng-isolate-scope{
+        transition-duration: 1s;
+        background: red;
+    }
   /* Center the dialog */
   top: 50px;
   margin: 0px auto;
@@ -641,12 +645,6 @@ section.one {
   font-weight: bold;
   font-family: 'arial', 'sans-serif';
 }
-
-
-
-
-
-
 
 
 
