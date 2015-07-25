@@ -6,57 +6,38 @@
     <title>Bunky Web</title>
     <meta name="description" content="">
     <meta name="viewport" content="initial-scale=1" />
-    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
-    <!-- build:css(.) styles/vendor.css -->
-    <!-- bower:css -->
-    <!-- endbower -->
-    <!-- endbuild -->
-    <!-- build:css(.tmp) styles/main.css -->
 
-    <!--Bootstap Baby!-->
-    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
-    <script src="bower_components/jquery/dist/jquery.min.js"></script>
-    <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
-
-        <!--Awesome Fonts-->
+    <!--CSS Frameworks/Icons -->
     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.min.css">
-    <script src="bower_components/jquery/dist/jquery.min.js"></script>
-
-    <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.min.css">
-
     <link href="bower_components/ng-responsive-calendar/dist/css/calendar.min.css" rel="stylesheet">
-    <link href="bower_components/angular-chart.js/dist/angular-chart.css" rel="stylesheet">
+    
+    <!--JS Libs-->
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
     
     <!--My Styles-->
     <link rel="stylesheet" href="css/style.css">
 
+    <!--Angular-->
+    <script src="bower_components/angular/angular.min.js"></script>
+    <script src="bower_components/angular-route/angular-route.min.js"></script>
+    <script src="bower_components/ng-responsive-calendar/dist/js/calendar-tpls.min.js"></script>
+    <script src="bower_components/angular-animate/angular-animate.min.js"></script>
 
-
-
+    <!--This is simply Magic-->
+    <script src="js/magic.js"></script>
 
     <!--Google Fonts-->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=RobotoDraft:300,400,500,700,400italic">
     <link href='http://fonts.googleapis.com/css?family=Gloria+Hallelujah|Patua+One' rel='stylesheet' type='text/css'>
-    <!--Angular Magic-->
-    <script src="bower_components/angular/angular.min.js"></script>
-    <script src="bower_components/angular-route/angular-route.min.js"></script>
-    <script src="bower_components/ng-responsive-calendar/dist/js/calendar-tpls.min.js"></script>
 
-    <!--This is simply Magic-->
-    <script src="js/magic.js"></script>
-    <!-- endbuild -->
 </head>
 
 <body ng-app="bunky">
     
     <div ng-controller="HomeCtrl">
-         
-       
-        
         <div id="wrapper" class="home" ng-class="{'toggled': menu == true}">
-          
-            
             <!-- Sidebar -->
             <div id="sidebar-wrapper">
                 <ul class="sidebar-nav text-left">

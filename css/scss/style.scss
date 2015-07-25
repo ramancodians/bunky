@@ -281,6 +281,24 @@ section.one {
             div {
                 padding: 10px 20px;
                 border-bottom: $sidebar-color - 5px 1px solid;
+                transition: all 0.6s ease-in-out;
+                 opacity: 0;
+                
+                &.ng-enter{
+                    transform: translateX(-100px);
+                   
+                }
+                
+                &.ng-enter.ng-enter-active{
+                    opacity: 1;
+                }
+                
+                &.ng-scope{
+                     opacity: 1;
+                    transition-duration: 0.6s;
+                }
+                
+                
             }
             p.perbox {
                 width: 80px;
@@ -582,6 +600,7 @@ section.one {
   height:100%;
   background-color:#000000;
   opacity: 0.5;
+    -webkit-overflow-scrolling: touch;
 }
 .ng-modal-dialog {
   /* A centered div above the overlay with a box shadow. */
@@ -590,12 +609,19 @@ section.one {
       width: 80%; /* Default */
       border-radius: 0px;
       left: 50%;
-    border-radius: 3px;
+      border-radius: 3px;
       transform: translateX(-50%);
       box-shadow: 0 3px 9px rgba(0,0,0,0.32);
       background-color: #fff;
       top: 50px;
       margin: 0px auto;
+      transition: all 1s ease;
+    transform: scale(1);
+    transition-duration: 0.6s;
+    
+     &.ng-hide{
+         transform: scale(2);
+     }
     
         @include tablet{
             width: 95%;

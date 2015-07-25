@@ -2615,7 +2615,16 @@ section.one {
     text-align: left; }
     .home .home-card .subjects div {
       padding: 10px 20px;
-      border-bottom: #e3e3e3 1px solid; }
+      border-bottom: #e3e3e3 1px solid;
+      transition: all 0.6s ease-in-out;
+      opacity: 0; }
+      .home .home-card .subjects div.ng-enter {
+        transform: translateX(-100px); }
+      .home .home-card .subjects div.ng-enter.ng-enter-active {
+        opacity: 1; }
+      .home .home-card .subjects div.ng-scope {
+        opacity: 1;
+        transition-duration: 0.6s; }
     .home .home-card .subjects p.perbox {
       width: 80px;
       height: 80px;
@@ -2861,7 +2870,8 @@ section.one {
   width: 2000%;
   height: 100%;
   background-color: #000000;
-  opacity: 0.5; }
+  opacity: 0.5;
+  -webkit-overflow-scrolling: touch; }
 
 .ng-modal-dialog {
   /* A centered div above the overlay with a box shadow. */
@@ -2877,7 +2887,12 @@ section.one {
   background-color: #fff;
   top: 50px;
   margin: 0px auto;
+  transition: all 1s ease;
+  transform: scale(1);
+  transition-duration: 0.6s;
   /* Center the dialog */ }
+  .ng-modal-dialog.ng-hide {
+    transform: scale(2); }
   @media (max-width: 767px) {
     .ng-modal-dialog {
       width: 95%; } }

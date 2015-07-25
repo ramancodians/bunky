@@ -1,4 +1,4 @@
-var app = angular.module('bunky', ['ngRoute','ui.rCalendar']);
+var app = angular.module('bunky', ['ngRoute','ui.rCalendar','ngAnimate']);
 
 /*CONFIG
  *************************************************************************************/

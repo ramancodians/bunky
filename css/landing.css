@@ -7,6 +7,9 @@ body {
 
 .modal .modal-dialog {
   margin: 100px auto; }
+  @media (max-width: 767px) {
+    .modal .modal-dialog {
+      margin-top: 20px; } }
 
 .modal .modal-content {
   border-radius: 0px;
@@ -14,7 +17,7 @@ body {
   @media (max-width: 767px) {
     .modal .modal-content {
       width: 90%;
-      margin: 100px 20px; } }
+      margin: 0px 20px; } }
   .modal .modal-content .login-app .header {
     padding: 70px;
     background: #39CBD1; }

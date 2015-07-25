@@ -53,6 +53,10 @@ body{
     .modal-dialog{
         margin: 100px auto;
         
+        @include tablet{
+            margin-top: 20px;
+        }
+        
     }
      
     .modal-content{
@@ -60,8 +64,8 @@ body{
         width: 500px;
         
         @include tablet{
-             width: 90%;
-            margin:  100px 20px;
+            width: 90%;
+            margin:  0px 20px;
         }
     
     .login-app{
