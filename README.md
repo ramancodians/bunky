@@ -1,7 +1,7 @@
 
 # Bunky #
 
-View Live Project  [bunky](http://bunky.in/ "Demo")
+View [Live Project](http://bunky.in/ "Demo")
 
 Bunky is a stoned spider-monkey that helps you bunk and recover from a bunking spree. 
 
