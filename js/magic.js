@@ -34,53 +34,14 @@ app.config(['$routeProvider',
 /*CONTROLLER
  ***********************************************************************************/
 
-app.controller('HomeCtrl', ['$scope', 'Attendance','Christ', function ($scope, Attendance,Christ) {
-
+app.controller('HomeCtrl', ['$scope', 'Attendance', function ($scope, Attendance) {
+    
+    // init setting UI Toggles
     $scope.dropdown = false;
     $scope.menu = false;
-    
-     $scope.menuToggle = function () {
-         $scope.isMobile();
-         
-         
-         if($scope.mobile == true){
-             console.log("Mobile Toggle Called!");
-             $scope.menu = !$scope.menu;
-         }else{
-            // desktop then do this
-           console.log("Desktop Toggled called!");
-
-            $scope.menu = false;
-         }
-         console.log($scope.menu);
-              
-    }
-     
-     
-     $scope.isMobile = function(){
-        $scope.mobile = window.innerWidth;
-         
-        if($scope.mobile > 767){
-          // console.log("Desktop Version of Site activated");
-           $scope.mobile = false;
-           // console.log($scope.mobile);
-        }else{
-          //  console.log("Mobile Version of Site activated");
-            $scope.mobile =  true;
-          //  $scope.menu = true;
-           // console.log($scope.mobile);
-        }
-     }
-    
-      $scope.modalShown = false;
-    
-    $scope.toggleModal = function(data) {
-        $scope.modalShown = !$scope.modalShown;
-        $scope.subDetails = data;
-        console.log($scope.subDetails);
-    };
-    
-    
+    $scope.modalShown = false;
+    $scope.tab = [true, false, false];  /*overview by default*/
+    $scope.extraMarks = 0;
 
     // sidebar data
     $scope.sidebar = [{
@@ -101,6 +62,38 @@ app.controller('HomeCtrl', ['$scope', 'Attendance','Christ', function ($scope, A
         url: 'stats'
     }];
     
+    
+     $scope.menuToggle = function () {         
+         // check the size of the window and load it
+         $scope.isMobile();
+         if($scope.mobile == true){
+             console.log("Mobile Toggle Called!");
+             $scope.menu = !$scope.menu;
+         }else{
+            // desktop then do this
+            $scope.menu = false;
+         }    
+    }
+     
+     // check if window is mobile
+     $scope.isMobile = function(){
+        $scope.mobile = window.innerWidth;
+        if($scope.mobile > 767){
+           $scope.mobile = false;
+        }else{
+            $scope.mobile =  true;
+        }
+     }
+    
+    // subject dialog box toggler
+    $scope.toggleModal = function(data) {        
+        $scope.modalShown = !$scope.modalShown;
+        // init modal scope data
+        $scope.subDetails = data;
+    };
+
+
+    
     // activating the home sidebar
     $scope.activeNav = 'home';
     
@@ -111,14 +104,7 @@ app.controller('HomeCtrl', ['$scope', 'Attendance','Christ', function ($scope, A
     }
     
     
-    // bunk and attend UI logic 
-    // basically when to show gain
-    // or loose property
-  
-    
     //controlling the Tabs Logic
-    $scope.tab = [true, false, false];
-
     $scope.tabHandler = function (i) {
         //find the tab with true and 
         //setting it false
@@ -135,9 +121,9 @@ app.controller('HomeCtrl', ['$scope', 'Attendance','Christ', function ($scope, A
     // calling
     $scope.makeSubjectBunkChart();
 
-    $scope.extraMarks = 0;
         
     // fetching data from json
+    // just for Development
     Attendance.fetch().then(function (data) {
         $scope.d = data;
         console.log($scope.d);
@@ -161,14 +147,16 @@ app.controller('HomeCtrl', ['$scope', 'Attendance','Christ', function ($scope, A
                 marks = marks + 0;
             }
         });
+        // storing it on scope
         $scope.extraMarks = marks;
     });
-
 
 }]);
 
 app.controller('PAHCtrl',function($scope){
-    $scope.hello = "Hello Angular";
+
+    
+    
     
 });
 
@@ -193,27 +181,6 @@ app.controller('CIBCtrl', ['$scope', 'Attendance', function ($scope, Attendance)
 
 
 
-
-app.controller('LoginCtrl', function ($scope) {
-    $scope.loginBox = false;
-    $scope.hello = "Hello!!";
-
-    $scope.toggle = function () {
-        if ($scope.loginBox == false) {
-            $scope.loginBox = true;
-        } else if ($scope.loginBox == true) {
-            $scope.loginBox = false;
-        }
-    }
-
-    
-
-
-});
-
-
-
-
 /* FILTERS
  ***********************************************************************************/
 
@@ -235,20 +202,6 @@ app.factory('Attendance', function ($q, $timeout, $http) {
                 });
             }, 30);
             return deferred.promise;
-        }
-    }
-    return data;
-});
-
-app.factory('Christ',function($http,$timeout,$q){
-    var data = { 
-        get : function(){
-            var deferred = $q.defer();
-            $timeout(function(){ $http.post('http://111.93.136.228/KnowledgePro/StudentLoginAction.do',{userName : 1315957, password : 94517053
-            }).success(function(data){
-            console.log(data);
-            })
-            },30);
         }
     }
     return data;

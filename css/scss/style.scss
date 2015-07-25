@@ -585,29 +585,32 @@ section.one {
 }
 .ng-modal-dialog {
   /* A centered div above the overlay with a box shadow. */
-  z-index:10000;
-  position: absolute;
-  width: 80%; /* Default */
-  border-radius: 0px;
-    left: 50%;
-    transform: translateX(-50%);
+      z-index:10000;
+      position: absolute;
+      width: 80%; /* Default */
+      border-radius: 0px;
+      left: 50%;
+    border-radius: 3px;
+      transform: translateX(-50%);
+      box-shadow: 0 3px 9px rgba(0,0,0,0.32);
+      background-color: #fff;
+      top: 50px;
+      margin: 0px auto;
     
-    @include tablet{
-        width: 95%;
-    }
-    
+        @include tablet{
+            width: 95%;
+        }
+
 
     .ng-isolate-scope{
         transition-duration: 1s;
         background: red;
     }
   /* Center the dialog */
-  top: 50px;
-  margin: 0px auto;
 
 
-  background-color: #fff;
-  box-shadow: 4px 4px 80px #000;
+
+
     
     header{
         color: #444;
@@ -618,7 +621,7 @@ section.one {
         }
         
         & > h1{
-            margin-bottom: 20px; 
+            margin-bottom: 50px; 
         }
         padding: 70px 20px 20px 20px;
         

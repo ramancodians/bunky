@@ -2871,12 +2871,13 @@ section.one {
   /* Default */
   border-radius: 0px;
   left: 50%;
+  border-radius: 3px;
   transform: translateX(-50%);
-  /* Center the dialog */
+  box-shadow: 0 3px 9px rgba(0, 0, 0, 0.32);
+  background-color: #fff;
   top: 50px;
   margin: 0px auto;
-  background-color: #fff;
-  box-shadow: 4px 4px 80px #000; }
+  /* Center the dialog */ }
   @media (max-width: 767px) {
     .ng-modal-dialog {
       width: 95%; } }
@@ -2891,7 +2892,7 @@ section.one {
       text-transform: capitalize;
       font-size: 25px; }
     .ng-modal-dialog header > h1 {
-      margin-bottom: 20px; }
+      margin-bottom: 50px; }
     .ng-modal-dialog header h1.hhh {
       font-size: 20px;
       padding-top: 10px; }
