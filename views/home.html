@@ -41,7 +41,7 @@
         <span ng-click="tabHandler(2)" ng-class="{'active': tab[2]}">Bunk Graph</span>
     </div>
     <div class="tab" ng-show="tab[0]" ng-click="tab[0] = true">
-        <div class="clearfix">
+        <div class="clearfix animate">
             <img ng-src="img/app-1.PNG" class="app">
             <span> If you
                 <select class="form-control" style="width:100px;" ng-model="ba" ng-init="ba = 'bunk'">
@@ -56,7 +56,7 @@
                 <!--If you're Attending-->
                 <span ng-if="ba == 'attend'">
                     gain
-                     -{{((d.attendance.present + oneBunk)/(d.attendance.conducted + oneBunk) * 100) - d.attendance.percentage | number : 2}}% | 
+                     {{((d.attendance.present + oneBunk)/(d.attendance.conducted + oneBunk) * 100) - d.attendance.percentage | number : 2}}% | 
                     <em>{{ d.attendance.percentage - (((d.attendance.present + oneBunk)/(d.attendance.conducted + oneBunk) * 100) - d.attendance.percentage) | number : 2 }}% </em>
                 </span>
 
@@ -73,7 +73,7 @@
             </span>
         </div>
 
-        <div class="clearfix">
+        <div class="clearfix animate">
             <img ng-src="img/app-2.png" class="app">
             <span> To reach  
                 <select class="form-control" editable="true" >
@@ -118,8 +118,8 @@
     </div>
 
     <div class="bunk-graph" ng-show="tab[2]" ng-click="tab[2] = true">
-        <div class="holder">
-      
+        <div class="chart-holder">
+          <canvas id="myChart" width="400" height="400"></canvas>
             
         </div>
     </div>

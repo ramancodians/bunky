@@ -169,6 +169,12 @@ header {
       @media (min-width: 1200px) {
         .main .let-me-know input {
           width: 250px; } }
+      @media (max-width: 480px) {
+        .main .let-me-know input {
+          margin-left: 20px; } }
+      @media (max-width: 767px) {
+        .main .let-me-know input {
+          margin-left: 20px; } }
     .main .let-me-know button {
       border-radius: 0px;
       margin: 0px;

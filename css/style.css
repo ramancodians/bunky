@@ -2495,11 +2495,11 @@ section.one {
   max-width: 800px;
   position: relative;
   border-radius: 5px;
-  background: #e8e8e8;
   margin: 20px auto;
   transform: translateY(-90px);
   border-top-left-radius: 10px;
-  border-top-right-radius: 10px; }
+  border-top-right-radius: 10px;
+  background: #e8e8e8; }
   @media (max-width: 767px) {
     .home .home-card {
       border-radius: 0px;
@@ -2566,6 +2566,10 @@ section.one {
     .home .home-card .tab div {
       padding: 10px 20px;
       border-bottom: #e3e3e3 1px solid; }
+      .home .home-card .tab div.animate {
+        transform: translateX(0px);
+        opacity: 1;
+        transition: all 0.5s ease; }
       .home .home-card .tab div > span {
         position: relative; }
         @media (max-width: 767px) {
@@ -2616,15 +2620,10 @@ section.one {
     .home .home-card .subjects div {
       padding: 10px 20px;
       border-bottom: #e3e3e3 1px solid;
-      transition: all 0.6s ease-in-out;
-      opacity: 0; }
-      .home .home-card .subjects div.ng-enter {
-        transform: translateX(-100px); }
-      .home .home-card .subjects div.ng-enter.ng-enter-active {
-        opacity: 1; }
-      .home .home-card .subjects div.ng-scope {
-        opacity: 1;
-        transition-duration: 0.6s; }
+      transition: all 0.3s ease-in-out; }
+      .home .home-card .subjects div:hover {
+        background: #efefef;
+        cursor: pointer; }
     .home .home-card .subjects p.perbox {
       width: 80px;
       height: 80px;
@@ -2870,8 +2869,7 @@ section.one {
   width: 2000%;
   height: 100%;
   background-color: #000000;
-  opacity: 0.5;
-  -webkit-overflow-scrolling: touch; }
+  opacity: 0.5; }
 
 .ng-modal-dialog {
   /* A centered div above the overlay with a box shadow. */
@@ -2886,19 +2884,7 @@ section.one {
   box-shadow: 0 3px 9px rgba(0, 0, 0, 0.32);
   background-color: #fff;
   top: 50px;
-  margin: 0px auto;
-  transition: all 1s ease;
-  transform: scale(1);
-  transition-duration: 0.6s;
-  /* Center the dialog */ }
-  .ng-modal-dialog.ng-hide {
-    transform: scale(2); }
-  @media (max-width: 767px) {
-    .ng-modal-dialog {
-      width: 95%; } }
-  .ng-modal-dialog .ng-isolate-scope {
-    transition-duration: 1s;
-    background: red; }
+  margin: 0px auto; }
   .ng-modal-dialog header {
     color: #444;
     padding: 70px 20px 20px 20px; }

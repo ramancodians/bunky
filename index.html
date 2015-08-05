@@ -7,93 +7,235 @@
     <meta name="description" content="">
     <meta name="viewport" content="initial-scale=1" />
 
-    <!--CSS Frameworks/Icons -->
-    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.min.css">
-    <link href="bower_components/ng-responsive-calendar/dist/css/calendar.min.css" rel="stylesheet">
-    
-    <!--JS Libs-->
-    <script src="bower_components/jquery/dist/jquery.min.js"></script>
-    <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
-    
-    <!--My Styles-->
-    <link rel="stylesheet" href="css/style.css">
-
-    <!--Angular-->
-    <script src="bower_components/angular/angular.min.js"></script>
-    <script src="bower_components/angular-route/angular-route.min.js"></script>
-    <script src="bower_components/ng-responsive-calendar/dist/js/calendar-tpls.min.js"></script>
-    <script src="bower_components/angular-animate/angular-animate.min.js"></script>
-
-    <!--This is simply Magic-->
-    <script src="js/magic.js"></script>
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
+    <link href="bower_components/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href="css/landing.css" rel="stylesheet">
 
     <!--Google Fonts-->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=RobotoDraft:300,400,500,700,400italic">
     <link href='http://fonts.googleapis.com/css?family=Gloria+Hallelujah|Patua+One' rel='stylesheet' type='text/css'>
-
-</head>
-
-<body ng-app="bunky">
+    <link rel="stylesheet" href="css/landing.css">
+    <!-- endbuild -->
     
-    <div ng-controller="HomeCtrl">
-        <div id="wrapper" class="home" ng-class="{'toggled': menu == true}">
-            <!-- Sidebar -->
-            <div id="sidebar-wrapper">
-                <ul class="sidebar-nav text-left">
-                    <li class="sidebar-brand text-center" id="first">
-                        <span class="bshifter">
-                       <img src="img/bunky.png" id="bunky-img">
-                        <span id="bunky">Bunky!</span>
-                        </span>
-                    </li>
-
-                    <li ng-repeat="i in sidebar" ng-class="{'active':activeNav == i.url}" ng-click="sidebarActive(i.url)" class="ripple">
-                        <a href="#/{{i.url}}">
-                            <i class="fa nv fa-{{i.icon}}"></i>{{i.item}}
-                        </a>
-                    </li>
-
-                    <p style="padding: 20px; font-size: 11px; color : #ccc;" class="text-center">
-                        made with <i class="fa fa-heart-o"></i>
-                        <br/> by ironman & batman
-                    </p>
-                </ul>
-            </div>
-            <!-- /#sidebar-wrapper -->
-
-            <!-- Page Content -->
-            <div id="page-content-wrapper">
-                <div class="page-overlay" ng-show="menu == true" ng-click="menu = !menu" class="visible-sm visible-xs"></div>
-                 <div class="sidebar-mobile-btn visible-sm visible-xs" ng-click="menuToggle()" ng-class="{'toggle checked':menu == true}">
-                    <ul class='hamburger'>
-                        <li class='first'></li>
-                        <li class='second'></li>
-                        <li class='third'></li>
-                    </ul>
-                </div>
-                
-                <div class="home-card" ng-view>
-
-                </div>
-            </div>
-            <!-- /#page-content-wrapper -->
-        </div>
-        <!-- /#wrapper -->
-        
-        
-                    <modal-dialog show='modalShown' width='750px' height='60%'>
-  <p>Modal Content Goes here<p>
-</modal-dialog>
-
-
-    </div>
+    <!--Angular-->
+    <script src="bower_components/angular/angular.min.js"></script>
+    <script src="bower_components/angularfire/dist/angularfire.min.js"></script>
     <script>
-//        $('.sidebar-mobile-btn').on('click', function(){
-//          $(this).toggleClass('checked');
-//        })
-    </script>
+    //Magic is happring here...!
+        
+        var app  = angular.modeule('landing',['angularfire']);
+        
+        app.controller('MainCtrl',['$scope','angularfire',function($scope,Angularfire){
+            
+            
+        }]);
+        
 
+            app.factory("SingUpData", ["$firebaseArray",
+              function($firebaseArray) {   
+                var ref = new Firebase("https://bunky-landing.firebaseio.com");
+
+                // this uses AngularFire to create the synchronized array
+                return $firebaseArray(ref);
+              }
+            ]);
+    
+    </script>
+    </head>
+
+<body ng-app="landing">
+  
+<div class="modal fade login-model" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
+  <div class="modal-dialog modal-sm">
+    <div class="modal-content">
+        <div class="login-app">
+            <div class="header text-center">
+                <h1>Bunky! <span>Login</span></h1>
+            </div>
+            <div class="xxx">
+                <form class="form">
+                    <div class="form-group">
+                        <i class="fa fa-user"></i>
+                        <input type="text" placeholder="Student ID" name="userman">
+                    </div>
+                     <div class="form-group">
+                        <i class="fa fa-lock"></i>
+                        <input type="password" placeholder="Password" name="userman">
+                    </div>
+                    <div class="notice">
+                        <span>
+                        We need your permission to fetch your attendance.
+                        </span>
+                        
+                        <input type="checkbox" name="tc" class="tc"> Allow Bunky 
+                    </div>
+                    
+                    <button>Login</button>
+                    
+                </form>
+            </div>
+        </div>
+    </div>
+  </div>
+</div>
+    <header class="clearfix">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-4">
+                    <div class="xxx">
+                        <img src="img/bunky.svg" class="bunky-logo">
+                        <span class="bunky-text">Bunky!</span>
+                    </div>
+                </div>
+                <div class="col-xs-8">
+                    <div>
+                        <ul class="nav nav-pills pull pull-right">
+                            <li id="login" data-toggle="modal" data-target=".login-model">
+                                <a href="#">Login</a>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="main">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-5">
+                    <div class="visible-md visible-lg visible-sm">
+                         <img src="img/phone.png" class="img-responsive" role="Showcase app">
+                    </div>
+                </div>
+                <div class="col-sm-7 pitch">
+                    <div>
+                        <h1>Manage your attendance Like a Boss!</h1>
+                        <h3>Bunky is a stoned spider-monkey that helps you bunk and recover from a bunking spree.</h3>
+
+                        <div class="let-me-know">
+                            <input type="text" max="9999999999" min="7000000000" placeholder="Phone Number">
+                            <button class="btn btn-success btn-lg">
+                                I'm in!
+                            </button>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="features">
+        <div class="container">
+            <h1 class="title">So! What Bunky can do for you? </h1>
+
+            <div class="row">
+                <div class="col-sm-4">
+                    <div class="icon">
+                        <i class="fa fa-calculator img-circle"></i>
+                    </div>
+                    <h1>Bunk Calculations</h1>
+                    <p>
+                        We made calculation very easy. Pre-loaded equations for all
+                        your bunking requrements. No Need to copy paste the values,
+                        Bunky can automatically take data from University Server.   Yaa! Magic!
+                    </p>
+                </div>
+                <div class="col-sm-4">
+                    <div class="icon">
+                        <i class="fa fa-area-chart img-circle"></i>
+                    </div>
+                    <h1>Analysis</h1>
+                    <p>
+                       Bunky can analyse your attendanc and advice you what you can do with it. You specify what is your priority before hand and bunky will take that into account while suggesting you what to do.
+                    </p>
+                </div>
+                <div class="col-sm-4">
+                    <div class="icon">
+                        <i class="fa fa-plane img-circle"></i>
+                    </div>
+                    <h1>Plan a holiday</h1>
+                    <p>
+                      You attended all the classes in the begening! Now time to use  your extra attendance. Plan a holiday let you plan bunky for a longer period of time. Bunky will give you clear picture of those classes bunked on your attendance.
+                    </p>
+                </div>
+            </div>
+
+            <h4>
+                ...and even more!!
+            </h4>
+        </div>
+    </div>
+
+    <div class="developer">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6">
+                     <h1 class="title">
+                        Are you a geek? Why don't join us! 
+                    </h1>
+                   <div>
+                       <p>
+                          Bunky is a <strong><a href="@">Open Source</a></strong> project. We are trying to solve the Attendance Management problem that we all face in College. Currently we are working on Christ University Attendance system. We would love to have you onboard and together extend Bunky in various colleges and platform. 
+                       </p>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div>
+                       <div class="row people text-center">
+                           <h4 class="text-left">Superheros Needed</h4>
+                            <div class="col-sm-4 col-xs-12">
+                                <div class="hhh">
+                                   <i class="fa fa-android"></i>
+                                    <span>
+                                        Android </br> Developer
+                                    </span>
+                                    <button>Apply</button>
+                                </div>
+                           </div>
+                            <div class="col-sm-4 col-xs-12">
+                                <div class="hhh">
+                                   <i class="fa fa-apple"></i>
+                                    <span>
+                                        iOS </br> Developer
+                                    </span>
+                                    <button>Apply</button>
+                                </div>
+                           </div>
+                           <div class="col-sm-4 col-xs-12">
+                                <div class="hhh">
+                                <i class="fa fa-bank"></i>
+                                    <span>
+                                        College </br> Representative
+                                    </span>
+                                    <button>Apply</button>
+                               </div>
+                           </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="row text-center">
+               <div class="col-md-12">
+                   <div>
+                    <p>
+                        Made with <i class="fa fa-heart-o text-error"></i> by 
+                        <img src="img/ironman.png" class="heros"> & <img class="heros" src="img/batman.png">
+                       </p> 
+                   </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+<script src="bower_components/jquery/dist/jquery.min.js"></script>
+<script src="bower_components/bootstrap/js/modal.js"></script>
 </body>
 
 </html>
