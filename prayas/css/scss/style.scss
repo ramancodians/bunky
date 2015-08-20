@@ -1,0 +1,207 @@
+/* Coolors Exported Palette - coolors.co/1be7ff-6eeb83-e4ff1a-e8aa14-ff5714 */
+
+$color1: #1be7ff; //rgba(27, 231, 255, 100)
+$brand-color: #6eeb83; //rgba(110, 235, 131, 100)
+$color3: #e4ff1a; //rgba(228, 255, 26, 100)
+$color4: #e8aa14; //rgba(232, 170, 20, 100)
+$color5: #ff5714; //rgba(255, 87, 20, 100)
+$primary-color: #FFFFFF;
+$secondry-color: #84A1B7;
+$low-white: #f1f1f1;
+$section-padding: 70px;
+$theme-border: 2px solid #FFF;
+$base-color: #f5f5f5;
+$san-font: 'Roboto Slab',
+serif;
+// Imports
+@import 'partials/bootstrap';
+@import 'media-query';
+
+
+// Quiz Login CSS
+
+.wrapper{
+    width: 100%;
+    height: 100%;
+    position:absolute;
+    top: 0px;
+    left: 0px;
+    background: #1be7ff;
+    
+    .login-box{
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
+        margin: 0px auto;
+        max-width: 400px;
+        text-align: center;
+        border-radius: 5px;
+        background: #1be7ff - 20;
+        padding: 20px;
+        
+        .form-control,.btn{
+            border-radius: 2px;
+            padding: 20px;
+            display: block;
+            width: 100%;
+        }
+        
+        form{
+            margin-top: 40px;
+        }
+    }
+}
+
+
+
+body {
+    background: $base-color;
+}
+
+.btn {
+    border: 0px;
+    padding: 10px;
+    border-radius: 4px;
+    font-size: 12px;
+}
+
+header {
+    padding: 10px;
+    background: #1be7ff;
+    .logo {
+        max-width: 150px;
+    }
+    
+    .qp{
+        font-size: 20px;
+        position: relative;
+        top: 5px;
+        font-family: $san-font;
+        color: #FFF;
+    }
+}
+
+.sidestick {
+    position: fixed;
+    top: 20px;
+    background: red;
+}
+
+
+
+main > .container {
+    transform: translateY(-2px);
+    min-height: 500px;
+    .sidebar {
+        background: #FFF;
+        padding: 20px;
+        border: 1px solid #e2e2e2;
+        border-radius: 4px;
+        margin-top: 20px;
+        .qs {
+            .q {
+                width: 30px;
+                padding: 7px;
+                text-align: center;
+                height: 30px;
+                border-radius: 2px;
+                background: #ededed;
+                border: 1px solid #d6d6d6;
+                display: inline-block;
+                margin-bottom: 4px;
+                &.done {
+                    background: #51cc5f;
+                    color: #FFF;
+                }
+            }
+        }
+    }
+    
+    .rules{
+        h4{
+            color: firebrick;
+        }
+        
+        background: #FFF;
+        padding: 20px;
+        border: 1px solid #e2e2e2;
+        border-radius: 4px;
+        margin-top: 20px;
+        
+    }
+}
+
+.quiz {
+    margin-bottom: 20px;
+    
+    .card {
+        background: #FFF;
+        padding: 20px;
+        border: 1px solid #e2e2e2;
+        border-radius: 4px;
+        margin-top: 20px;
+        position: relative;
+        overflow: hidden;
+        transition-duration: 0.3s;
+        &:hover {
+            box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.15);
+        }
+        .qs {
+            font-size: 50px;
+            font-family: 'Impact';
+            float: left;
+            padding-right: 20px;
+            display: inline-block;
+            width: 10%;
+            min-width: 80px;
+            padding-left: 20px;
+        }
+        #question {
+            font-size: 20px;
+            padding-top: 10px;
+            font-family: $san-font;
+            margin-bottom: 20px;
+            strong {
+                color: #2e9f3b;
+            }
+        }
+        .qimg {
+            padding: 10px;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+            // margin: 0px auto;
+        }
+        #answer {
+            margin-top: 20px;
+            max-width: 600px;
+            border-radius: 2px;
+        }
+        .ans {
+            font-size: 20px;
+            padding-top: 10px;
+            font-family: $san-font;
+            margin-bottom: 20px;
+            color: #2e9f3b;
+            
+            a{
+                font-size: 12px;
+            }
+        }
+        #ft {
+            font-size: 10px;
+            font-weight: bold;
+            color: #989898;
+            position: relative;
+            transform: translateY(10px);
+            display: inline-block;
+        }
+    }
+    
+}
+
+.next-btn{
+    width: 100px;
+    display: block;
+    margin: 0px auto;
+    margin-bottom: 50px;
+}
