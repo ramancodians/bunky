@@ -1,0 +1,99 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Bunky Web</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="initial-scale=1" />
+
+    <!--CSS Frameworks/Icons -->
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.min.css">
+    <link href="bower_components/ng-responsive-calendar/dist/css/calendar.min.css" rel="stylesheet">
+    
+    <!--JS Libs-->
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    
+    <!--My Styles-->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!--Angular-->
+    <script src="bower_components/angular/angular.min.js"></script>
+    <script src="bower_components/angular-route/angular-route.min.js"></script>
+    <script src="bower_components/ng-responsive-calendar/dist/js/calendar-tpls.min.js"></script>
+    <script src="bower_components/angular-animate/angular-animate.min.js"></script>
+
+    <!--This is simply Magic-->
+    <script src="js/magic.js"></script>
+
+    <!--Google Fonts-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=RobotoDraft:300,400,500,700,400italic">
+    <link href='http://fonts.googleapis.com/css?family=Gloria+Hallelujah|Patua+One' rel='stylesheet' type='text/css'>
+
+</head>
+
+<body ng-app="bunky">
+    
+    <div ng-controller="HomeCtrl">
+        <div id="wrapper" class="home" ng-class="{'toggled': menu == true}">
+            <!-- Sidebar -->
+            <div id="sidebar-wrapper">
+                <ul class="sidebar-nav text-left">
+                    <li class="sidebar-brand text-center" id="first">
+                        <span class="bshifter">
+                       <img src="img/bunky.png" id="bunky-img">
+                        <span id="bunky">Bunky!</span>
+                        </span>
+                    </li>
+
+                    <li ng-repeat="i in sidebar" ng-class="{'active':activeNav == i.url}" ng-click="sidebarActive(i.url)" class="ripple">
+                        <a href="#/{{i.url}}">
+                            <i class="fa nv fa-{{i.icon}}"></i>{{i.item}}
+                        </a>
+                    </li>
+
+                    <p style="padding: 20px; font-size: 11px; color : #ccc;" class="text-center">
+                        made with <i class="fa fa-heart-o"></i>
+                        <br/> by ironman & batman
+                    </p>
+                </ul>
+            </div>
+            <!-- /#sidebar-wrapper -->
+
+            <!-- Page Content -->
+            <div id="page-content-wrapper">
+                <div class="page-overlay" ng-show="menu == true" ng-click="menu = !menu" class="visible-sm visible-xs"></div>
+                 <div class="sidebar-mobile-btn visible-sm visible-xs" ng-click="menuToggle()" ng-class="{'toggle checked':menu == true}">
+                    <ul class='hamburger'>
+                        <li class='first'></li>
+                        <li class='second'></li>
+                        <li class='third'></li>
+                    </ul>
+                </div>
+                
+                <div class="home-card" ng-view>
+
+                </div>
+            </div>
+            <!-- /#page-content-wrapper -->
+        </div>
+        <!-- /#wrapper -->
+        
+        
+                    <modal-dialog show='modalShown' width='750px' height='60%'>
+  <p>Modal Content Goes here<p>
+</modal-dialog>
+
+
+    </div>
+    <script>
+//        $('.sidebar-mobile-btn').on('click', function(){
+//          $(this).toggleClass('checked');
+//        })
+    </script>
+
+</body>
+
+</html>

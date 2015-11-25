@@ -15,7 +15,9 @@
     "ng-responsive-calendar": "~0.1.4",
     "angularfire": "~1.1.2",
     "angular-chart.js": "~0.7.2",
-    "chart.js": "~0.1.0"
+    "chart.js": "~0.1.0",
+    "angular-local-storage": "~0.2.3",
+    "ngstorage": "~0.3.10"
   },
   "authors": [
     "Raman Choudhary <raman.choudhary65@gmail.com>"

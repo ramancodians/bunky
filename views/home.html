@@ -1,177 +1,235 @@
-<div>
-    <!-- Page Content -->
-    <div class="user-panel clearfix test-gr">
-        <div class="col-md-6 text-left">
-            <img class="img-circle" id="user" src="img/user.jpg">
-            <h4 id="username">Raman Choudhary</h4>
-            <h6 class="sub-text">BCA, Christ University</h6>
+<div class="home">
+
+    <div>
+        <div id="wrapper" class="home" ng-class="{'toggled': menu == true}">
+            <!-- Sidebar -->
+            <div id="sidebar-wrapper">
+                <ul class="sidebar-nav text-left">
+                    <li class="sidebar-brand text-center" id="first">
+                        <span class="bshifter">
+                       <img src="img/bunky.png" id="bunky-img">
+                        <span id="bunky">Bunky!</span>
+                        </span>
+                    </li>
+
+                    <li ng-repeat="i in sidebar" ng-class="{'active':sidemenu[$index]}" ng-click="sidebarActiveToggle($index)" class="ripple">
+                            <i class="fa nv fa-{{i.icon}}"></i>{{i.item}}
+                    </li>
+
+                    <li ng-click="logout()" class="ripple">
+                        <a href="">
+                            <i class="fa nv fa-sign-out"></i>Loggout
+                        </a>
+                    </li>
+
+                    <p style="padding: 20px; font-size: 11px; color : #ccc;" class="text-center">
+                        made with <i class="fa fa-heart-o"></i>
+                        <br/> by ironman & batman
+                    </p>
+                </ul>
+            </div>
+            <!-- /#sidebar-wrapper -->
+
+            <!-- Page Content -->
+            <div id="page-content-wrapper">
+                <div class="page-overlay" ng-show="menu == true" ng-click="menu = !menu" class="visible-sm visible-xs"></div>
+                <div class="sidebar-mobile-btn visible-sm visible-xs" ng-click="menuToggle()" ng-class="{'toggle checked':menu == true}">
+                    <ul class='hamburger'>
+                        <li class='first'></li>
+                        <li class='second'></li>
+                        <li class='third'></li>
+                    </ul>
+                </div>
+
+            <div class="home-card" ng-show="sidemenu[0]">
+                    <div class="user-panel clearfix test-gr">
+                        <div class="col-md-4 text-left">
+                            <img class="img-circle" id="user" src="img/user.jpg">
+                            <h4 id="username">{{d.user.FatherName}}</h4>
+                            <h6 class="sub-text">{{d.user.Class }}, Christ University</h6>
+                        </div>
+                        <div class="col-md-8 text-right">
+                            <div class="overall text-center">
+                                <div class="row">
+                                    <div class="col-xs-4">
+                                        <h5>Attendace</h5>
+                                        <h1>{{percentage | number:1}}%</h1>
+                                    </div>
+                                    <div class="col-xs-8 adj">
+                                        <div class="col-xs-4">
+                                            <h5>Conducted</h5>
+                                            <h4>{{conducted | number:0}}</h4>
+                                        </div>
+                                        <div class="col-xs-4">
+                                            <h5>Present</h5>
+                                            <h4>{{present | number:0}}</h4>
+                                        </div>
+                                        <div class="col-xs-4">
+                                            <h5>Absent</h5>
+                                            <h4>{{absent | number:0}}</h4>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                    <div class="tabs">
+                        <span ng-click="tabHandler(0)" ng-class="{'active': tab[0]}">Overview
+        </span>
+                        <span ng-click="tabHandler(1)" ng-class="{'active':tab[1]}">Subjects</span>
+                        <span ng-click="tabHandler(2)" ng-class="{'active': tab[2]}">Bunk Graph</span>
+                    </div>
+                    <div class="tab" ng-show="tab[0]" ng-click="tab[0] = true">
+                        <div class="row apps">
+                            <div class="col-sm-12">
+                                <div class="wrapper">
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="panel">
+                            If you
+                            <select style="width:100px;" ng-model="ba" ng-init="ba = 'bunk'">
+                                <option value="bunk" selected>Bunk</option>
+                                <option value="attend">Attend</option>
+                            </select>
+                            <input type="number" ng-model="Bunk" ng- value="1" id="lele" min="0" max="200"> then you'll
+
+                            <span ng-class="{'gain':ba == 'attend','loose':ba == 'bunk'}">
+                    </span>
+                            <!--If you're Attending-->
+                            <span ng-if="ba == 'attend'">
+                    gain
+                    
+                                                    
+                </span>
+
+                            <!--If you are Bunking-->
+                            <span ng-if="ba == 'bunk'">
+                    loose 
+                    bunk : {{Bunk}}
+                    p: {{present}}
+                    a: {{absent}}
+                    c: {{conducted}}
+                </span>
+
+
+                        </div>
+                    </div>
+
+                    <div class="subjects" ng-show="tab[1]" ng-click="tab[1] = true" ng-class="{'active':tab[1]}">
+                        <div ng-repeat="i in d.attendance | limitTo:d.attendance.length - 1" ng-click='toggleModal(i)' class="subject">
+
+
+
+                            <p class="perbox" app-colorify="{{i.Percentage}}">
+                                {{i.Percentage}}
+                            </p>
+
+                            <span id="subname" class="text-capitalize">
+                {{i.SubjectName | capitalize:true}}
+            </span>
+                        </div>
+
+                    </div>
+
+                    <div class="bunk-graph" ng-show="tab[2]" ng-click="tab[2] = true">
+                        <div class="holder">
+
+
+                        </div>
+                    </div>
+                </div>
+                
+             <div class="can-i-bunk" ng-show="sidemenu[1]">
+                    <div class="text-center header">
+                        <i class="fa fa-question fa-4x"></i>
+                        <span>Can I bunk?</span>
+                    </div>
+
+                    <main>
+                        <span class="msg animated tada">NO!</span>
+                        <span>You atendance is low, therefore Bunky doesn't recommend you to bunk.</span>
+
+                    </main>
+
+            </div>
+            
+            <div class="plan-a-holiday" ng-show="sidemenu[2]">
+    <div class="header">
+        <h1 class="icon" ng-class="{'animate-this-shit': lalajee == true}" ng-init="lalajee = false" ng-click="lalajee = !lalajee">
+            <i class="fa fa-plane fa-x4"></i>
+        </h1>
+        <h5>Plan a Holiday</h5>
+    </div>
+    
+    
+                
+            </div>
+            </div>
+            <!-- /#page-content-wrapper -->
         </div>
-        <div class="col-md-6 text-right">
-            <div class="overall text-center">
+        <!-- /#wrapper -->
+
+
+        <!-- Page Content -->
+
+        <modal-dialog show='modalShown'>
+            <header>
+                <h1>{{subDetails.SubjectName}}</h1>
                 <div class="row">
                     <div class="col-xs-6">
-                        <h5>Attendace</h5>
-                        <h1>{{d.attendance.percentage}}</h1>
-                    </div>
-                    <div class="col-xs-6 adj">
-                        <div class="col-xs-4">
-                            <h5>C</h5>
-                            <h4>{{d.attendance.conducted}}</h4>
-                        </div>
-                        <div class="col-xs-4">
-                            <h5>P</h5>
-                            <h4>{{d.attendance.present}}</h4>
-                        </div>
-                        <div class="col-xs-4">
-                            <h5>A</h5>
-                            <h4>{{d.attendance.absent}}</h4>
+                        <div>
+                            <p>Attendance</p>
+                            <h2>{{subDetails.Percentage}}</h2>
+
                         </div>
                     </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    
-
-    
-    <div class="tabs">
-        <span ng-click="tabHandler(0)" ng-class="{'active': tab[0]}">Overview
-        </span>
-        <span ng-click="tabHandler(1)" ng-class="{'active':tab[1]}">Subjects</span>
-        <span ng-click="tabHandler(2)" ng-class="{'active': tab[2]}">Bunk Graph</span>
-    </div>
-    <div class="tab" ng-show="tab[0]" ng-click="tab[0] = true">
-        <div class="clearfix">
-            <img ng-src="img/app-1.PNG" class="app">
-            <span> If you
-                <select class="form-control" style="width:100px;" ng-model="ba" ng-init="ba = 'bunk'">
-                    <option value="bunk" selected>Bunk</option>
-                    <option value="attend">Attend</option>
-                </select>
-                <input type="number" ng-model="oneBunk" ng-init="oneBunk = 1" value="1" id="lele" class="form-control" min="0" max="200">
-                
-                hr/hrs then you'll 
-                
-                <span ng-class="{'gain':ba == 'attend','loose':ba == 'bunk'}">
-                <!--If you're Attending-->
-                <span ng-if="ba == 'attend'">
-                    gain
-                     -{{((d.attendance.present + oneBunk)/(d.attendance.conducted + oneBunk) * 100) - d.attendance.percentage | number : 2}}% | 
-                    <em>{{ d.attendance.percentage - (((d.attendance.present + oneBunk)/(d.attendance.conducted + oneBunk) * 100) - d.attendance.percentage) | number : 2 }}% </em>
-                </span>
-
-            <!--If you are Bunking-->
-            <span ng-if="ba == 'bunk'">
-                    loose
-                     {{( d.attendance.percentage - (d.attendance.present)/(d.attendance.conducted + oneBunk) * 100) | number : 2}}%
-                   | 
-                    <em>    {{ d.attendance.percentage - (((d.attendance.present)/(d.attendance.conducted + oneBunk) * 100) + d.attendance.percentage) | number : 2 }}% </em>
-                </span>
-            </span>
-
-
-            </span>
-        </div>
-
-        <div class="clearfix">
-            <img ng-src="img/app-2.png" class="app">
-            <span> To reach  
-                <select class="form-control" editable="true" >
-                    <option>75%</option>
-                    <option>80%</option>
-                    <option>85%</option>
-                    <option>90%</option>
-                    <option>95%</option>
-                    <option>100%</option>
-                </select>
-                you have to attend <span id="classestoattend">58</span> classes
-            </span>
-        </div>
-        <div>
-            <img ng-src="img/app-3.png" class="app">
-            <span>
-                <span id="noBunkingBitch">
-                    Your attendance is too low!
-                    You can't afford to bunky any class.
-                </span>
-            </span>
-        </div>
-        <div>
-            <img ng-src="img/app-4.png" class="app">
-            <span>You can get 
-                <span class="text-success">
-                    <strong>{{extraMarks}} marks</strong>
-                </span> extra based on your attendance.</span>
-        </div>
-    </div>
-
-    <div class="subjects" ng-show="tab[1]" ng-click="tab[1] = true" ng-class="{'active':tab[1]}">
-         <div ng-repeat="i in d.attendance.subjects" ng-click='toggleModal(i)'>
-            <p class="perbox" app-colorify="{{i.percentage}}">
-                {{i.percentage}}
-            </p>
-            <span id="subname">
-                {{i.name}}
-            </span>
-        </div>
-        
-    </div>
-
-    <div class="bunk-graph" ng-show="tab[2]" ng-click="tab[2] = true">
-        <div class="holder">
-      
-            
-        </div>
-    </div>
-<modal-dialog show='modalShown'>
-  <header>
-    <h1>{{subDetails.name}}</h1>
-      <div class="row">
-        <div class="col-xs-6">
-            <div>
-            <p>Attendance</p>
-                <h2>{{subDetails.percentage}}</h2>
-            
-            </div>
-         </div>
-        <div class="col-xs-6 text-center">
-            <div class="row">
-                <div class="col-xs-4">
-                    <div>
-                    <span class="visible-xs visible-sm">C</span>
-                    <span class="visible-md visible-lg">Conducted</span>
-                    <h1 class="hhh">
-                       {{subDetails.conducted}}
+                    <div class="col-xs-6 text-center">
+                        <div class="row">
+                            <div class="col-xs-4">
+                                <div>
+                                    <span class="visible-xs visible-sm">C</span>
+                                    <span class="visible-md visible-lg">Conducted</span>
+                                    <h1 class="hhh">
+                       {{subDetails.Conducted}}
                     </h1>
+                                </div>
+                            </div>
+                            <div class="col-xs-4">
+                                <div>
+                                    <span class="visible-xs visible-sm">P</span>
+                                    <span class="visible-md visible-lg">Present</span>
+                                    <h1 class="hhh">
+                        {{subDetails.Present}}
+                    </h1>
+                                </div>
+                            </div>
+                            <div class="col-xs-4">
+                                <div>
+                                    <span class="visible-xs visible-sm">A</span>
+                                    <span class="visible-md visible-lg">Absent</span>
+                                    <h1 class="hhh">
+                        {{subDetails.Absent}}
+                    </h1>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class="col-xs-4">
-                    <div>
-                    <span class="visible-xs visible-sm">P</span>
-                    <span class="visible-md visible-lg">Present</span>
-                    <h1 class="hhh">
-                        {{subDetails.present}}
-                    </h1>
-                    </div>
-                </div>
-                <div class="col-xs-4">
-                    <div>
-                    <span class="visible-xs visible-sm">A</span>
-                    <span class="visible-md visible-lg">Absent</span>
-                    <h1 class="hhh">
-                        {{subDetails.absent}}
-                    </h1>
-                    </div>
-                </div>
-            </div>
-          </div>
-      </div>
-      
-    </header>
-    
-    
-</modal-dialog>
 
-</div>
+            </header>
 
-<!-- /#wrapper -->
+
+        </modal-dialog>
+
+    </div>
+
+    <!-- /#wrapper -->

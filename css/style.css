@@ -2428,6 +2428,41 @@ Copyright (c) 2014 Daniel Eden
   animation-name: zoomOutUp; }
 
 /*Screen Breakoints*/
+@-webkit-keyframes whirly-loader {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg); }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg); } }
+
+@keyframes whirly-loader {
+  0% {
+    -ms-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg); }
+  100% {
+    -ms-transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg); } }
+
+/* :not(:required) hides this rule from IE9 and below */
+.whirly-loader:not(:required) {
+  overflow: hidden;
+  position: relative;
+  text-indent: -9999px;
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  background: transparent;
+  border-radius: 100%;
+  box-shadow: #e66 0px 26px 0 6px, #e66 0.90971px 26.05079px 0 5.93333px, #e66 1.82297px 26.06967px 0 5.86667px, #e66 2.73865px 26.05647px 0 5.8px, #e66 3.65561px 26.01104px 0 5.73333px, #e66 4.57274px 25.93327px 0 5.66667px, #e66 5.48887px 25.8231px 0 5.6px, #e66 6.40287px 25.68049px 0 5.53333px, #e66 7.31358px 25.50548px 0 5.46667px, #e66 8.21985px 25.2981px 0 5.4px, #e66 9.12054px 25.05847px 0 5.33333px, #e66 10.01448px 24.78672px 0 5.26667px, #e66 10.90054px 24.48302px 0 5.2px, #e66 11.77757px 24.1476px 0 5.13333px, #e66 12.64443px 23.78072px 0 5.06667px, #e66 13.5px 23.38269px 0 5px, #e66 14.34315px 22.95384px 0 4.93333px, #e66 15.17277px 22.49455px 0 4.86667px, #e66 15.98776px 22.00526px 0 4.8px, #e66 16.78704px 21.48643px 0 4.73333px, #e66 17.56953px 20.93855px 0 4.66667px, #e66 18.33418px 20.36217px 0 4.6px, #e66 19.07995px 19.75787px 0 4.53333px, #e66 19.80582px 19.12626px 0 4.46667px, #e66 20.5108px 18.468px 0 4.4px, #e66 21.1939px 17.78379px 0 4.33333px, #e66 21.85416px 17.07434px 0 4.26667px, #e66 22.49067px 16.34043px 0 4.2px, #e66 23.10251px 15.58284px 0 4.13333px, #e66 23.68881px 14.80241px 0 4.06667px, #e66 24.24871px 14.0px 0 4px, #e66 24.7814px 13.1765px 0 3.93333px, #e66 25.28607px 12.33284px 0 3.86667px, #e66 25.76198px 11.46997px 0 3.8px, #e66 26.2084px 10.58888px 0 3.73333px, #e66 26.62462px 9.69057px 0 3.66667px, #e66 27.01001px 8.77608px 0 3.6px, #e66 27.36392px 7.84648px 0 3.53333px, #e66 27.68577px 6.90284px 0 3.46667px, #e66 27.97502px 5.94627px 0 3.4px, #e66 28.23116px 4.97791px 0 3.33333px, #e66 28.4537px 3.99891px 0 3.26667px, #e66 28.64223px 3.01042px 0 3.2px, #e66 28.79635px 2.01364px 0 3.13333px, #e66 28.91571px 1.00976px 0 3.06667px, #e66 29px 0.0px 0 3px, #e66 29.04896px -1.01441px 0 2.93333px, #e66 29.06237px -2.03224px 0 2.86667px, #e66 29.04004px -3.05223px 0 2.8px, #e66 28.98185px -4.07313px 0 2.73333px, #e66 28.88769px -5.09368px 0 2.66667px, #e66 28.75754px -6.1126px 0 2.6px, #e66 28.59138px -7.12863px 0 2.53333px, #e66 28.38926px -8.14049px 0 2.46667px, #e66 28.15127px -9.1469px 0 2.4px, #e66 27.87755px -10.1466px 0 2.33333px, #e66 27.56827px -11.1383px 0 2.26667px, #e66 27.22365px -12.12075px 0 2.2px, #e66 26.84398px -13.09268px 0 2.13333px, #e66 26.42956px -14.05285px 0 2.06667px, #e66 25.98076px -15.0px 0 2px, #e66 25.49798px -15.93291px 0 1.93333px, #e66 24.98167px -16.85035px 0 1.86667px, #e66 24.43231px -17.75111px 0 1.8px, #e66 23.85046px -18.63402px 0 1.73333px, #e66 23.23668px -19.49789px 0 1.66667px, #e66 22.5916px -20.34157px 0 1.6px, #e66 21.91589px -21.16393px 0 1.53333px, #e66 21.21024px -21.96384px 0 1.46667px, #e66 20.4754px -22.74023px 0 1.4px, #e66 19.71215px -23.49203px 0 1.33333px, #e66 18.92133px -24.2182px 0 1.26667px, #e66 18.10379px -24.91772px 0 1.2px, #e66 17.26042px -25.58963px 0 1.13333px, #e66 16.39217px -26.23295px 0 1.06667px, #e66 15.5px -26.84679px 0 1px, #e66 14.58492px -27.43024px 0 0.93333px, #e66 13.64796px -27.98245px 0 0.86667px, #e66 12.69018px -28.50262px 0 0.8px, #e66 11.7127px -28.98995px 0 0.73333px, #e66 10.71663px -29.4437px 0 0.66667px, #e66 9.70313px -29.86317px 0 0.6px, #e66 8.67339px -30.2477px 0 0.53333px, #e66 7.6286px -30.59666px 0 0.46667px, #e66 6.57001px -30.90946px 0 0.4px, #e66 5.49886px -31.18558px 0 0.33333px, #e66 4.41643px -31.42451px 0 0.26667px, #e66 3.32401px -31.6258px 0 0.2px, #e66 2.22291px -31.78904px 0 0.13333px, #e66 1.11446px -31.91388px 0 0.06667px, #e66 0.0px -32px 0 0px, #e66 -1.11911px -32.04713px 0 -0.06667px, #e66 -2.24151px -32.05506px 0 -0.13333px, #e66 -3.36582px -32.02361px 0 -0.2px, #e66 -4.49065px -31.95265px 0 -0.26667px, #e66 -5.61462px -31.84212px 0 -0.33333px, #e66 -6.73634px -31.69198px 0 -0.4px, #e66 -7.8544px -31.50227px 0 -0.46667px, #e66 -8.9674px -31.27305px 0 -0.53333px, #e66 -10.07395px -31.00444px 0 -0.6px, #e66 -11.17266px -30.69663px 0 -0.66667px, #e66 -12.26212px -30.34982px 0 -0.73333px, #e66 -13.34096px -29.96429px 0 -0.8px, #e66 -14.4078px -29.54036px 0 -0.86667px, #e66 -15.46126px -29.07841px 0 -0.93333px, #e66 -16.5px -28.57884px 0 -1px, #e66 -17.52266px -28.04212px 0 -1.06667px, #e66 -18.52792px -27.46878px 0 -1.13333px, #e66 -19.51447px -26.85936px 0 -1.2px, #e66 -20.48101px -26.21449px 0 -1.26667px, #e66 -21.42625px -25.53481px 0 -1.33333px, #e66 -22.34896px -24.82104px 0 -1.4px, #e66 -23.2479px -24.07391px 0 -1.46667px, #e66 -24.12186px -23.29421px 0 -1.53333px, #e66 -24.96967px -22.48279px 0 -1.6px, #e66 -25.79016px -21.64052px 0 -1.66667px, #e66 -26.58223px -20.76831px 0 -1.73333px, #e66 -27.34477px -19.86714px 0 -1.8px, #e66 -28.07674px -18.938px 0 -1.86667px, #e66 -28.7771px -17.98193px 0 -1.93333px, #e66 -29.44486px -17.0px 0 -2px, #e66 -30.07908px -15.99333px 0 -2.06667px, #e66 -30.67884px -14.96307px 0 -2.13333px, #e66 -31.24325px -13.91039px 0 -2.2px, #e66 -31.7715px -12.83652px 0 -2.26667px, #e66 -32.26278px -11.74269px 0 -2.33333px, #e66 -32.71634px -10.63018px 0 -2.4px, #e66 -33.13149px -9.5003px 0 -2.46667px, #e66 -33.50755px -8.35437px 0 -2.53333px, #e66 -33.84391px -7.19374px 0 -2.6px, #e66 -34.14px -6.0198px 0 -2.66667px, #e66 -34.39531px -4.83395px 0 -2.73333px, #e66 -34.60936px -3.63759px 0 -2.8px, #e66 -34.78173px -2.43218px 0 -2.86667px, #e66 -34.91205px -1.21916px 0 -2.93333px, #e66 -35px 0.0px 0 -3px, #e66 -35.04531px 1.22381px 0 -3.06667px, #e66 -35.04775px 2.45078px 0 -3.13333px, #e66 -35.00717px 3.6794px 0 -3.2px, #e66 -34.92345px 4.90817px 0 -3.26667px, #e66 -34.79654px 6.13557px 0 -3.33333px, #e66 -34.62643px 7.36007px 0 -3.4px, #e66 -34.41316px 8.58016px 0 -3.46667px, #e66 -34.15683px 9.79431px 0 -3.53333px, #e66 -33.85761px 11.001px 0 -3.6px, #e66 -33.5157px 12.19872px 0 -3.66667px, #e66 -33.13137px 13.38594px 0 -3.73333px, #e66 -32.70493px 14.56117px 0 -3.8px, #e66 -32.23675px 15.72291px 0 -3.86667px, #e66 -31.72725px 16.86968px 0 -3.93333px, #e66 -31.17691px 18px 0 -4px, #e66 -30.58627px 19.11242px 0 -4.06667px, #e66 -29.95589px 20.2055px 0 -4.13333px, #e66 -29.28642px 21.27783px 0 -4.2px, #e66 -28.57852px 22.32799px 0 -4.26667px, #e66 -27.83295px 23.35462px 0 -4.33333px, #e66 -27.05047px 24.35635px 0 -4.4px, #e66 -26.23192px 25.33188px 0 -4.46667px, #e66 -25.37819px 26.27988px 0 -4.53333px, #e66 -24.49018px 27.1991px 0 -4.6px, #e66 -23.56888px 28.0883px 0 -4.66667px, #e66 -22.6153px 28.94626px 0 -4.73333px, #e66 -21.6305px 29.77183px 0 -4.8px, #e66 -20.61558px 30.56385px 0 -4.86667px, #e66 -19.57168px 31.32124px 0 -4.93333px, #e66 -18.5px 32.04294px 0 -5px, #e66 -17.40175px 32.72792px 0 -5.06667px, #e66 -16.27818px 33.37522px 0 -5.13333px, #e66 -15.1306px 33.98389px 0 -5.2px, #e66 -13.96034px 34.55305px 0 -5.26667px, #e66 -12.76875px 35.08186px 0 -5.33333px, #e66 -11.55724px 35.56951px 0 -5.4px, #e66 -10.32721px 36.01527px 0 -5.46667px, #e66 -9.08014px 36.41843px 0 -5.53333px, #e66 -7.81748px 36.77835px 0 -5.6px, #e66 -6.54075px 37.09443px 0 -5.66667px, #e66 -5.25147px 37.36612px 0 -5.73333px, #e66 -3.95118px 37.59293px 0 -5.8px, #e66 -2.64145px 37.77443px 0 -5.86667px, #e66 -1.32385px 37.91023px 0 -5.93333px;
+  -webkit-animation: whirly-loader 1.25s infinite linear;
+  animation: whirly-loader 1.25s infinite linear;
+  -ms-transform-origin: 50% 50%;
+  -webkit-transform-origin: 50% 50%;
+  transform-origin: 50% 50%; }
+
 * {
   padding: 0px;
   margin: 0px;
@@ -2438,10 +2473,141 @@ Copyright (c) 2014 Daniel Eden
   -khtml-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
-  user-select: none; }
+  user-select: none;
+  transition-duration: 0.9s; }
+
+.loading {
+  padding: 20px;
+  text-align: center;
+  transition-delay: 0.5s; }
+  .loading h6 {
+    margin-top: 60px; }
 
 .sub-text {
   color: #888787; }
+
+.navbar {
+  background: #ffffff;
+  color: #FFF !important;
+  background: #0d7c7c;
+  border: 0px;
+  padding: 5px 0px; }
+
+.navbar-default .navbar-nav > li > a {
+  color: #fff;
+  font-weight: bold; }
+
+.brand img.bunky-logo {
+  max-height: 50px;
+  padding: 5px;
+  display: inline-block; }
+
+.brand .bunky-text {
+  font-family: "Gloria Hallelujah", cursive;
+  position: relative;
+  font-size: 20px;
+  font-weight: bold;
+  color: #FFF;
+  top: 5px; }
+
+.login-form {
+  background: #FFF;
+  padding: 30px;
+  max-width: 350px;
+  border-radius: 4px;
+  margin: 0px auto;
+  position: relative;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.3); }
+  .login-form img {
+    max-width: 130px;
+    margin: 20px auto; }
+  .login-form .form {
+    text-align: left;
+    color: #555; }
+    .login-form .form .form-control {
+      margin-bottom: 10px; }
+
+.pitch {
+  color: #ffffff;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+  text-align: right; }
+  @media (max-width: 767px) {
+    .pitch {
+      text-align: center !important; } }
+  .pitch h2 {
+    font-size: 40px; }
+    @media (max-width: 767px) {
+      .pitch h2 {
+        font-size: 25px; } }
+  .pitch img.like-a-boss {
+    position: absolute;
+    bottom: -240px;
+    left: -130px;
+    height: 400px;
+    width: auto;
+    /* Portrait tablet to landscape and desktop */ }
+    @media (min-width: 767px) and (max-width: 979px) {
+      .pitch img.like-a-boss {
+        height: 300px;
+        width: auto; } }
+  .pitch h1 {
+    font-size: 50px;
+    font-family: "Gloria Hallelujah", cursive;
+    font-weight: bold;
+    color: #ffffff;
+    background: rgba(157, 255, 0, 0.3);
+    display: inline-block;
+    padding: 5px 15px;
+    transform: rotate(-4deg) translateY(-20px); }
+  .pitch .avalable-c {
+    text-align: right; }
+    @media (max-width: 767px) {
+      .pitch .avalable-c {
+        text-align: center; } }
+    .pitch .avalable-c h6 {
+      padding-right: 20px; }
+    .pitch .avalable-c img {
+      max-width: 200px;
+      display: inline-block; }
+
+.main {
+  padding: 105px 0px;
+  background: transparent;
+  background-position: top;
+  color: #FFFFFF;
+  width: 100%;
+  position: relative;
+  display: block;
+  z-index: 1;
+  color: #fff;
+  margin: 0px;
+  top: -20px;
+  min-height: 600px; }
+  .main:before {
+    content: '';
+    background: rgba(43, 187, 193, 0.5);
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    display: block;
+    width: 100%;
+    height: 100%; }
+
+.subject.ng-enter {
+  /* standard transition code */
+  transition: 1s linear all;
+  opacity: 0; }
+
+.subject.ng-enter-stagger {
+  /* this will have a 100ms delay between each successive leave animation */
+  transition-delay: 0.1s;
+  /* As of 1.4.4, this must always be set: it signals ngAnimate
+    to not accidentally inherit a delay property from another CSS class */
+  transition-duration: 0s; }
+
+.subject.ng-enter.ng-enter-active {
+  /* standard transition styles */
+  opacity: 1; }
 
 .no-pm {
   margin: 0px !important;
@@ -2451,12 +2617,8 @@ Copyright (c) 2014 Daniel Eden
   text-align: left; }
 
 body {
-  background: #d9d9d9 !important;
   text-align: center;
-  position: relative;
-  height: 100%;
-  width: 100%;
-  background: red;
+  background: url("../img/bg.png");
   overflow-x: hidden; }
 
 .blur {
@@ -2491,20 +2653,27 @@ section.one {
   padding-bottom: 40px; }
 
 /*Home Styles*/
-.home .home-card {
+.home .home-card,
+.home .can-i-bunk,
+.home .plan-a-holiday {
   max-width: 800px;
   position: relative;
   border-radius: 5px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
   background: #e8e8e8;
   margin: 20px auto;
   transform: translateY(-90px);
   border-top-left-radius: 10px;
   border-top-right-radius: 10px; }
   @media (max-width: 767px) {
-    .home .home-card {
+    .home .home-card,
+    .home .can-i-bunk,
+    .home .plan-a-holiday {
       border-radius: 0px;
       transform: translateY(-80px); } }
-  .home .home-card .user-panel {
+  .home .home-card .user-panel,
+  .home .can-i-bunk .user-panel,
+  .home .plan-a-holiday .user-panel {
     background: url(../img/home-header/christ.png) center center no-repeat;
     -moz-backgroud-size: cover;
     -webkit-backgroud-size: cover;
@@ -2515,34 +2684,60 @@ section.one {
     border-top-left-radius: 10px;
     border-top-right-radius: 10px; }
     @media (max-width: 767px) {
-      .home .home-card .user-panel .col-md-6 {
+      .home .home-card .user-panel .col-md-6,
+      .home .can-i-bunk .user-panel .col-md-6,
+      .home .plan-a-holiday .user-panel .col-md-6 {
         text-align: center; } }
-    .home .home-card .user-panel h4#username {
+    .home .home-card .user-panel h4#username,
+    .home .can-i-bunk .user-panel h4#username,
+    .home .plan-a-holiday .user-panel h4#username {
       color: #434343; }
     .home .home-card .user-panel span,
-    .home .home-card .user-panel #user {
+    .home .home-card .user-panel #user,
+    .home .can-i-bunk .user-panel span,
+    .home .can-i-bunk .user-panel #user,
+    .home .plan-a-holiday .user-panel span,
+    .home .plan-a-holiday .user-panel #user {
       display: inline-block; }
-    .home .home-card .user-panel span strong {
+    .home .home-card .user-panel span strong,
+    .home .can-i-bunk .user-panel span strong,
+    .home .plan-a-holiday .user-panel span strong {
       color: #ffffff; }
-    .home .home-card .user-panel #user {
+    .home .home-card .user-panel #user,
+    .home .can-i-bunk .user-panel #user,
+    .home .plan-a-holiday .user-panel #user {
       max-width: 100px;
       margin-right: 15px; }
-    .home .home-card .user-panel .overall .row {
+    .home .home-card .user-panel .overall .row,
+    .home .can-i-bunk .user-panel .overall .row,
+    .home .plan-a-holiday .user-panel .overall .row {
       padding: 20px 0px; }
-      .home .home-card .user-panel .overall .row .adj {
+      .home .home-card .user-panel .overall .row .adj,
+      .home .can-i-bunk .user-panel .overall .row .adj,
+      .home .plan-a-holiday .user-panel .overall .row .adj {
         transform: translateY(20px); }
-        .home .home-card .user-panel .overall .row .adj .col-xs-4:nth-child(1) {
+        .home .home-card .user-panel .overall .row .adj .col-xs-4:nth-child(1),
+        .home .can-i-bunk .user-panel .overall .row .adj .col-xs-4:nth-child(1),
+        .home .plan-a-holiday .user-panel .overall .row .adj .col-xs-4:nth-child(1) {
           color: #1992c7 !important; }
-        .home .home-card .user-panel .overall .row .adj .col-xs-4:nth-child(2) {
+        .home .home-card .user-panel .overall .row .adj .col-xs-4:nth-child(2),
+        .home .can-i-bunk .user-panel .overall .row .adj .col-xs-4:nth-child(2),
+        .home .plan-a-holiday .user-panel .overall .row .adj .col-xs-4:nth-child(2) {
           color: #14b120 !important; }
-        .home .home-card .user-panel .overall .row .adj .col-xs-4:nth-child(3) {
+        .home .home-card .user-panel .overall .row .adj .col-xs-4:nth-child(3),
+        .home .can-i-bunk .user-panel .overall .row .adj .col-xs-4:nth-child(3),
+        .home .plan-a-holiday .user-panel .overall .row .adj .col-xs-4:nth-child(3) {
           color: #ba0a0a !important; }
-  .home .home-card .tabs {
+  .home .home-card .tabs,
+  .home .can-i-bunk .tabs,
+  .home .plan-a-holiday .tabs {
     padding: 0px;
     background: #e8e8e8;
     text-align: left;
     border-bottom: 1px solid #dedede; }
-    .home .home-card .tabs span {
+    .home .home-card .tabs span,
+    .home .can-i-bunk .tabs span,
+    .home .plan-a-holiday .tabs span {
       display: inline-block;
       padding: 20px;
       cursor: pointer;
@@ -2554,78 +2749,58 @@ section.one {
       transform: translateY(1px);
       border-top: 1px solid #dedede;
       border-right: 1px solid #dedede; }
-      .home .home-card .tabs span:hover {
+      .home .home-card .tabs span:hover,
+      .home .can-i-bunk .tabs span:hover,
+      .home .plan-a-holiday .tabs span:hover {
         background: #ededed; }
-    .home .home-card .tabs span.active {
+    .home .home-card .tabs span.active,
+    .home .can-i-bunk .tabs span.active,
+    .home .plan-a-holiday .tabs span.active {
       background: #fcfcfc; }
-  .home .home-card .tab {
+  .home .home-card .tab,
+  .home .can-i-bunk .tab,
+  .home .plan-a-holiday .tab {
     background: #fcfcfc;
     color: #434343;
     text-align: left !important;
     padding-bottom: 50px; }
-    .home .home-card .tab div {
-      padding: 10px 20px;
-      border-bottom: #e3e3e3 1px solid; }
-      .home .home-card .tab div > span {
-        position: relative; }
-        @media (max-width: 767px) {
-          .home .home-card .tab div > span {
-            display: block;
-            top: -50px;
-            left: 70px;
-            max-width: 400px;
-            width: 70%; } }
-      .home .home-card .tab div .app {
-        max-width: 80px;
-        border-radius: 5px;
-        display: inline-block;
-        background: #39cbd1;
-        padding: 20px;
-        margin-right: 30px; }
-        @media (max-width: 767px) {
-          .home .home-card .tab div .app {
-            max-width: 50px;
-            padding: 7px; } }
-      .home .home-card .tab div #lele {
-        width: 70px;
-        display: inline-block; }
-      .home .home-card .tab div select {
-        display: inline-block;
-        width: 80px; }
-      .home .home-card .tab div #lostattendance,
-      .home .home-card .tab div #classestoattend {
-        font-weight: bold;
-        color: #a01b1b; }
-      .home .home-card .tab div #noBunkingBitch {
-        color: #a01b1b;
-        font-weight: bold; }
-      .home .home-card .tab div .gain {
-        color: #349b1b;
-        font-weight: bold; }
-      .home .home-card .tab div .loose {
-        color: #a01b1b;
-        font-weight: bold; }
   .home .home-card .subjects,
-  .home .home-card .bunk-graph {
+  .home .home-card .bunk-graph,
+  .home .can-i-bunk .subjects,
+  .home .can-i-bunk .bunk-graph,
+  .home .plan-a-holiday .subjects,
+  .home .plan-a-holiday .bunk-graph {
     background: #fff;
     min-height: 400px;
     position: relative;
     padding-bottom: 30px; }
-  .home .home-card .subjects {
+  .home .home-card .subjects,
+  .home .can-i-bunk .subjects,
+  .home .plan-a-holiday .subjects {
     text-align: left; }
-    .home .home-card .subjects div {
+    .home .home-card .subjects div,
+    .home .can-i-bunk .subjects div,
+    .home .plan-a-holiday .subjects div {
       padding: 10px 20px;
       border-bottom: #e3e3e3 1px solid;
       transition: all 0.6s ease-in-out;
       opacity: 0; }
-      .home .home-card .subjects div.ng-enter {
+      .home .home-card .subjects div.ng-enter,
+      .home .can-i-bunk .subjects div.ng-enter,
+      .home .plan-a-holiday .subjects div.ng-enter {
         transform: translateX(-100px); }
-      .home .home-card .subjects div.ng-enter.ng-enter-active {
+      .home .home-card .subjects div.ng-enter.ng-enter-active,
+      .home .can-i-bunk .subjects div.ng-enter.ng-enter-active,
+      .home .plan-a-holiday .subjects div.ng-enter.ng-enter-active {
         opacity: 1; }
-      .home .home-card .subjects div.ng-scope {
+      .home .home-card .subjects div.ng-scope,
+      .home .can-i-bunk .subjects div.ng-scope,
+      .home .plan-a-holiday .subjects div.ng-scope {
         opacity: 1;
         transition-duration: 0.6s; }
-    .home .home-card .subjects p.perbox {
+    .home .home-card .subjects p.perbox,
+    .home .can-i-bunk .subjects p.perbox,
+    .home .plan-a-holiday .subjects p.perbox {
       width: 80px;
       height: 80px;
       display: inline-block;
@@ -2635,14 +2810,16 @@ section.one {
       font-size: 22px;
       text-align: center;
       margin: 0px; }
-    .home .home-card .subjects #subname {
+    .home .home-card .subjects #subname,
+    .home .can-i-bunk .subjects #subname,
+    .home .plan-a-holiday .subjects #subname {
       text-transform: capitalize;
       font-weight: bold;
       margin-left: 30px;
       color: #555555; }
 
 .home #page-content-wrapper {
-  border-top: 120px solid #2fc1c7;
+  border-top: 120px solid #21b1b7;
   position: relative; }
   .home #page-content-wrapper > .page-overlay {
     position: absolute;
@@ -2666,11 +2843,12 @@ section.one {
   width: 50px;
   height: 25px;
   display: inline-block;
-  color: #39cbd1; }
+  color: #2bbbc1; }
 
 .home #sidebar-wrapper {
   background: #e8e8e8;
-  background: #f2f2f2; }
+  background: #f2f2f2;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); }
   .home #sidebar-wrapper img#bunky-img {
     max-width: 60px;
     display: block;
@@ -2682,7 +2860,7 @@ section.one {
 
 .home .sidebar-nav li.active {
   background: #d9d9d9;
-  border-left: 5px solid #39cbd1;
+  border-left: 5px solid #2bbbc1;
   color: #ffffff !important;
   font-weight: bold; }
   .home .sidebar-nav li.active:last-child {
@@ -2695,11 +2873,11 @@ section.one {
 
 .home .sidebar-nav li:hover {
   background: #cacaca;
-  border-left: 5px solid #39cbd1; }
+  border-left: 5px solid #2bbbc1; }
 
 .home .sidebar-brand {
   height: 120px;
-  background: #39cbd1; }
+  background: #2bbbc1; }
 
 .home .sidebar-nav li a {
   color: #a2a2a2;
@@ -2718,9 +2896,10 @@ section.one {
   color: #ffffff; }
 
 .can-i-bunk {
-  padding: 40px; }
+  padding: 40px;
+  background: #FFF; }
   .can-i-bunk .header .fa {
-    color: #39cbd1;
+    color: #2bbbc1;
     display: block;
     width: 80px;
     height: 80px;
@@ -2728,13 +2907,13 @@ section.one {
     padding: 15px;
     border-radius: 50%;
     font-size: 50px;
-    border: 1px solid #39cbd1; }
+    border: 1px solid #2bbbc1; }
   .can-i-bunk .header span {
     display: block;
     font-size: 25px;
     font-weight: bold;
     font-family: "Gloria Hallelujah", cursive;
-    color: #39cbd1; }
+    color: #2bbbc1; }
   .can-i-bunk main {
     margin: 30px 0px; }
     .can-i-bunk main .msg {
@@ -2829,7 +3008,7 @@ section.one {
   .join-us .andHereMySucks {
     padding: 70px;
     text-align: left;
-    background: #2fc1c7;
+    background: #21b1b7;
     color: #fff; }
 
 .plan-a-holiday .calendar-navbar {
@@ -2844,7 +3023,7 @@ section.one {
 .plan-a-holiday .header {
   padding: 40px; }
   .plan-a-holiday .header h1.icon {
-    color: #39cbd1;
+    color: #2bbbc1;
     display: block;
     width: 80px;
     height: 80px;
@@ -2852,14 +3031,14 @@ section.one {
     padding: 15px;
     border-radius: 50%;
     font-size: 50px;
-    border: 1px solid #39cbd1;
+    border: 1px solid #2bbbc1;
     transition-duration: 0.4s; }
   .plan-a-holiday .header h5 {
     display: block;
     font-size: 25px;
     font-weight: bold;
     font-family: "Gloria Hallelujah", cursive;
-    color: #39cbd1; }
+    color: #2bbbc1; }
 
 .ng-modal-overlay {
   /* A dark translucent div that covers the whole screen */
@@ -2891,26 +3070,12 @@ section.one {
   transform: scale(1);
   transition-duration: 0.6s;
   /* Center the dialog */ }
-  .ng-modal-dialog.ng-hide {
-    transform: scale(2); }
   @media (max-width: 767px) {
     .ng-modal-dialog {
       width: 95%; } }
   .ng-modal-dialog .ng-isolate-scope {
     transition-duration: 1s;
     background: red; }
-  .ng-modal-dialog header {
-    color: #444;
-    padding: 70px 20px 20px 20px; }
-    .ng-modal-dialog header h1 {
-      font-weight: normal;
-      text-transform: capitalize;
-      font-size: 25px; }
-    .ng-modal-dialog header > h1 {
-      margin-bottom: 50px; }
-    .ng-modal-dialog header h1.hhh {
-      font-size: 20px;
-      padding-top: 10px; }
 
 .ng-modal-dialog-content {
   text-align: left;
@@ -2926,3 +3091,46 @@ section.one {
   display: inline-block;
   font-weight: bold;
   font-family: 'arial', 'sans-serif'; }
+
+.features {
+  background: #e1e1e1;
+  top: -20px;
+  position: relative; }
+  .features .container {
+    position: relative; }
+
+.push-up {
+  background: #FFF;
+  padding: 40px;
+  position: relative;
+  top: -40px;
+  z-index: 2;
+  border-radius: 4px;
+  box-shadow: 0 3px 9px rgba(0, 0, 0, 0.1); }
+  .push-up h1.title {
+    padding-bottom: 40px;
+    font-family: "Gloria Hallelujah", cursive;
+    color: #17a7ad; }
+  .push-up .icon {
+    background: #53e3e9;
+    padding: 25px;
+    height: 100px;
+    width: 100px;
+    margin: 20px auto;
+    margin-bottom: 50px;
+    border-radius: 50%; }
+    .push-up .icon .fa {
+      font-size: 48px;
+      color: #FFF; }
+  .push-up p {
+    padding-top: 20px;
+    line-height: 1.8; }
+  .push-up h1 {
+    font-size: 25px; }
+
+.apps .wrapper {
+  padding: 30px;
+  border-radius: 5px; }
+
+.subject {
+  background: #ffffff; }
