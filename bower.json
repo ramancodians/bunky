@@ -16,8 +16,13 @@
     "angularfire": "~1.1.2",
     "angular-chart.js": "~0.7.2",
     "chart.js": "~0.1.0",
+<<<<<<< HEAD
     "angular-local-storage": "~0.2.3",
     "ngstorage": "~0.3.10"
+=======
+    "chartjs": "~1.0.2",
+    "firebase": "~2.2.9"
+>>>>>>> 811a94669a8834edc03767aed598d52dc774e4e0
   },
   "authors": [
     "Raman Choudhary <raman.choudhary65@gmail.com>"

@@ -2659,11 +2659,11 @@ section.one {
   position: relative;
   border-radius: 5px;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
-  background: #e8e8e8;
   margin: 20px auto;
   transform: translateY(-90px);
   border-top-left-radius: 10px;
-  border-top-right-radius: 10px; }
+  border-top-right-radius: 10px;
+  background: #e8e8e8; }
   @media (max-width: 767px) {
     .home .home-card,
     .home .can-i-bunk,
@@ -2782,21 +2782,12 @@ section.one {
     .home .plan-a-holiday .subjects div {
       padding: 10px 20px;
       border-bottom: #e3e3e3 1px solid;
-      transition: all 0.6s ease-in-out;
-      opacity: 0; }
-      .home .home-card .subjects div.ng-enter,
-      .home .can-i-bunk .subjects div.ng-enter,
-      .home .plan-a-holiday .subjects div.ng-enter {
-        transform: translateX(-100px); }
-      .home .home-card .subjects div.ng-enter.ng-enter-active,
-      .home .can-i-bunk .subjects div.ng-enter.ng-enter-active,
-      .home .plan-a-holiday .subjects div.ng-enter.ng-enter-active {
-        opacity: 1; }
-      .home .home-card .subjects div.ng-scope,
-      .home .can-i-bunk .subjects div.ng-scope,
-      .home .plan-a-holiday .subjects div.ng-scope {
-        opacity: 1;
-        transition-duration: 0.6s; }
+      transition: all 0.3s ease-in-out; }
+      .home .home-card .subjects div:hover,
+      .home .can-i-bunk .subjects div:hover,
+      .home .plan-a-holiday .subjects div:hover {
+        background: #efefef;
+        cursor: pointer; }
     .home .home-card .subjects p.perbox,
     .home .can-i-bunk .subjects p.perbox,
     .home .plan-a-holiday .subjects p.perbox {
@@ -3048,8 +3039,7 @@ section.one {
   width: 2000%;
   height: 100%;
   background-color: #000000;
-  opacity: 0.5;
-  -webkit-overflow-scrolling: touch; }
+  opacity: 0.5; }
 
 .ng-modal-dialog {
   /* A centered div above the overlay with a box shadow. */
@@ -3075,6 +3065,18 @@ section.one {
   .ng-modal-dialog .ng-isolate-scope {
     transition-duration: 1s;
     background: red; }
+  .ng-modal-dialog header {
+    color: #444;
+    padding: 70px 20px 20px 20px; }
+    .ng-modal-dialog header h1 {
+      font-weight: normal;
+      text-transform: capitalize;
+      font-size: 25px; }
+    .ng-modal-dialog header > h1 {
+      margin-bottom: 50px; }
+    .ng-modal-dialog header h1.hhh {
+      font-size: 20px;
+      padding-top: 10px; }
 
 .ng-modal-dialog-content {
   text-align: left;

@@ -293,7 +293,8 @@ section.one {
     padding-bottom: 40px;
 }
 /*Home Styles*/
-
+   
+    
 .home {
     .home-card,
     .can-i-bunk,
@@ -302,6 +303,12 @@ section.one {
         position: relative;
         border-radius: 5px;
         box-shadow: 0px 4px 10px rgba(#000,0.2);
+        //border: 1px solid $sidebar-color;
+        margin: 20px auto;
+        transform: translateY(-90px);
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+     
         
         @include tablet{
             border-radius: 0px;
@@ -309,11 +316,7 @@ section.one {
         }
         
         background: $sidebar-color;
-        //border: 1px solid $sidebar-color;
-        margin: 20px auto;
-        transform: translateY(-90px);
-        border-top-left-radius: 10px;
-        border-top-right-radius: 10px;
+     
         .user-panel {
             background: url(../img/home-header/christ.png) center center no-repeat;
             -moz-backgroud-size: cover;
@@ -395,7 +398,7 @@ section.one {
             color: $white;
             text-align: left !important;
             padding-bottom: 50px;
-            
+     
         }
         .subjects,
         .bunk-graph {
@@ -409,23 +412,15 @@ section.one {
             div {
                 padding: 10px 20px;
                 border-bottom: $sidebar-color - 5px 1px solid;
-                transition: all 0.6s ease-in-out;
-                 opacity: 0;
+                transition: all 0.3s ease-in-out;
                 
-                &.ng-enter{
-                    transform: translateX(-100px);
-                   
+                &:hover{
+                    background: #efefef;
+                    cursor: pointer;
                 }
                 
-                &.ng-enter.ng-enter-active{
-                    opacity: 1;
-                }
-                
-                &.ng-scope{
-                     opacity: 1;
-                    transition-duration: 0.6s;
-                }
-                
+               
+              
                 
             }
             p.perbox {
@@ -732,7 +727,6 @@ section.one {
   height:100%;
   background-color:#000000;
   opacity: 0.5;
-    -webkit-overflow-scrolling: touch;
 }
 .ng-modal-dialog {
   /* A centered div above the overlay with a box shadow. */
@@ -768,6 +762,26 @@ section.one {
 
 
 
+
+    header{
+        color: #444;
+        h1{
+            font-weight: normal;
+            text-transform: capitalize;
+            font-size: 25px;
+        }
+        
+        & > h1{
+            margin-bottom: 50px; 
+        }
+        padding: 70px 20px 20px 20px;
+        
+        h1.hhh{
+            font-size: 20px;
+            padding-top: 10px
+        }
+    }
+    
 }
 .ng-modal-dialog-content {
    text-align: left;
