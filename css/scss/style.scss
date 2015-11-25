@@ -48,7 +48,7 @@ $animation-duration : 0.2s;
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
-    transition-duration: 0.9s;
+   
 }
 
 
@@ -786,13 +786,10 @@ section.one {
   font-family: 'arial', 'sans-serif';
 }
 
-.features{
+.features,.developer,footer{
     background: #e1e1e1;
-    top: -20px;
-        position: relative;
-    .container{
     position: relative;
-    }
+    top: -20px;
 }
 
 .push-up{
@@ -802,7 +799,7 @@ section.one {
     top: -40px;
     z-index: 2;
     border-radius: 4px;
-     box-shadow: 0 3px 9px rgba(0,0,0,0.1);
+    box-shadow: 0 3px 9px rgba(0,0,0,0.1);
     
     h1.title{
         padding-bottom: 40px;

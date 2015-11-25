@@ -2473,8 +2473,7 @@ Copyright (c) 2014 Daniel Eden
   -khtml-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
-  user-select: none;
-  transition-duration: 0.9s; }
+  user-select: none; }
 
 .loading {
   padding: 20px;
@@ -3092,12 +3091,10 @@ section.one {
   font-weight: bold;
   font-family: 'arial', 'sans-serif'; }
 
-.features {
+.features, .developer, footer {
   background: #e1e1e1;
-  top: -20px;
-  position: relative; }
-  .features .container {
-    position: relative; }
+  position: relative;
+  top: -20px; }
 
 .push-up {
   background: #FFF;
